@@ -217,6 +217,7 @@
             this.btnIncluirLocais.TabIndex = 7;
             this.btnIncluirLocais.Text = "Incluir Locais";
             this.btnIncluirLocais.UseVisualStyleBackColor = false;
+            this.btnIncluirLocais.Click += new System.EventHandler(this.btnIncluirLocais_Click);
             // 
             // btnIncluirPedidoCompra
             // 

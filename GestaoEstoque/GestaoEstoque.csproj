@@ -70,6 +70,12 @@
     <Compile Include="Incluir.Designer.cs">
       <DependentUpon>Incluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncluirLocais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirLocais.Designer.cs">
+      <DependentUpon>IncluirLocais.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Incluir.resx">
       <DependentUpon>Incluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirLocais.resx">
+      <DependentUpon>IncluirLocais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirTipoMaterial.resx">
       <DependentUpon>IncluirTipoMaterial.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace GestaoEstoque
 {
-    partial class IncluirTipoMaterial
+    partial class IncluirLocais
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTipoMaterial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirLocais));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
-            this.toolStripIncluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.gpbIncluirTipoMaterial = new System.Windows.Forms.GroupBox();
-            this.txtDescricaoReduzida = new System.Windows.Forms.TextBox();
-            this.txtDescricaoCompleta = new System.Windows.Forms.TextBox();
-            this.lblDescricaoReduzida = new System.Windows.Forms.Label();
-            this.lblDescricaoCompleta = new System.Windows.Forms.Label();
+            this.toolStripIncluir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
+            this.gpbIncluirTipoDespesa = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.toolStripMenu.SuspendLayout();
-            this.gpbIncluirTipoMaterial.SuspendLayout();
+            this.gpbIncluirTipoDespesa.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
@@ -60,7 +60,22 @@
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
-            this.toolStripMenu.TabIndex = 8;
+            this.toolStripMenu.TabIndex = 7;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripIncluir
             // 
@@ -73,12 +88,6 @@
             this.toolStripIncluir.Padding = new System.Windows.Forms.Padding(50, 10, 40, 0);
             this.toolStripIncluir.Size = new System.Drawing.Size(172, 39);
             this.toolStripIncluir.Text = "Incluir";
-            this.toolStripIncluir.Click += new System.EventHandler(this.toolStripIncluir_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripConsultar
             // 
@@ -91,12 +100,6 @@
             this.toolStripConsultar.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripConsultar.Size = new System.Drawing.Size(167, 39);
             this.toolStripConsultar.Text = "Consultar";
-            this.toolStripConsultar.Click += new System.EventHandler(this.toolStripConsultar_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripExcluir
             // 
@@ -109,71 +112,21 @@
             this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
             this.toolStripExcluir.Text = "Excluir";
-            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
             // 
-            // toolStripSeparator3
+            // gpbIncluirTipoDespesa
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
-            // 
-            // gpbIncluirTipoMaterial
-            // 
-            this.gpbIncluirTipoMaterial.BackColor = System.Drawing.Color.DimGray;
-            this.gpbIncluirTipoMaterial.Controls.Add(this.txtDescricaoReduzida);
-            this.gpbIncluirTipoMaterial.Controls.Add(this.txtDescricaoCompleta);
-            this.gpbIncluirTipoMaterial.Controls.Add(this.lblDescricaoReduzida);
-            this.gpbIncluirTipoMaterial.Controls.Add(this.lblDescricaoCompleta);
-            this.gpbIncluirTipoMaterial.Controls.Add(this.btnCancelar);
-            this.gpbIncluirTipoMaterial.Controls.Add(this.btnIncluir);
-            this.gpbIncluirTipoMaterial.Location = new System.Drawing.Point(123, 126);
-            this.gpbIncluirTipoMaterial.Name = "gpbIncluirTipoMaterial";
-            this.gpbIncluirTipoMaterial.Size = new System.Drawing.Size(717, 294);
-            this.gpbIncluirTipoMaterial.TabIndex = 7;
-            this.gpbIncluirTipoMaterial.TabStop = false;
-            // 
-            // txtDescricaoReduzida
-            // 
-            this.txtDescricaoReduzida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricaoReduzida.Location = new System.Drawing.Point(345, 119);
-            this.txtDescricaoReduzida.MaxLength = 15;
-            this.txtDescricaoReduzida.Name = "txtDescricaoReduzida";
-            this.txtDescricaoReduzida.Size = new System.Drawing.Size(212, 27);
-            this.txtDescricaoReduzida.TabIndex = 2;
-            this.txtDescricaoReduzida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescricaoReduzida_KeyDown);
-            // 
-            // txtDescricaoCompleta
-            // 
-            this.txtDescricaoCompleta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricaoCompleta.Location = new System.Drawing.Point(345, 77);
-            this.txtDescricaoCompleta.MaxLength = 40;
-            this.txtDescricaoCompleta.Name = "txtDescricaoCompleta";
-            this.txtDescricaoCompleta.Size = new System.Drawing.Size(212, 27);
-            this.txtDescricaoCompleta.TabIndex = 1;
-            this.txtDescricaoCompleta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescricaoCompleta_KeyDown);
-            // 
-            // lblDescricaoReduzida
-            // 
-            this.lblDescricaoReduzida.AutoSize = true;
-            this.lblDescricaoReduzida.BackColor = System.Drawing.Color.Gray;
-            this.lblDescricaoReduzida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoReduzida.Location = new System.Drawing.Point(137, 118);
-            this.lblDescricaoReduzida.Name = "lblDescricaoReduzida";
-            this.lblDescricaoReduzida.Padding = new System.Windows.Forms.Padding(6, 5, 7, 5);
-            this.lblDescricaoReduzida.Size = new System.Drawing.Size(180, 28);
-            this.lblDescricaoReduzida.TabIndex = 6;
-            this.lblDescricaoReduzida.Text = "Descrição Reduzida";
-            // 
-            // lblDescricaoCompleta
-            // 
-            this.lblDescricaoCompleta.AutoSize = true;
-            this.lblDescricaoCompleta.BackColor = System.Drawing.Color.Gray;
-            this.lblDescricaoCompleta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoCompleta.Location = new System.Drawing.Point(137, 76);
-            this.lblDescricaoCompleta.Name = "lblDescricaoCompleta";
-            this.lblDescricaoCompleta.Padding = new System.Windows.Forms.Padding(5);
-            this.lblDescricaoCompleta.Size = new System.Drawing.Size(180, 28);
-            this.lblDescricaoCompleta.TabIndex = 5;
-            this.lblDescricaoCompleta.Text = "Descrição Completa";
+            this.gpbIncluirTipoDespesa.BackColor = System.Drawing.Color.DimGray;
+            this.gpbIncluirTipoDespesa.Controls.Add(this.txtEndereco);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.txtDescricao);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.lblEndereco);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.lblDescricao);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.btnCancelar);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.btnIncluir);
+            this.gpbIncluirTipoDespesa.Location = new System.Drawing.Point(123, 126);
+            this.gpbIncluirTipoDespesa.Name = "gpbIncluirTipoDespesa";
+            this.gpbIncluirTipoDespesa.Size = new System.Drawing.Size(717, 294);
+            this.gpbIncluirTipoDespesa.TabIndex = 6;
+            this.gpbIncluirTipoDespesa.TabStop = false;
             // 
             // btnCancelar
             // 
@@ -181,10 +134,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(369, 214);
+            this.btnCancelar.Location = new System.Drawing.Point(370, 202);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 32);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -195,31 +148,74 @@
             this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluir.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluir.ForeColor = System.Drawing.Color.White;
-            this.btnIncluir.Location = new System.Drawing.Point(186, 214);
+            this.btnIncluir.Location = new System.Drawing.Point(187, 202);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(154, 32);
-            this.btnIncluir.TabIndex = 3;
+            this.btnIncluir.TabIndex = 2;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
-            // IncluirTipoMaterial
+            // txtEndereco
+            // 
+            this.txtEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(312, 120);
+            this.txtEndereco.MaxLength = 45;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(212, 27);
+            this.txtEndereco.TabIndex = 1;
+            this.txtEndereco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEndereco_KeyDown);
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(312, 77);
+            this.txtDescricao.MaxLength = 15;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(212, 27);
+            this.txtDescricao.TabIndex = 0;
+            this.txtDescricao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescricao_KeyDown);
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.BackColor = System.Drawing.Color.Gray;
+            this.lblEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.Location = new System.Drawing.Point(161, 119);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
+            this.lblEndereco.Size = new System.Drawing.Size(126, 28);
+            this.lblEndereco.TabIndex = 5;
+            this.lblEndereco.Text = "Endereço";
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.BackColor = System.Drawing.Color.Gray;
+            this.lblDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(161, 76);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.lblDescricao.Size = new System.Drawing.Size(126, 28);
+            this.lblDescricao.TabIndex = 4;
+            this.lblDescricao.Text = "Descrição";
+            // 
+            // IncluirLocais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoEstoque.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(941, 478);
-            this.Controls.Add(this.gpbIncluirTipoMaterial);
+            this.Controls.Add(this.gpbIncluirTipoDespesa);
             this.Controls.Add(this.toolStripMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "IncluirTipoMaterial";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Incluir Tipo de Material";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncluirTipoMaterial_FormClosing);
+            this.Name = "IncluirLocais";
+            this.Text = "Incluir Locais";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncluirLocais_FormClosing);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
-            this.gpbIncluirTipoMaterial.ResumeLayout(false);
-            this.gpbIncluirTipoMaterial.PerformLayout();
+            this.gpbIncluirTipoDespesa.ResumeLayout(false);
+            this.gpbIncluirTipoDespesa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,12 +230,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.GroupBox gpbIncluirTipoMaterial;
-        private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.TextBox txtDescricaoReduzida;
-        private System.Windows.Forms.TextBox txtDescricaoCompleta;
-        private System.Windows.Forms.Label lblDescricaoReduzida;
-        private System.Windows.Forms.Label lblDescricaoCompleta;
+        private System.Windows.Forms.GroupBox gpbIncluirTipoDespesa;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblDescricao;
     }
 }

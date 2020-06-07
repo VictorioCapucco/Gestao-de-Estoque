@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTipoSaida));
             this.gpbIncluirTipoDespesa = new System.Windows.Forms.GroupBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricaoCompleta = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
@@ -49,7 +49,7 @@
             // 
             this.gpbIncluirTipoDespesa.BackColor = System.Drawing.Color.DimGray;
             this.gpbIncluirTipoDespesa.Controls.Add(this.txtDescricao);
-            this.gpbIncluirTipoDespesa.Controls.Add(this.lblDescricaoCompleta);
+            this.gpbIncluirTipoDespesa.Controls.Add(this.lblDescricao);
             this.gpbIncluirTipoDespesa.Controls.Add(this.btnCancelar);
             this.gpbIncluirTipoDespesa.Controls.Add(this.btnIncluir);
             this.gpbIncluirTipoDespesa.Location = new System.Drawing.Point(123, 126);
@@ -65,20 +65,20 @@
             this.txtDescricao.MaxLength = 15;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 27);
-            this.txtDescricao.TabIndex = 8;
+            this.txtDescricao.TabIndex = 1;
             this.txtDescricao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescricao_KeyDown);
             // 
-            // lblDescricaoCompleta
+            // lblDescricao
             // 
-            this.lblDescricaoCompleta.AutoSize = true;
-            this.lblDescricaoCompleta.BackColor = System.Drawing.Color.Gray;
-            this.lblDescricaoCompleta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricaoCompleta.Location = new System.Drawing.Point(168, 103);
-            this.lblDescricaoCompleta.Name = "lblDescricaoCompleta";
-            this.lblDescricaoCompleta.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.lblDescricaoCompleta.Size = new System.Drawing.Size(126, 28);
-            this.lblDescricaoCompleta.TabIndex = 6;
-            this.lblDescricaoCompleta.Text = "Descrição";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.BackColor = System.Drawing.Color.Gray;
+            this.lblDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(168, 103);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.lblDescricao.Size = new System.Drawing.Size(126, 28);
+            this.lblDescricao.TabIndex = 4;
+            this.lblDescricao.Text = "Descrição";
             // 
             // btnCancelar
             // 
@@ -89,7 +89,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(370, 202);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 32);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -103,7 +103,7 @@
             this.btnIncluir.Location = new System.Drawing.Point(187, 202);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(154, 32);
-            this.btnIncluir.TabIndex = 4;
+            this.btnIncluir.TabIndex = 2;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
@@ -202,7 +202,7 @@
         #endregion
         private System.Windows.Forms.GroupBox gpbIncluirTipoDespesa;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label lblDescricaoCompleta;
+        private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.ToolStrip toolStripMenu;

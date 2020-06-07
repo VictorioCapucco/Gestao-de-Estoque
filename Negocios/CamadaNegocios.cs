@@ -22,5 +22,11 @@ namespace Negocios
             //return insercao.ExecutaNQ("insert into Tipo_Saida (descricao_tipo_saida, status_tipo_saida) values('" + descricao_tipo_saida + "'," + status_tipo_saida + ")");
             return insercao.ExecutaNQ("insert into Tipo_saida (descricao_tipo_saida, status_tipo_saida) values('" + descricaoTipoSaida + "'," + statusTipoSaida + ')');
         }
+
+        public Boolean InserirLocais(string descricaoLocal, string enderecoLocal, Boolean statusLocal)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Locais (descricao_local, endereco_local, status_local) values('" + descricaoLocal + "','" + enderecoLocal + "'," + statusLocal + ')');
+        }
     }
 }

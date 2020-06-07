@@ -52,9 +52,13 @@ namespace GestaoEstoque
             }
 
             else
+            {
                 MessageBox.Show("Descrição inválida. \n\n" +
-                "Deve ter pelo menos um caractere \n" +
-                "Não conter caracteres especiais");
+                                "Deve ter pelo menos um caractere \n" +
+                                "Não conter caracteres especiais");
+                txtDescricao.Focus();
+            }
+                
         }
 
         private void txtDescricao_KeyDown(object sender, KeyEventArgs e)
