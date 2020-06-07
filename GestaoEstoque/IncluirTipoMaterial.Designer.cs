@@ -36,7 +36,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.gpbExcluir = new System.Windows.Forms.GroupBox();
+            this.gpbIncluirTipoMaterial = new System.Windows.Forms.GroupBox();
             this.txtDescricaoReduzida = new System.Windows.Forms.TextBox();
             this.txtDescricaoCompleta = new System.Windows.Forms.TextBox();
             this.lblDescricaoReduzida = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
-            this.gpbExcluir.SuspendLayout();
+            this.gpbIncluirTipoMaterial.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
@@ -73,6 +73,7 @@
             this.toolStripIncluir.Padding = new System.Windows.Forms.Padding(50, 10, 40, 0);
             this.toolStripIncluir.Size = new System.Drawing.Size(172, 39);
             this.toolStripIncluir.Text = "Incluir";
+            this.toolStripIncluir.Click += new System.EventHandler(this.toolStripIncluir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -90,6 +91,7 @@
             this.toolStripConsultar.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripConsultar.Size = new System.Drawing.Size(167, 39);
             this.toolStripConsultar.Text = "Consultar";
+            this.toolStripConsultar.Click += new System.EventHandler(this.toolStripConsultar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -107,26 +109,27 @@
             this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
             this.toolStripExcluir.Text = "Excluir";
+            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
-            // gpbExcluir
+            // gpbIncluirTipoMaterial
             // 
-            this.gpbExcluir.BackColor = System.Drawing.Color.DimGray;
-            this.gpbExcluir.Controls.Add(this.txtDescricaoReduzida);
-            this.gpbExcluir.Controls.Add(this.txtDescricaoCompleta);
-            this.gpbExcluir.Controls.Add(this.lblDescricaoReduzida);
-            this.gpbExcluir.Controls.Add(this.lblDescricaoCompleta);
-            this.gpbExcluir.Controls.Add(this.btnCancelar);
-            this.gpbExcluir.Controls.Add(this.btnIncluir);
-            this.gpbExcluir.Location = new System.Drawing.Point(123, 126);
-            this.gpbExcluir.Name = "gpbExcluir";
-            this.gpbExcluir.Size = new System.Drawing.Size(717, 294);
-            this.gpbExcluir.TabIndex = 4;
-            this.gpbExcluir.TabStop = false;
+            this.gpbIncluirTipoMaterial.BackColor = System.Drawing.Color.DimGray;
+            this.gpbIncluirTipoMaterial.Controls.Add(this.txtDescricaoReduzida);
+            this.gpbIncluirTipoMaterial.Controls.Add(this.txtDescricaoCompleta);
+            this.gpbIncluirTipoMaterial.Controls.Add(this.lblDescricaoReduzida);
+            this.gpbIncluirTipoMaterial.Controls.Add(this.lblDescricaoCompleta);
+            this.gpbIncluirTipoMaterial.Controls.Add(this.btnCancelar);
+            this.gpbIncluirTipoMaterial.Controls.Add(this.btnIncluir);
+            this.gpbIncluirTipoMaterial.Location = new System.Drawing.Point(123, 126);
+            this.gpbIncluirTipoMaterial.Name = "gpbIncluirTipoMaterial";
+            this.gpbIncluirTipoMaterial.Size = new System.Drawing.Size(717, 294);
+            this.gpbIncluirTipoMaterial.TabIndex = 4;
+            this.gpbIncluirTipoMaterial.TabStop = false;
             // 
             // txtDescricaoReduzida
             // 
@@ -184,6 +187,7 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnIncluir
             // 
@@ -205,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoEstoque.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(941, 478);
-            this.Controls.Add(this.gpbExcluir);
+            this.Controls.Add(this.gpbIncluirTipoMaterial);
             this.Controls.Add(this.toolStripMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "IncluirTipoMaterial";
@@ -214,8 +218,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncluirTipoMaterial_FormClosing);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
-            this.gpbExcluir.ResumeLayout(false);
-            this.gpbExcluir.PerformLayout();
+            this.gpbIncluirTipoMaterial.ResumeLayout(false);
+            this.gpbIncluirTipoMaterial.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +234,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.GroupBox gpbExcluir;
+        private System.Windows.Forms.GroupBox gpbIncluirTipoMaterial;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.TextBox txtDescricaoReduzida;
         private System.Windows.Forms.TextBox txtDescricaoCompleta;

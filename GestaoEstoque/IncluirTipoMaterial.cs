@@ -17,6 +17,7 @@ namespace GestaoEstoque
         Form formAnterior;
         CamadaNegocios camadaNegocios = new CamadaNegocios();
         Validacao validar = new Validacao();
+        private Boolean xClicked = true;
 
         public IncluirTipoMaterial(Form anterior, int x, int y)
         {
@@ -27,7 +28,8 @@ namespace GestaoEstoque
 
         private void IncluirTipoMaterial_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formAnterior.Close();
+            if (xClicked == true)
+                formAnterior.Close();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
@@ -101,6 +103,44 @@ namespace GestaoEstoque
 
                 btnIncluir.Focus();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            xClicked = false;
+            this.Close();
+
+            formAnterior.Show();
+        }
+
+        private void toolStripIncluir_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluir.Show();
+        }
+
+        private void toolStripConsultar_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultar.Show();
+        }
+
+        private void toolStripExcluir_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formExcluir.Show();
         }
     }
 }

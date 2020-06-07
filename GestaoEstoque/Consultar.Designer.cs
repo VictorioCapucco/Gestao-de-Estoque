@@ -75,6 +75,7 @@
             this.toolStripIncluir.Padding = new System.Windows.Forms.Padding(50, 10, 40, 0);
             this.toolStripIncluir.Size = new System.Drawing.Size(172, 39);
             this.toolStripIncluir.Text = "Incluir";
+            this.toolStripIncluir.Click += new System.EventHandler(this.toolStripIncluir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -92,6 +93,7 @@
             this.toolStripConsultar.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripConsultar.Size = new System.Drawing.Size(167, 39);
             this.toolStripConsultar.Text = "Consultar";
+            this.toolStripConsultar.Click += new System.EventHandler(this.toolStripConsultar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -109,6 +111,7 @@
             this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
             this.toolStripExcluir.Text = "Excluir";
+            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
             // 
             // toolStripSeparator3
             // 

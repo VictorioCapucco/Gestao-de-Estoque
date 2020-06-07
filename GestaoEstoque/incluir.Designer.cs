@@ -177,6 +177,7 @@
             this.btnIncluirTipoSaida.TabIndex = 10;
             this.btnIncluirTipoSaida.Text = "Incluir Tipo de Saída";
             this.btnIncluirTipoSaida.UseVisualStyleBackColor = false;
+            this.btnIncluirTipoSaida.Click += new System.EventHandler(this.btnIncluirTipoSaida_Click);
             // 
             // btnIncluirSaida
             // 

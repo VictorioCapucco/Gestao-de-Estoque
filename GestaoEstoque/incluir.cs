@@ -21,6 +21,16 @@ namespace GestaoEstoque
             InitializeComponent();
         }
 
+        private void toolStripIncluir_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluir.Show();
+        }
+
         private void toolStripConsultar_Click(object sender, EventArgs e)
         {
             Point posicaoForm = new Point(100, 100);
@@ -31,15 +41,6 @@ namespace GestaoEstoque
             formConsultar.Show();
         }
 
-        private void toolStripIncluir_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
-            this.Hide();
-            formIncluir.Show();
-        }
 
         private void toolStripExcluir_Click(object sender, EventArgs e)
         {
@@ -66,6 +67,14 @@ namespace GestaoEstoque
             formAnterior.Close();
         }
 
+        private void btnIncluirTipoSaida_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
 
+            Form formIncluirTipoSaida = new IncluirTipoSaida(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluirTipoSaida.Show();
+        }
     }
 }
