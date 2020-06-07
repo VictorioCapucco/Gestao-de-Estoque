@@ -80,5 +80,23 @@ namespace Dados
                 throw;
             }
         }
+
+        public Boolean ExisteRegistro(string sql, string nome_tabela)
+        {
+            AbrirConexao();
+            OleDbDataAdapter oDa = new OleDbDataAdapter(sql, myDBConnection);
+            DataSet oDs = new DataSet();
+            DataTable oDT = new DataTable();
+            oDa.Fill(oDs, nome_tabela);
+            oDT = oDs.Tables[nome_tabela];
+
+            oDa.Fill(oDs);
+            FecharConexao();
+
+            if (oDT.Rows.Count == 0)
+                return false;
+            else
+                return true;
+        }
     }
 }

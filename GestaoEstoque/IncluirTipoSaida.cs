@@ -84,6 +84,7 @@ namespace GestaoEstoque
             xClicked = false;
             this.Close();
 
+            formAnterior.Location = this.Location;
             formAnterior.Show();
         }
 

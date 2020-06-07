@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTipoSaida));
-            this.gpbIncluirTipoDespesa = new System.Windows.Forms.GroupBox();
+            this.gpbIncluirTipoSaida = new System.Windows.Forms.GroupBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -41,22 +41,22 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.gpbIncluirTipoDespesa.SuspendLayout();
+            this.gpbIncluirTipoSaida.SuspendLayout();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gpbIncluirTipoDespesa
+            // gpbIncluirTipoSaida
             // 
-            this.gpbIncluirTipoDespesa.BackColor = System.Drawing.Color.DimGray;
-            this.gpbIncluirTipoDespesa.Controls.Add(this.txtDescricao);
-            this.gpbIncluirTipoDespesa.Controls.Add(this.lblDescricao);
-            this.gpbIncluirTipoDespesa.Controls.Add(this.btnCancelar);
-            this.gpbIncluirTipoDespesa.Controls.Add(this.btnIncluir);
-            this.gpbIncluirTipoDespesa.Location = new System.Drawing.Point(123, 126);
-            this.gpbIncluirTipoDespesa.Name = "gpbIncluirTipoDespesa";
-            this.gpbIncluirTipoDespesa.Size = new System.Drawing.Size(717, 294);
-            this.gpbIncluirTipoDespesa.TabIndex = 5;
-            this.gpbIncluirTipoDespesa.TabStop = false;
+            this.gpbIncluirTipoSaida.BackColor = System.Drawing.Color.DimGray;
+            this.gpbIncluirTipoSaida.Controls.Add(this.txtDescricao);
+            this.gpbIncluirTipoSaida.Controls.Add(this.lblDescricao);
+            this.gpbIncluirTipoSaida.Controls.Add(this.btnCancelar);
+            this.gpbIncluirTipoSaida.Controls.Add(this.btnIncluir);
+            this.gpbIncluirTipoSaida.Location = new System.Drawing.Point(123, 126);
+            this.gpbIncluirTipoSaida.Name = "gpbIncluirTipoSaida";
+            this.gpbIncluirTipoSaida.Size = new System.Drawing.Size(717, 294);
+            this.gpbIncluirTipoSaida.TabIndex = 5;
+            this.gpbIncluirTipoSaida.TabStop = false;
             // 
             // txtDescricao
             // 
@@ -184,14 +184,14 @@
             this.BackgroundImage = global::GestaoEstoque.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(941, 478);
             this.Controls.Add(this.toolStripMenu);
-            this.Controls.Add(this.gpbIncluirTipoDespesa);
+            this.Controls.Add(this.gpbIncluirTipoSaida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "IncluirTipoSaida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Incluir Tipo de Saida";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncluirTipoSaida_FormClosing);
-            this.gpbIncluirTipoDespesa.ResumeLayout(false);
-            this.gpbIncluirTipoDespesa.PerformLayout();
+            this.gpbIncluirTipoSaida.ResumeLayout(false);
+            this.gpbIncluirTipoSaida.PerformLayout();
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -200,7 +200,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox gpbIncluirTipoDespesa;
+        private System.Windows.Forms.GroupBox gpbIncluirTipoSaida;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Button btnCancelar;

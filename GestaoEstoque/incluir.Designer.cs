@@ -150,6 +150,7 @@
             this.btnIncluirUsuario.TabIndex = 12;
             this.btnIncluirUsuario.Text = "Incluir Usuário";
             this.btnIncluirUsuario.UseVisualStyleBackColor = false;
+            this.btnIncluirUsuario.Click += new System.EventHandler(this.btnIncluirUsuario_Click);
             // 
             // btnIncluirTipoMaterial
             // 

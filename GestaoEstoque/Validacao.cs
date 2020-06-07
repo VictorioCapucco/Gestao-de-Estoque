@@ -37,5 +37,13 @@ namespace GestaoEstoque
             }
             
         }
+
+        public Boolean Senha(string senha, string confirmarSenha)
+        {
+            if (senha == confirmarSenha)
+                return true;
+            else
+                return false;
+        }
     }
 }

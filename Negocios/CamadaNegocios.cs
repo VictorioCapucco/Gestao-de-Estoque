@@ -28,5 +28,17 @@ namespace Negocios
             Conexao insercao = new Conexao();
             return insercao.ExecutaNQ("insert into Locais (descricao_local, endereco_local, status_local) values('" + descricaoLocal + "','" + enderecoLocal + "'," + statusLocal + ')');
         }
+
+        public Boolean InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Usuario (nome_usuario, tipo_usuario, status_usuario, senha_usuario) values('" + nomeUsuario + "'," + tipoUsuario + "," + statusUsuario + ",'" + senhaUsuario + "')");
+        }
+
+        public Boolean ExisteUsuario(string nomeUsuario)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.ExisteRegistro("select nome_usuario from Usuario where nome_usuario = '" + nomeUsuario + "'", "Usuario");
+        }
     }
 }

@@ -81,6 +81,7 @@ namespace GestaoEstoque
             xClicked = false;
             this.Close();
 
+            formAnterior.Location = this.Location;
             formAnterior.Show();
         }
 
@@ -112,6 +113,37 @@ namespace GestaoEstoque
 
                 btnIncluir.Focus();
             }
+        }
+
+        private void toolStripIncluir_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluir.Show();
+        }
+
+        private void toolStripConsultar_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultar.Show();
+        }
+
+
+        private void toolStripExcluir_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formExcluir.Show();
         }
     }
 }
