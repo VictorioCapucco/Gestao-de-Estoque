@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Dados;
 
 namespace Negocios
 {
     public class CamadaNegocios
     {
+        //Tipo Material
         public Boolean InserirTipoMaterial(string descricaoCompleta, string descricaoReduzida, Boolean statusTipoMaterial)
         {
             Conexao insercao = new Conexao();
@@ -16,6 +18,13 @@ namespace Negocios
 
         }
 
+        public DataTable DataTableTipoMaterial()
+        {
+            Conexao consultaTipoMaterial = new Conexao();
+            return consultaTipoMaterial.RetornarDataTable("select id_tipo_material, descricao_reduzida_tipo_material from Tipo_Material where status_tipo_material = true", "Tipo_Material");
+        }
+
+        //Tipo Saida
         public Boolean InserirTipoSaida(string descricaoTipoSaida, Boolean statusTipoSaida)
         {
             Conexao insercao = new Conexao();
@@ -23,12 +32,14 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Tipo_saida (descricao_tipo_saida, status_tipo_saida) values('" + descricaoTipoSaida + "'," + statusTipoSaida + ')');
         }
 
+        //Locais
         public Boolean InserirLocais(string descricaoLocal, string enderecoLocal, Boolean statusLocal)
         {
             Conexao insercao = new Conexao();
             return insercao.ExecutaNQ("insert into Locais (descricao_local, endereco_local, status_local) values('" + descricaoLocal + "','" + enderecoLocal + "'," + statusLocal + ')');
         }
 
+        //Usuarios
         public Boolean InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
         {
             Conexao insercao = new Conexao();
@@ -39,6 +50,13 @@ namespace Negocios
         {
             Conexao consulta = new Conexao();
             return consulta.ExisteRegistro("select nome_usuario from Usuario where nome_usuario = '" + nomeUsuario + "'", "Usuario");
+        }
+
+        //Material
+        public Boolean InserirMaterial(string nomeMaterial, Boolean statusMaterial, int idTipoMaterial)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Material (nome_material, status_material, id_tipo_material) values('" + nomeMaterial + "'," + statusMaterial + "," + idTipoMaterial + ")");
         }
     }
 }

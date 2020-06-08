@@ -64,7 +64,7 @@
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
-            this.toolStripMenu.TabIndex = 0;
+            this.toolStripMenu.TabIndex = 12;
             // 
             // toolStripIncluir
             // 
@@ -135,7 +135,7 @@
             this.gpbIncluir.Location = new System.Drawing.Point(123, 126);
             this.gpbIncluir.Name = "gpbIncluir";
             this.gpbIncluir.Size = new System.Drawing.Size(717, 294);
-            this.gpbIncluir.TabIndex = 1;
+            this.gpbIncluir.TabIndex = 11;
             this.gpbIncluir.TabStop = false;
             // 
             // btnIncluirUsuario
@@ -147,7 +147,7 @@
             this.btnIncluirUsuario.Location = new System.Drawing.Point(391, 237);
             this.btnIncluirUsuario.Name = "btnIncluirUsuario";
             this.btnIncluirUsuario.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirUsuario.TabIndex = 12;
+            this.btnIncluirUsuario.TabIndex = 10;
             this.btnIncluirUsuario.Text = "Incluir Usuário";
             this.btnIncluirUsuario.UseVisualStyleBackColor = false;
             this.btnIncluirUsuario.Click += new System.EventHandler(this.btnIncluirUsuario_Click);
@@ -161,7 +161,7 @@
             this.btnIncluirTipoMaterial.Location = new System.Drawing.Point(100, 237);
             this.btnIncluirTipoMaterial.Name = "btnIncluirTipoMaterial";
             this.btnIncluirTipoMaterial.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirTipoMaterial.TabIndex = 11;
+            this.btnIncluirTipoMaterial.TabIndex = 5;
             this.btnIncluirTipoMaterial.Text = "Incluir Tipo de Material";
             this.btnIncluirTipoMaterial.UseVisualStyleBackColor = false;
             this.btnIncluirTipoMaterial.Click += new System.EventHandler(this.btnIncluirTipoMaterial_Click);
@@ -175,7 +175,7 @@
             this.btnIncluirTipoSaida.Location = new System.Drawing.Point(391, 189);
             this.btnIncluirTipoSaida.Name = "btnIncluirTipoSaida";
             this.btnIncluirTipoSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirTipoSaida.TabIndex = 10;
+            this.btnIncluirTipoSaida.TabIndex = 9;
             this.btnIncluirTipoSaida.Text = "Incluir Tipo de Saída";
             this.btnIncluirTipoSaida.UseVisualStyleBackColor = false;
             this.btnIncluirTipoSaida.Click += new System.EventHandler(this.btnIncluirTipoSaida_Click);
@@ -189,7 +189,7 @@
             this.btnIncluirSaida.Location = new System.Drawing.Point(391, 141);
             this.btnIncluirSaida.Name = "btnIncluirSaida";
             this.btnIncluirSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirSaida.TabIndex = 9;
+            this.btnIncluirSaida.TabIndex = 8;
             this.btnIncluirSaida.Text = "Incluir Saída";
             this.btnIncluirSaida.UseVisualStyleBackColor = false;
             // 
@@ -202,7 +202,7 @@
             this.btnIncluirRecebimento.Location = new System.Drawing.Point(391, 93);
             this.btnIncluirRecebimento.Name = "btnIncluirRecebimento";
             this.btnIncluirRecebimento.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirRecebimento.TabIndex = 8;
+            this.btnIncluirRecebimento.TabIndex = 7;
             this.btnIncluirRecebimento.Text = "Incluir Recebimento";
             this.btnIncluirRecebimento.UseVisualStyleBackColor = false;
             // 
@@ -215,7 +215,7 @@
             this.btnIncluirLocais.Location = new System.Drawing.Point(391, 45);
             this.btnIncluirLocais.Name = "btnIncluirLocais";
             this.btnIncluirLocais.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirLocais.TabIndex = 7;
+            this.btnIncluirLocais.TabIndex = 6;
             this.btnIncluirLocais.Text = "Incluir Locais";
             this.btnIncluirLocais.UseVisualStyleBackColor = false;
             this.btnIncluirLocais.Click += new System.EventHandler(this.btnIncluirLocais_Click);
@@ -229,7 +229,7 @@
             this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(100, 189);
             this.btnIncluirPedidoCompra.Name = "btnIncluirPedidoCompra";
             this.btnIncluirPedidoCompra.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirPedidoCompra.TabIndex = 5;
+            this.btnIncluirPedidoCompra.TabIndex = 4;
             this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
             this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
             // 
@@ -242,7 +242,7 @@
             this.btnIncluirRequisicaoSaida.Location = new System.Drawing.Point(100, 141);
             this.btnIncluirRequisicaoSaida.Name = "btnIncluirRequisicaoSaida";
             this.btnIncluirRequisicaoSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirRequisicaoSaida.TabIndex = 4;
+            this.btnIncluirRequisicaoSaida.TabIndex = 3;
             this.btnIncluirRequisicaoSaida.Text = "Incluir Requisição de saída";
             this.btnIncluirRequisicaoSaida.UseVisualStyleBackColor = false;
             // 
@@ -255,9 +255,10 @@
             this.btnIncluirMaterial.Location = new System.Drawing.Point(100, 93);
             this.btnIncluirMaterial.Name = "btnIncluirMaterial";
             this.btnIncluirMaterial.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirMaterial.TabIndex = 3;
+            this.btnIncluirMaterial.TabIndex = 2;
             this.btnIncluirMaterial.Text = "Incluir Material";
             this.btnIncluirMaterial.UseVisualStyleBackColor = false;
+            this.btnIncluirMaterial.Click += new System.EventHandler(this.btnIncluirMaterial_Click);
             // 
             // btnIncluirFornecedor
             // 
@@ -268,7 +269,7 @@
             this.btnIncluirFornecedor.Location = new System.Drawing.Point(100, 45);
             this.btnIncluirFornecedor.Name = "btnIncluirFornecedor";
             this.btnIncluirFornecedor.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirFornecedor.TabIndex = 2;
+            this.btnIncluirFornecedor.TabIndex = 1;
             this.btnIncluirFornecedor.Text = "Incluir Fornecedor";
             this.btnIncluirFornecedor.UseVisualStyleBackColor = false;
             // 
