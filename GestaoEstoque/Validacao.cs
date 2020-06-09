@@ -45,5 +45,20 @@ namespace GestaoEstoque
             else
                 return false;
         }
+
+        public int IsNumero(string texto)
+        {
+            try
+            {
+                int numero = int.Parse(texto);
+
+                return numero;
+            }
+
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }

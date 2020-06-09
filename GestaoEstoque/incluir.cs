@@ -106,5 +106,15 @@ namespace GestaoEstoque
             this.Hide();
             formIncluirMaterial.Show();
         }
+
+        private void btnIncluirRequisicaoSaida_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluirRequisicaoSaida = new IncluirRequisicaoSaida(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluirRequisicaoSaida.Show();
+        }
     }
 }

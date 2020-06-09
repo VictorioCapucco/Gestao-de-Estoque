@@ -83,6 +83,12 @@
     <Compile Include="IncluirMaterial.Designer.cs">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncluirRequisicaoSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirRequisicaoSaida.Designer.cs">
+      <DependentUpon>IncluirRequisicaoSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirTipoMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirMaterial.resx">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirRequisicaoSaida.resx">
+      <DependentUpon>IncluirRequisicaoSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirTipoMaterial.resx">
       <DependentUpon>IncluirTipoMaterial.cs</DependentUpon>
@@ -162,6 +171,9 @@
       <Project>{5d33687d-5b58-4be0-8b62-4f7a5921422a}</Project>
       <Name>Negocios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lixeira.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

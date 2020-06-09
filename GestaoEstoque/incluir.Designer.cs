@@ -245,6 +245,7 @@
             this.btnIncluirRequisicaoSaida.TabIndex = 3;
             this.btnIncluirRequisicaoSaida.Text = "Incluir Requisição de saída";
             this.btnIncluirRequisicaoSaida.UseVisualStyleBackColor = false;
+            this.btnIncluirRequisicaoSaida.Click += new System.EventHandler(this.btnIncluirRequisicaoSaida_Click);
             // 
             // btnIncluirMaterial
             // 
