@@ -39,12 +39,12 @@
             this.gpbIncluir = new System.Windows.Forms.GroupBox();
             this.btnIncluirUsuario = new System.Windows.Forms.Button();
             this.btnIncluirTipoMaterial = new System.Windows.Forms.Button();
-            this.btnIncluirTipoSaida = new System.Windows.Forms.Button();
-            this.btnIncluirSaida = new System.Windows.Forms.Button();
+            this.btnIncluirTipoTransferencia = new System.Windows.Forms.Button();
+            this.btnIncluirTransferenciaEntrada = new System.Windows.Forms.Button();
             this.btnIncluirRecebimento = new System.Windows.Forms.Button();
             this.btnIncluirLocais = new System.Windows.Forms.Button();
             this.btnIncluirPedidoCompra = new System.Windows.Forms.Button();
-            this.btnIncluirRequisicaoSaida = new System.Windows.Forms.Button();
+            this.btnIncluirTransferenciaSaida = new System.Windows.Forms.Button();
             this.btnIncluirMaterial = new System.Windows.Forms.Button();
             this.btnIncluirFornecedor = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
@@ -124,12 +124,12 @@
             // 
             this.gpbIncluir.Controls.Add(this.btnIncluirUsuario);
             this.gpbIncluir.Controls.Add(this.btnIncluirTipoMaterial);
-            this.gpbIncluir.Controls.Add(this.btnIncluirTipoSaida);
-            this.gpbIncluir.Controls.Add(this.btnIncluirSaida);
+            this.gpbIncluir.Controls.Add(this.btnIncluirTipoTransferencia);
+            this.gpbIncluir.Controls.Add(this.btnIncluirTransferenciaEntrada);
             this.gpbIncluir.Controls.Add(this.btnIncluirRecebimento);
             this.gpbIncluir.Controls.Add(this.btnIncluirLocais);
             this.gpbIncluir.Controls.Add(this.btnIncluirPedidoCompra);
-            this.gpbIncluir.Controls.Add(this.btnIncluirRequisicaoSaida);
+            this.gpbIncluir.Controls.Add(this.btnIncluirTransferenciaSaida);
             this.gpbIncluir.Controls.Add(this.btnIncluirMaterial);
             this.gpbIncluir.Controls.Add(this.btnIncluirFornecedor);
             this.gpbIncluir.Location = new System.Drawing.Point(123, 126);
@@ -166,32 +166,33 @@
             this.btnIncluirTipoMaterial.UseVisualStyleBackColor = false;
             this.btnIncluirTipoMaterial.Click += new System.EventHandler(this.btnIncluirTipoMaterial_Click);
             // 
-            // btnIncluirTipoSaida
+            // btnIncluirTipoTransferencia
             // 
-            this.btnIncluirTipoSaida.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirTipoSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirTipoSaida.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirTipoSaida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTipoSaida.Location = new System.Drawing.Point(391, 189);
-            this.btnIncluirTipoSaida.Name = "btnIncluirTipoSaida";
-            this.btnIncluirTipoSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirTipoSaida.TabIndex = 9;
-            this.btnIncluirTipoSaida.Text = "Incluir Tipo de Saída";
-            this.btnIncluirTipoSaida.UseVisualStyleBackColor = false;
-            this.btnIncluirTipoSaida.Click += new System.EventHandler(this.btnIncluirTipoSaida_Click);
+            this.btnIncluirTipoTransferencia.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirTipoTransferencia.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTipoTransferencia.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirTipoTransferencia.Location = new System.Drawing.Point(391, 189);
+            this.btnIncluirTipoTransferencia.Name = "btnIncluirTipoTransferencia";
+            this.btnIncluirTipoTransferencia.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirTipoTransferencia.TabIndex = 9;
+            this.btnIncluirTipoTransferencia.Text = "Incluir Tipo de Transferência";
+            this.btnIncluirTipoTransferencia.UseVisualStyleBackColor = false;
+            this.btnIncluirTipoTransferencia.Click += new System.EventHandler(this.btnIncluirTipoSaida_Click);
             // 
-            // btnIncluirSaida
+            // btnIncluirTransferenciaEntrada
             // 
-            this.btnIncluirSaida.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirSaida.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirSaida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirSaida.Location = new System.Drawing.Point(391, 141);
-            this.btnIncluirSaida.Name = "btnIncluirSaida";
-            this.btnIncluirSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirSaida.TabIndex = 8;
-            this.btnIncluirSaida.Text = "Incluir Saída";
-            this.btnIncluirSaida.UseVisualStyleBackColor = false;
+            this.btnIncluirTransferenciaEntrada.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirTransferenciaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirTransferenciaEntrada.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTransferenciaEntrada.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirTransferenciaEntrada.Location = new System.Drawing.Point(391, 141);
+            this.btnIncluirTransferenciaEntrada.Name = "btnIncluirTransferenciaEntrada";
+            this.btnIncluirTransferenciaEntrada.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirTransferenciaEntrada.TabIndex = 8;
+            this.btnIncluirTransferenciaEntrada.Text = "Incluir Transferência entrada";
+            this.btnIncluirTransferenciaEntrada.UseVisualStyleBackColor = false;
+            this.btnIncluirTransferenciaEntrada.Click += new System.EventHandler(this.btnIncluirSaida_Click);
             // 
             // btnIncluirRecebimento
             // 
@@ -233,19 +234,19 @@
             this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
             this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
             // 
-            // btnIncluirRequisicaoSaida
+            // btnIncluirTransferenciaSaida
             // 
-            this.btnIncluirRequisicaoSaida.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirRequisicaoSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirRequisicaoSaida.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirRequisicaoSaida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirRequisicaoSaida.Location = new System.Drawing.Point(100, 141);
-            this.btnIncluirRequisicaoSaida.Name = "btnIncluirRequisicaoSaida";
-            this.btnIncluirRequisicaoSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirRequisicaoSaida.TabIndex = 3;
-            this.btnIncluirRequisicaoSaida.Text = "Incluir Requisição de saída";
-            this.btnIncluirRequisicaoSaida.UseVisualStyleBackColor = false;
-            this.btnIncluirRequisicaoSaida.Click += new System.EventHandler(this.btnIncluirRequisicaoSaida_Click);
+            this.btnIncluirTransferenciaSaida.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirTransferenciaSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirTransferenciaSaida.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTransferenciaSaida.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirTransferenciaSaida.Location = new System.Drawing.Point(100, 141);
+            this.btnIncluirTransferenciaSaida.Name = "btnIncluirTransferenciaSaida";
+            this.btnIncluirTransferenciaSaida.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirTransferenciaSaida.TabIndex = 3;
+            this.btnIncluirTransferenciaSaida.Text = "Incluir Transferência saída";
+            this.btnIncluirTransferenciaSaida.UseVisualStyleBackColor = false;
+            this.btnIncluirTransferenciaSaida.Click += new System.EventHandler(this.btnIncluirRequisicaoSaida_Click);
             // 
             // btnIncluirMaterial
             // 
@@ -306,12 +307,12 @@
         private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.GroupBox gpbIncluir;
-        private System.Windows.Forms.Button btnIncluirTipoSaida;
-        private System.Windows.Forms.Button btnIncluirSaida;
+        private System.Windows.Forms.Button btnIncluirTipoTransferencia;
+        private System.Windows.Forms.Button btnIncluirTransferenciaEntrada;
         private System.Windows.Forms.Button btnIncluirRecebimento;
         private System.Windows.Forms.Button btnIncluirLocais;
         private System.Windows.Forms.Button btnIncluirPedidoCompra;
-        private System.Windows.Forms.Button btnIncluirRequisicaoSaida;
+        private System.Windows.Forms.Button btnIncluirTransferenciaSaida;
         private System.Windows.Forms.Button btnIncluirMaterial;
         private System.Windows.Forms.Button btnIncluirFornecedor;
         private System.Windows.Forms.Button btnIncluirUsuario;

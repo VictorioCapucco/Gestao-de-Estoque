@@ -72,9 +72,9 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirTipoSaida = new IncluirTipoSaida(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTipoTransferencia = new IncluirTipoTransferencia(this, posicaoForm.X, posicaoForm.Y);
             this.Hide();
-            formIncluirTipoSaida.Show();
+            formIncluirTipoTransferencia.Show();
         }
 
         private void btnIncluirLocais_Click(object sender, EventArgs e)
@@ -112,9 +112,19 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirRequisicaoSaida = new IncluirRequisicaoSaida(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTransferenciaSaida = new IncluirTransferenciaSaida(this, posicaoForm.X, posicaoForm.Y);
             this.Hide();
-            formIncluirRequisicaoSaida.Show();
+            formIncluirTransferenciaSaida.Show();
+        }
+
+        private void btnIncluirSaida_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluirTransferenciaEntrada = new IncluirTransferenciaEntrada(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluirTransferenciaEntrada.Show();
         }
     }
 }

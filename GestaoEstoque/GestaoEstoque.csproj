@@ -83,11 +83,17 @@
     <Compile Include="IncluirMaterial.Designer.cs">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncluirRequisicaoSaida.cs">
+    <Compile Include="IncluirTransferenciaEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncluirRequisicaoSaida.Designer.cs">
-      <DependentUpon>IncluirRequisicaoSaida.cs</DependentUpon>
+    <Compile Include="IncluirTransferenciaEntrada.Designer.cs">
+      <DependentUpon>IncluirTransferenciaEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirTransferenciaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirTransferenciaSaida.Designer.cs">
+      <DependentUpon>IncluirTransferenciaSaida.cs</DependentUpon>
     </Compile>
     <Compile Include="IncluirTipoMaterial.cs">
       <SubType>Form</SubType>
@@ -95,11 +101,11 @@
     <Compile Include="IncluirTipoMaterial.Designer.cs">
       <DependentUpon>IncluirTipoMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncluirTipoSaida.cs">
+    <Compile Include="IncluirTipoTransferencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncluirTipoSaida.Designer.cs">
-      <DependentUpon>IncluirTipoSaida.cs</DependentUpon>
+    <Compile Include="IncluirTipoTransferencia.Designer.cs">
+      <DependentUpon>IncluirTipoTransferencia.cs</DependentUpon>
     </Compile>
     <Compile Include="IncluirUsuario.cs">
       <SubType>Form</SubType>
@@ -128,14 +134,17 @@
     <EmbeddedResource Include="IncluirMaterial.resx">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncluirRequisicaoSaida.resx">
-      <DependentUpon>IncluirRequisicaoSaida.cs</DependentUpon>
+    <EmbeddedResource Include="IncluirTransferenciaEntrada.resx">
+      <DependentUpon>IncluirTransferenciaEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirTransferenciaSaida.resx">
+      <DependentUpon>IncluirTransferenciaSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirTipoMaterial.resx">
       <DependentUpon>IncluirTipoMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncluirTipoSaida.resx">
-      <DependentUpon>IncluirTipoSaida.cs</DependentUpon>
+    <EmbeddedResource Include="IncluirTipoTransferencia.resx">
+      <DependentUpon>IncluirTipoTransferencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirUsuario.resx">
       <DependentUpon>IncluirUsuario.cs</DependentUpon>

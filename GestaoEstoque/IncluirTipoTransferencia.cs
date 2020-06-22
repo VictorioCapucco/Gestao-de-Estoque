@@ -11,14 +11,14 @@ using Negocios;
 
 namespace GestaoEstoque
 {
-    public partial class IncluirTipoSaida : Form
+    public partial class IncluirTipoTransferencia : Form
     {
         Form formAnterior;
         CamadaNegocios camadaNegocios = new CamadaNegocios();
         Validacao validar = new Validacao();
         private Boolean xClicked = true;
 
-        public IncluirTipoSaida(Form anterior, int x, int y)
+        public IncluirTipoTransferencia(Form anterior, int x, int y)
         {
             this.Location = new Point(x, y);
             formAnterior = anterior;
@@ -28,6 +28,7 @@ namespace GestaoEstoque
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
+            Boolean saida = (rdbSaida.Checked == true);
             string descricao = txtDescricao.Text.ToString();
 
             //Validação da descrição
@@ -35,12 +36,12 @@ namespace GestaoEstoque
 
             if (statusDescricao == true)
             {
-                //Pedindo à camada de negócios para adicionar o tipo de saída
-                Boolean statusInsercao = camadaNegocios.InserirTipoSaida(descricao, true);
+                //Pedindo à camada de negócios para adicionar o tipo de transferencia
+                Boolean statusInsercao = camadaNegocios.InserirTipoSaida(descricao, true, saida);
 
                 if (statusInsercao == true)
                 {
-                    MessageBox.Show("Tipo de saída incluído com sucesso!");
+                    MessageBox.Show("Tipo de transferência incluído com sucesso!");
 
                     //Limpando os campos
                     txtDescricao.Text = "";
@@ -48,7 +49,7 @@ namespace GestaoEstoque
                 }
 
                 else
-                    MessageBox.Show("Não foi possível incluir o tipo de saída");
+                    MessageBox.Show("Não foi possível incluir o tipo de transferência");
             }
 
             else
@@ -117,6 +118,16 @@ namespace GestaoEstoque
             Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
             this.Hide();
             formExcluir.Show();
+        }
+
+        private void rdbAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbSupervisor_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,6 +43,7 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
+            this.checkboxObra = new System.Windows.Forms.CheckBox();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirLocais.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +120,7 @@
             // gpbIncluirLocais
             // 
             this.gpbIncluirLocais.BackColor = System.Drawing.Color.DimGray;
+            this.gpbIncluirLocais.Controls.Add(this.checkboxObra);
             this.gpbIncluirLocais.Controls.Add(this.txtEndereco);
             this.gpbIncluirLocais.Controls.Add(this.txtDescricao);
             this.gpbIncluirLocais.Controls.Add(this.lblEndereco);
@@ -134,7 +136,7 @@
             // txtEndereco
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(312, 120);
+            this.txtEndereco.Location = new System.Drawing.Point(312, 93);
             this.txtEndereco.MaxLength = 45;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(212, 27);
@@ -144,7 +146,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(312, 77);
+            this.txtDescricao.Location = new System.Drawing.Point(312, 50);
             this.txtDescricao.MaxLength = 15;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 27);
@@ -156,7 +158,7 @@
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.BackColor = System.Drawing.Color.Gray;
             this.lblEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(161, 119);
+            this.lblEndereco.Location = new System.Drawing.Point(161, 92);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.lblEndereco.Size = new System.Drawing.Size(126, 28);
@@ -168,7 +170,7 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.BackColor = System.Drawing.Color.Gray;
             this.lblDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(161, 76);
+            this.lblDescricao.Location = new System.Drawing.Point(161, 49);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.lblDescricao.Size = new System.Drawing.Size(126, 28);
@@ -181,7 +183,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(370, 202);
+            this.btnCancelar.Location = new System.Drawing.Point(370, 213);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 32);
             this.btnCancelar.TabIndex = 3;
@@ -195,13 +197,26 @@
             this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluir.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluir.ForeColor = System.Drawing.Color.White;
-            this.btnIncluir.Location = new System.Drawing.Point(187, 202);
+            this.btnIncluir.Location = new System.Drawing.Point(187, 213);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(154, 32);
             this.btnIncluir.TabIndex = 2;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
+            // checkboxObra
+            // 
+            this.checkboxObra.AutoSize = true;
+            this.checkboxObra.BackColor = System.Drawing.Color.Gray;
+            this.checkboxObra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxObra.Location = new System.Drawing.Point(281, 149);
+            this.checkboxObra.Name = "checkboxObra";
+            this.checkboxObra.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.checkboxObra.Size = new System.Drawing.Size(146, 22);
+            this.checkboxObra.TabIndex = 7;
+            this.checkboxObra.Text = "Obra";
+            this.checkboxObra.UseVisualStyleBackColor = false;
             // 
             // IncluirLocais
             // 
@@ -241,5 +256,6 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.CheckBox checkboxObra;
     }
 }

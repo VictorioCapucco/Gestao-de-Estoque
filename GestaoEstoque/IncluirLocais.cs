@@ -28,6 +28,7 @@ namespace GestaoEstoque
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
+            Boolean obra = (checkboxObra.Checked == true);
             string descricao = txtDescricao.Text.ToString();
             string endereco = txtEndereco.Text.ToString();
 
@@ -40,7 +41,7 @@ namespace GestaoEstoque
                 if (statusEndereco == true)
                 {
                     ////Pedindo à camada de negócios para adicionar o local
-                    Boolean statusInsercao = camadaNegocios.InserirLocais(descricao, endereco, true);
+                    Boolean statusInsercao = camadaNegocios.InserirLocais(descricao, endereco, true, obra);
 
                     if (statusInsercao == true)
                     {

@@ -1,6 +1,6 @@
 ﻿namespace GestaoEstoque
 {
-    partial class IncluirTipoSaida
+    partial class IncluirTipoTransferencia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTipoSaida));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTipoTransferencia));
             this.gpbIncluirTipoSaida = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdbEntrada = new System.Windows.Forms.RadioButton();
+            this.rdbSaida = new System.Windows.Forms.RadioButton();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -42,12 +45,14 @@
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirTipoSaida.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbIncluirTipoSaida
             // 
             this.gpbIncluirTipoSaida.BackColor = System.Drawing.Color.DimGray;
+            this.gpbIncluirTipoSaida.Controls.Add(this.panel1);
             this.gpbIncluirTipoSaida.Controls.Add(this.txtDescricao);
             this.gpbIncluirTipoSaida.Controls.Add(this.lblDescricao);
             this.gpbIncluirTipoSaida.Controls.Add(this.btnCancelar);
@@ -58,11 +63,47 @@
             this.gpbIncluirTipoSaida.TabIndex = 5;
             this.gpbIncluirTipoSaida.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.rdbEntrada);
+            this.panel1.Controls.Add(this.rdbSaida);
+            this.panel1.Location = new System.Drawing.Point(171, 124);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(353, 46);
+            this.panel1.TabIndex = 13;
+            // 
+            // rdbEntrada
+            // 
+            this.rdbEntrada.AutoSize = true;
+            this.rdbEntrada.Checked = true;
+            this.rdbEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbEntrada.Location = new System.Drawing.Point(81, 13);
+            this.rdbEntrada.Name = "rdbEntrada";
+            this.rdbEntrada.Size = new System.Drawing.Size(89, 22);
+            this.rdbEntrada.TabIndex = 4;
+            this.rdbEntrada.TabStop = true;
+            this.rdbEntrada.Text = "Entrada";
+            this.rdbEntrada.UseVisualStyleBackColor = true;
+            this.rdbEntrada.CheckedChanged += new System.EventHandler(this.rdbAdmin_CheckedChanged);
+            // 
+            // rdbSaida
+            // 
+            this.rdbSaida.AutoSize = true;
+            this.rdbSaida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSaida.Location = new System.Drawing.Point(199, 13);
+            this.rdbSaida.Name = "rdbSaida";
+            this.rdbSaida.Size = new System.Drawing.Size(71, 22);
+            this.rdbSaida.TabIndex = 5;
+            this.rdbSaida.Text = "Saída";
+            this.rdbSaida.UseVisualStyleBackColor = true;
+            this.rdbSaida.CheckedChanged += new System.EventHandler(this.rdbSupervisor_CheckedChanged);
+            // 
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(312, 103);
-            this.txtDescricao.MaxLength = 15;
+            this.txtDescricao.Location = new System.Drawing.Point(312, 71);
+            this.txtDescricao.MaxLength = 20;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 27);
             this.txtDescricao.TabIndex = 1;
@@ -73,7 +114,7 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.BackColor = System.Drawing.Color.Gray;
             this.lblDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(168, 103);
+            this.lblDescricao.Location = new System.Drawing.Point(168, 71);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.lblDescricao.Size = new System.Drawing.Size(126, 28);
@@ -177,7 +218,7 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
-            // IncluirTipoSaida
+            // IncluirTipoTransferencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,12 +227,14 @@
             this.Controls.Add(this.toolStripMenu);
             this.Controls.Add(this.gpbIncluirTipoSaida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "IncluirTipoSaida";
+            this.Name = "IncluirTipoTransferencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Incluir Tipo de Saida";
+            this.Text = "Incluir Tipo de transferência";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncluirTipoSaida_FormClosing);
             this.gpbIncluirTipoSaida.ResumeLayout(false);
             this.gpbIncluirTipoSaida.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -212,5 +255,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rdbEntrada;
+        private System.Windows.Forms.RadioButton rdbSaida;
     }
 }
