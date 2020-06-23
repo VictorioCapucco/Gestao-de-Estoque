@@ -136,5 +136,142 @@ namespace GestaoEstoque
                 return false;
             }
         }
+
+        public Boolean Cnpj(string documento)
+        {
+            if (documento.Length != 14)
+                return false;
+            try
+            {
+                //Validando primeiro dígito do CNPJ
+                string sa = "", sb = "", sc = "", sd = "", se = "", sf = "", sg = "", sh = "", si = "", sj = "", sk = "", sl = "", sm = "", sn = "";
+
+                sa += documento[0];
+                sb += documento[1];
+                sc += documento[2];
+                sd += documento[3];
+                se += documento[4];
+                sf += documento[5];
+                sg += documento[6];
+                sh += documento[7];
+                si += documento[8];
+                sj += documento[9];
+                sk += documento[10];
+                sl += documento[11];
+                sm += documento[12];
+                sn += documento[13];
+
+                int saint = int.Parse(sa);
+                int sbint = int.Parse(sb);
+                int scint = int.Parse(sc);
+                int sdint = int.Parse(sd);
+                int seint = int.Parse(se);
+                int sfint = int.Parse(sf);
+                int sgint = int.Parse(sg);
+                int shint = int.Parse(sh);
+                int siint = int.Parse(si);
+                int sjint = int.Parse(sj);
+                int skint = int.Parse(sk);
+                int slint = int.Parse(sl);
+                int smint = int.Parse(sm);
+                int snint = int.Parse(sn);
+
+
+                saint = saint * 5;
+                sbint = sbint * 4;
+                scint = scint * 3;
+                sdint = sdint * 2;
+                seint = seint * 9;
+                sfint = sfint * 8;
+                sgint = sgint * 7;
+                shint = shint * 6;
+                siint = siint * 5;
+                sjint = sjint * 4;
+                skint = skint * 3;
+                slint = slint * 2;
+
+                int soma;
+
+                soma = saint + sbint + scint + sdint + seint + sfint + sgint + shint + siint + sjint + skint + slint;
+                int resto = soma % 11;
+
+                if (resto == 0 || resto == 1)
+                {
+                    if (int.Parse(sm) != 0 && int.Parse(sm) != 1)
+                    {
+                        return false;
+                    }
+                    //Caso contrário continua
+                }
+
+                else
+                {
+                    if (int.Parse(sm) != (11 - resto))
+                    {
+                        return false;
+                    }
+                    //Caso contrário continua
+                }
+
+                //Validando segundo dígito do CNPJ
+                saint = int.Parse(sa);
+                sbint = int.Parse(sb);
+                scint = int.Parse(sc);
+                sdint = int.Parse(sd);
+                seint = int.Parse(se);
+                sfint = int.Parse(sf);
+                sgint = int.Parse(sg);
+                shint = int.Parse(sh);
+                siint = int.Parse(si);
+                sjint = int.Parse(sj);
+                skint = int.Parse(sk);
+                slint = int.Parse(sl);
+                smint = int.Parse(sm);
+                snint = int.Parse(sn);
+
+                saint = saint * 6;
+                sbint = sbint * 5;
+                scint = scint * 4;
+                sdint = sdint * 3;
+                seint = seint * 2;
+                sfint = sfint * 9;
+                sgint = sgint * 8;
+                shint = shint * 7;
+                siint = siint * 6;
+                sjint = sjint * 5;
+                skint = skint * 4;
+                slint = slint * 3;
+                smint = smint * 2;
+
+                soma = saint + sbint + scint + sdint + seint + sfint + sgint + shint + siint + sjint + skint + slint + smint;
+
+                resto = soma % 11;
+
+                if (resto == 1 || resto == 0)
+                {
+                    if (int.Parse(sn) != 0 && int.Parse(sn) != 1)
+                    {
+                        return false;
+                    }
+                    //Caso contrário continua
+                }
+
+                else
+                {
+                    if (int.Parse(sn) != (11 - resto))
+                    {
+                        return false;
+                    }
+                    //Caso contrário continua
+                }
+
+                return true;
+            }
+
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

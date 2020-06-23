@@ -79,7 +79,7 @@ namespace Negocios
         {
             Conexao consulta = new Conexao();
             DataTable oDtMaterial = new DataTable();
-            oDtMaterial = consulta.RetornarDataTable("select nome_material from Material where id_material = " + codigoMaterial, " Material");
+            oDtMaterial = consulta.RetornarDataTable("select nome_material from Material where id_material = " + codigoMaterial + " and status_material = true" , " Material");
 
             string nomeMaterial;
 
@@ -276,6 +276,40 @@ namespace Negocios
             return consulta.RetornarDataTable("select MT.id_transferencia as CodigoTransferencia, M.id_material as Codigo, M.nome_material as Nome, MT.quantidade_material as Quantidade from Material as M " +
                                                 "inner join Materiais_Transferencia as MT on M.id_material = MT.id_material " +
                                                 "where MT.id_transferencia = " + codigoTransferencia + " order by M.id_material asc", "Materiais_Transferencia");
+        }
+
+        //Fornecedor
+        public int InserirFornecedor(string nomeFornecedor, string cnpjFornecedor, string telefoneFornecedor, string enderecoFornecedor)
+        {
+            Conexao insercao = new Conexao();
+            Boolean statusCriarFornecedor = insercao.ExecutaNQ("insert into Fornecedor (nome_for, cnpj_for, telefone_for, endereco_for, status_for) values ('" + nomeFornecedor + "','" + cnpjFornecedor + "','" + telefoneFornecedor + "','" + enderecoFornecedor + "',true)");
+            if (statusCriarFornecedor == true)
+            {
+                try
+                {
+                    //Obtendo o id da transferência criada
+                    DataTable oDtUltimoFornecedor = new DataTable();
+
+                    oDtUltimoFornecedor = insercao.RetornarDataTable("select id_for from Fornecedor where id_for = (select max (id_for) from Fornecedor)", "Fornecedor");
+                    int codigoFornecedor = int.Parse(oDtUltimoFornecedor.Rows[0]["id_for"].ToString());
+
+                    return codigoFornecedor;
+                }
+
+                catch
+                {
+                    return 0;
+                }
+            }
+
+            else
+                return 0;
+        }
+
+        public Boolean InserirMateriaisFornecedor(int codigoFornecedor, int codigoMaterial)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Materiais_Fornecedor (id_for, id_material) values (" + codigoFornecedor + "," + codigoMaterial + ")");
         }
     }
 }

@@ -71,6 +71,12 @@
     <Compile Include="Incluir.Designer.cs">
       <DependentUpon>Incluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncluirFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirFornecedor.Designer.cs">
+      <DependentUpon>IncluirFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirLocais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Incluir.resx">
       <DependentUpon>Incluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirFornecedor.resx">
+      <DependentUpon>IncluirFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirLocais.resx">
       <DependentUpon>IncluirLocais.cs</DependentUpon>

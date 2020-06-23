@@ -379,6 +379,7 @@
             this.txtCodigoMaterial.TabIndex = 6;
             this.txtCodigoMaterial.Text = "  F1 para consultar";
             this.txtCodigoMaterial.Click += new System.EventHandler(this.txtCodigoMaterial_Click);
+            this.txtCodigoMaterial.Enter += new System.EventHandler(this.txtCodigoMaterial_Enter);
             this.txtCodigoMaterial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoMaterial_KeyDown);
             this.txtCodigoMaterial.Leave += new System.EventHandler(this.txtCodigoMaterial_Leave);
             // 

@@ -27,7 +27,7 @@ namespace GestaoEstoque
 
         private void txtCodigoMaterial_Click(object sender, EventArgs e)
         {
-            if (txtCodigoMaterial.Text == "  F1 para consultar")
+            if (txtCodigoMaterial.Text == "  F1 para consultar" && txtCodigoMaterial.ForeColor == Color.Gray)
             {
                 txtCodigoMaterial.Text = "";
                 txtCodigoMaterial.ForeColor = Color.Black;
@@ -564,6 +564,15 @@ namespace GestaoEstoque
 
             else
                 MessageBox.Show("Selecione um local destino");
+        }
+
+        private void txtCodigoMaterial_Enter(object sender, EventArgs e)
+        {
+            if (txtCodigoMaterial.Text == "  F1 para consultar" && txtCodigoMaterial.ForeColor == Color.Gray)
+            {
+                txtCodigoMaterial.Text = "";
+                txtCodigoMaterial.ForeColor = Color.Black;
+            }
         }
     }
 }

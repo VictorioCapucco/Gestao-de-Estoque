@@ -274,6 +274,7 @@
             this.btnIncluirFornecedor.TabIndex = 1;
             this.btnIncluirFornecedor.Text = "Incluir Fornecedor";
             this.btnIncluirFornecedor.UseVisualStyleBackColor = false;
+            this.btnIncluirFornecedor.Click += new System.EventHandler(this.btnIncluirFornecedor_Click);
             // 
             // Incluir
             // 
