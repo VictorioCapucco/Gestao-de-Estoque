@@ -311,5 +311,53 @@ namespace Negocios
             Conexao insercao = new Conexao();
             return insercao.ExecutaNQ("insert into Materiais_Fornecedor (id_for, id_material) values (" + codigoFornecedor + "," + codigoMaterial + ")");
         }
+
+        public DataTable DataTableFornecedor(Boolean statusFornecedor)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor where status_for = " + statusFornecedor, "Fornecedor");
+        }
+
+        public Boolean ExisteMaterialFornecedor(int codigoFornecedor, int codigoMaterial)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.ExisteRegistro("select id_material_fornecedor from Materiais_Fornecedor where id_for = " + codigoFornecedor + " and id_material = " + codigoMaterial, "Materiais_Fornecedor");
+        }
+
+        //Pedido Compra
+        public int InserirPedidoCompra(int codigoFornecedor, int codigoLocal)
+        {
+            //Criando a requisição
+            Conexao insercao = new Conexao();
+            Boolean statusCriarPedidoCompra = insercao.ExecutaNQ("insert into Pedido_Compra (status_pedido_compra, id_fornecedor, id_local) values (false," + codigoFornecedor + "," + codigoLocal + ")");
+
+            if (statusCriarPedidoCompra == true)
+            {
+                try
+                {
+                    //Obtendo o id da transferência criada
+                    DataTable oDtUltimoPedidoCompra = new DataTable();
+
+                    oDtUltimoPedidoCompra = insercao.RetornarDataTable("select id_pedido_compra from Pedido_Compra where id_pedido_compra = (select max (id_pedido_compra) from Pedido_Compra)", "Pedido_Compra");
+                    int codigoPedidoCompra = int.Parse(oDtUltimoPedidoCompra.Rows[0]["id_pedido_compra"].ToString());
+
+                    return codigoPedidoCompra;
+                }
+
+                catch
+                {
+                    return 0;
+                }
+            }
+
+            else
+                return 0;
+        }
+
+        public Boolean InserirMateriaisPedidoCompra(int codigoPedidoCompra, int codigoMaterial, int quantidadeMaterial)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Materiais_PedidoCompra (quantidade_material, id_material, id_pedido_compra) values (" + quantidadeMaterial + "," + codigoMaterial + "," + codigoPedidoCompra + ")");
+        }
     }
 }

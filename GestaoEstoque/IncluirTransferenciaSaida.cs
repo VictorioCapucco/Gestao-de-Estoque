@@ -432,7 +432,6 @@ namespace GestaoEstoque
                 txtCodigoMaterial.Text = "  F1 para consultar";
                 txtCodigoMaterial.ForeColor = Color.Gray;
             }
-
         }
 
         private void btnConfirmarTipoTransferencia_Click(object sender, EventArgs e)
@@ -533,6 +532,8 @@ namespace GestaoEstoque
                     btnIncluirTransferência.Visible = true;
                     btnCancelar.Visible = true;
                     gpbMateriais.Visible = true;
+
+                    btnCancelar.Location = new Point(478, btnCancelar.Location.Y);
                 }
             }
 
@@ -560,6 +561,8 @@ namespace GestaoEstoque
                 btnIncluirTransferência.Visible = true;
                 btnCancelar.Visible = true;
                 gpbMateriais.Visible = true;
+
+                btnCancelar.Location = new Point(486, btnCancelar.Location.Y);
             }
 
             else

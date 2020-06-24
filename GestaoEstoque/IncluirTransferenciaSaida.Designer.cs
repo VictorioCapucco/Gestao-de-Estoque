@@ -389,7 +389,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(385, 428);
+            this.btnCancelar.Location = new System.Drawing.Point(381, 428);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(203, 32);
             this.btnCancelar.TabIndex = 12;
@@ -403,7 +403,7 @@
             this.btnIncluirTransferência.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIncluirTransferência.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTransferência.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTransferência.Location = new System.Drawing.Point(176, 428);
+            this.btnIncluirTransferência.Location = new System.Drawing.Point(269, 428);
             this.btnIncluirTransferência.Name = "btnIncluirTransferência";
             this.btnIncluirTransferência.Size = new System.Drawing.Size(203, 32);
             this.btnIncluirTransferência.TabIndex = 11;

@@ -233,6 +233,7 @@
             this.btnIncluirPedidoCompra.TabIndex = 4;
             this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
             this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
+            this.btnIncluirPedidoCompra.Click += new System.EventHandler(this.btnIncluirPedidoCompra_Click);
             // 
             // btnIncluirTransferenciaSaida
             // 

@@ -89,6 +89,12 @@
     <Compile Include="IncluirMaterial.Designer.cs">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncluirPedidoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirPedidoCompra.Designer.cs">
+      <DependentUpon>IncluirPedidoCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirTransferenciaEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirMaterial.resx">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirPedidoCompra.resx">
+      <DependentUpon>IncluirPedidoCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirTransferenciaEntrada.resx">
       <DependentUpon>IncluirTransferenciaEntrada.cs</DependentUpon>
