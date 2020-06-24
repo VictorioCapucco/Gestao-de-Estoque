@@ -309,36 +309,17 @@ namespace GestaoEstoque
 
                     if (statusInsercaoMaterial == true)
                     {
-                        Boolean statusAumentarEstoque = true;
-                        for (int i = (lstboxMateriais.Items.Count) - 1; i >= 0; i--)
-                        {
-                            var array = ((lstboxMateriais.Items[i]).ToString()).Split('-');
+                        MessageBox.Show("Pedido de compra inserido com sucesso. \n\n" +
+                                        "Codigo do pedido de compra: " + codigoPedidoCompra);
 
-                            codigoMaterial = int.Parse(array[0]);
-                            quantidadeMaterial = int.Parse(array[2]);
+                        //Recarregando a página para atualizar as ComboBox
+                        Point posicaoForm = new Point(100, 100);
+                        posicaoForm = this.Location;
 
-                            statusAumentarEstoque = camadaNegocios.AumentaEstoque(codigoMaterial, codigoLocal, quantidadeMaterial);
-                            if (statusAumentarEstoque == false)
-                                break;
-                        }
-
-                        if (statusAumentarEstoque == true)
-                        {
-                            MessageBox.Show("Pedido de compra inserido com sucesso. \n\n" +
-                                            "Codigo do pedido de compra: " + codigoPedidoCompra);
-
-                            //Recarregando a página para atualizar as ComboBox
-                            Point posicaoForm = new Point(100, 100);
-                            posicaoForm = this.Location;
-
-                            Form formIncluirPedidoCompra = new IncluirPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y);
-                            xClicked = false;
-                            this.Close();
-                            formIncluirPedidoCompra.Show();
-                        }
-
-                        else
-                            MessageBox.Show("Erro ao atualizar o estoque");
+                        Form formIncluirPedidoCompra = new IncluirPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y);
+                        xClicked = false;
+                        this.Close();
+                        formIncluirPedidoCompra.Show();
                     }
 
                     else
