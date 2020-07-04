@@ -146,5 +146,15 @@ namespace GestaoEstoque
             this.Hide();
             formIncluirPedidoCompra.Show();
         }
+
+        private void btnIncluirUnidadeMedida_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluirUnidadeMedida = new IncluirUnidadeMedida(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluirUnidadeMedida.Show();
+        }
     }
 }

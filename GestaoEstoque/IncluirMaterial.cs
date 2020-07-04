@@ -27,24 +27,38 @@ namespace GestaoEstoque
 
         private void IncluirMaterial_Load(object sender, EventArgs e)
         {
-            //Criando o DataTable
+            //Criando o DataTable dos tipos de material
             DataTable oDtTipoMaterial = new DataTable();
             oDtTipoMaterial.Clear();
             oDtTipoMaterial = camadaNegocios.DataTableTipoMaterial();
 
-            //Preenchendo a ComboBox
+            //Preenchendo a ComboBox dos tipos de material
             cmbTipoMaterial.DataSource = null;
             cmbTipoMaterial.DataSource = oDtTipoMaterial;
             cmbTipoMaterial.ValueMember = "id_tipo_material";
             cmbTipoMaterial.DisplayMember = "descricao_reduzida_tipo_material";
             cmbTipoMaterial.SelectedItem = "";
             cmbTipoMaterial.Refresh();
+
+            //Criando o DataTable dos tipos de material
+            DataTable oDtUnidade = new DataTable();
+            oDtUnidade.Clear();
+            oDtUnidade = camadaNegocios.DataTableUnidade();
+
+            //Preenchendo a ComboBox dos tipos de material
+            cmbUnidade.DataSource = null;
+            cmbUnidade.DataSource = oDtUnidade;
+            cmbUnidade.ValueMember = "id_unidade";
+            cmbUnidade.DisplayMember = "descricao_unidade";
+            cmbUnidade.SelectedItem = "";
+            cmbUnidade.Refresh();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             string nomeMaterial = txtNome.Text.ToString();
-            int idTipoMaterial;
+            int codigoTipoMaterial;
+            int codigoUnidade;
 
             //Fazendo a validação do texto
             Boolean statusNome = validar.Textos(nomeMaterial);
@@ -53,22 +67,31 @@ namespace GestaoEstoque
             {
                 if (cmbTipoMaterial.SelectedIndex != -1)
                 {
-                    idTipoMaterial = int.Parse(cmbTipoMaterial.SelectedValue.ToString());
+                    codigoTipoMaterial = int.Parse(cmbTipoMaterial.SelectedValue.ToString());
 
-                    //Pedindo à camda de negocios para incluir o material
-                    Boolean statusInsercao = camadaNegocios.InserirMaterial(nomeMaterial, true, idTipoMaterial);
-
-                    if (statusInsercao == true)
+                    if (cmbUnidade.SelectedIndex != -1)
                     {
-                        MessageBox.Show("Material incluído com sucesso!");
+                        codigoUnidade = int.Parse(cmbUnidade.SelectedValue.ToString());
 
-                        //Limpando os campos
-                        txtNome.Text = "";
-                        txtNome.Focus();
+                        //Pedindo à camda de negocios para incluir o material
+                        Boolean statusInsercao = camadaNegocios.InserirMaterial(nomeMaterial, true, codigoTipoMaterial, codigoUnidade);
+
+                        if (statusInsercao == true)
+                        {
+                            MessageBox.Show("Material incluído com sucesso!");
+
+                            //Limpando os campos
+                            txtNome.Text = "";
+                            txtNome.Focus();
+                        }
+
+                        else
+                            MessageBox.Show("Não foi possível incluir o material");
                     }
 
                     else
-                        MessageBox.Show("Não foi possível incluir o material");
+                        MessageBox.Show("Selecione uma unidade de medida");
+                   
                 }
 
                 else

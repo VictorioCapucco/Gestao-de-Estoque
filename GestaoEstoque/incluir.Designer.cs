@@ -47,6 +47,7 @@
             this.btnIncluirTransferenciaSaida = new System.Windows.Forms.Button();
             this.btnIncluirMaterial = new System.Windows.Forms.Button();
             this.btnIncluirFornecedor = new System.Windows.Forms.Button();
+            this.btnIncluirUnidadeMedida = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluir.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             // 
             // gpbIncluir
             // 
+            this.gpbIncluir.Controls.Add(this.btnIncluirUnidadeMedida);
             this.gpbIncluir.Controls.Add(this.btnIncluirUsuario);
             this.gpbIncluir.Controls.Add(this.btnIncluirTipoMaterial);
             this.gpbIncluir.Controls.Add(this.btnIncluirTipoTransferencia);
@@ -142,9 +144,9 @@
             // 
             this.btnIncluirUsuario.BackColor = System.Drawing.Color.Black;
             this.btnIncluirUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirUsuario.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirUsuario.Location = new System.Drawing.Point(391, 237);
+            this.btnIncluirUsuario.Location = new System.Drawing.Point(391, 218);
             this.btnIncluirUsuario.Name = "btnIncluirUsuario";
             this.btnIncluirUsuario.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirUsuario.TabIndex = 10;
@@ -156,9 +158,9 @@
             // 
             this.btnIncluirTipoMaterial.BackColor = System.Drawing.Color.Black;
             this.btnIncluirTipoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirTipoMaterial.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTipoMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTipoMaterial.Location = new System.Drawing.Point(100, 237);
+            this.btnIncluirTipoMaterial.Location = new System.Drawing.Point(100, 218);
             this.btnIncluirTipoMaterial.Name = "btnIncluirTipoMaterial";
             this.btnIncluirTipoMaterial.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTipoMaterial.TabIndex = 5;
@@ -170,9 +172,9 @@
             // 
             this.btnIncluirTipoTransferencia.BackColor = System.Drawing.Color.Black;
             this.btnIncluirTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirTipoTransferencia.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTipoTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTipoTransferencia.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTipoTransferencia.Location = new System.Drawing.Point(391, 189);
+            this.btnIncluirTipoTransferencia.Location = new System.Drawing.Point(391, 170);
             this.btnIncluirTipoTransferencia.Name = "btnIncluirTipoTransferencia";
             this.btnIncluirTipoTransferencia.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTipoTransferencia.TabIndex = 9;
@@ -184,9 +186,9 @@
             // 
             this.btnIncluirTransferenciaEntrada.BackColor = System.Drawing.Color.Black;
             this.btnIncluirTransferenciaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirTransferenciaEntrada.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTransferenciaEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTransferenciaEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTransferenciaEntrada.Location = new System.Drawing.Point(391, 141);
+            this.btnIncluirTransferenciaEntrada.Location = new System.Drawing.Point(391, 122);
             this.btnIncluirTransferenciaEntrada.Name = "btnIncluirTransferenciaEntrada";
             this.btnIncluirTransferenciaEntrada.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTransferenciaEntrada.TabIndex = 8;
@@ -198,9 +200,9 @@
             // 
             this.btnIncluirRecebimento.BackColor = System.Drawing.Color.Black;
             this.btnIncluirRecebimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirRecebimento.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirRecebimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirRecebimento.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirRecebimento.Location = new System.Drawing.Point(391, 93);
+            this.btnIncluirRecebimento.Location = new System.Drawing.Point(391, 74);
             this.btnIncluirRecebimento.Name = "btnIncluirRecebimento";
             this.btnIncluirRecebimento.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirRecebimento.TabIndex = 7;
@@ -211,9 +213,9 @@
             // 
             this.btnIncluirLocais.BackColor = System.Drawing.Color.Black;
             this.btnIncluirLocais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirLocais.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirLocais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirLocais.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirLocais.Location = new System.Drawing.Point(391, 45);
+            this.btnIncluirLocais.Location = new System.Drawing.Point(391, 26);
             this.btnIncluirLocais.Name = "btnIncluirLocais";
             this.btnIncluirLocais.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirLocais.TabIndex = 6;
@@ -225,9 +227,9 @@
             // 
             this.btnIncluirPedidoCompra.BackColor = System.Drawing.Color.Black;
             this.btnIncluirPedidoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirPedidoCompra.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirPedidoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirPedidoCompra.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(100, 189);
+            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(100, 170);
             this.btnIncluirPedidoCompra.Name = "btnIncluirPedidoCompra";
             this.btnIncluirPedidoCompra.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirPedidoCompra.TabIndex = 4;
@@ -239,9 +241,9 @@
             // 
             this.btnIncluirTransferenciaSaida.BackColor = System.Drawing.Color.Black;
             this.btnIncluirTransferenciaSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirTransferenciaSaida.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirTransferenciaSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTransferenciaSaida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTransferenciaSaida.Location = new System.Drawing.Point(100, 141);
+            this.btnIncluirTransferenciaSaida.Location = new System.Drawing.Point(100, 122);
             this.btnIncluirTransferenciaSaida.Name = "btnIncluirTransferenciaSaida";
             this.btnIncluirTransferenciaSaida.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTransferenciaSaida.TabIndex = 3;
@@ -253,9 +255,9 @@
             // 
             this.btnIncluirMaterial.BackColor = System.Drawing.Color.Black;
             this.btnIncluirMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirMaterial.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirMaterial.Location = new System.Drawing.Point(100, 93);
+            this.btnIncluirMaterial.Location = new System.Drawing.Point(100, 74);
             this.btnIncluirMaterial.Name = "btnIncluirMaterial";
             this.btnIncluirMaterial.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirMaterial.TabIndex = 2;
@@ -267,15 +269,29 @@
             // 
             this.btnIncluirFornecedor.BackColor = System.Drawing.Color.Black;
             this.btnIncluirFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirFornecedor.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirFornecedor.Location = new System.Drawing.Point(100, 45);
+            this.btnIncluirFornecedor.Location = new System.Drawing.Point(100, 26);
             this.btnIncluirFornecedor.Name = "btnIncluirFornecedor";
             this.btnIncluirFornecedor.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirFornecedor.TabIndex = 1;
             this.btnIncluirFornecedor.Text = "Incluir Fornecedor";
             this.btnIncluirFornecedor.UseVisualStyleBackColor = false;
             this.btnIncluirFornecedor.Click += new System.EventHandler(this.btnIncluirFornecedor_Click);
+            // 
+            // btnIncluirUnidadeMedida
+            // 
+            this.btnIncluirUnidadeMedida.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirUnidadeMedida.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirUnidadeMedida.Location = new System.Drawing.Point(245, 256);
+            this.btnIncluirUnidadeMedida.Name = "btnIncluirUnidadeMedida";
+            this.btnIncluirUnidadeMedida.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirUnidadeMedida.TabIndex = 11;
+            this.btnIncluirUnidadeMedida.Text = "Incluir Unidade de Medida";
+            this.btnIncluirUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnIncluirUnidadeMedida.Click += new System.EventHandler(this.btnIncluirUnidadeMedida_Click);
             // 
             // Incluir
             // 
@@ -319,6 +335,7 @@
         private System.Windows.Forms.Button btnIncluirFornecedor;
         private System.Windows.Forms.Button btnIncluirUsuario;
         private System.Windows.Forms.Button btnIncluirTipoMaterial;
+        private System.Windows.Forms.Button btnIncluirUnidadeMedida;
     }
 }
 

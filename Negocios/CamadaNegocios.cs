@@ -62,10 +62,10 @@ namespace Negocios
         }
 
         //Material
-        public Boolean InserirMaterial(string nomeMaterial, Boolean statusMaterial, int idTipoMaterial)
+        public Boolean InserirMaterial(string nomeMaterial, Boolean statusMaterial, int codigoTipoMaterial, int codigoUnidade)
         {
             Conexao insercao = new Conexao();
-            return insercao.ExecutaNQ("insert into Material (nome_material, status_material, id_tipo_material) values('" + nomeMaterial + "'," + statusMaterial + "," + idTipoMaterial + ")");
+            return insercao.ExecutaNQ("insert into Material (nome_material, status_material, id_tipo_material, id_unidade) values('" + nomeMaterial + "'," + statusMaterial + "," + codigoTipoMaterial + "," + codigoUnidade + ")");
         }
 
         public Boolean ExisteMaterialLocal(int codigoMaterial, int codigoLocal)
@@ -359,5 +359,20 @@ namespace Negocios
             Conexao insercao = new Conexao();
             return insercao.ExecutaNQ("insert into Materiais_PedidoCompra (quantidade_material, id_material, id_pedido_compra) values (" + quantidadeMaterial + "," + codigoMaterial + "," + codigoPedidoCompra + ")");
         }
+
+
+        //Unidade de Medida
+        public Boolean InserirUnidadeMedida(string descricaoUnidade, string siglaUnidade)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Unidade_Medida (descricao_unidade, sigla_unidade, status_unidade) values ('" + descricaoUnidade + "','" + siglaUnidade + "',true)");
+        }
+
+        public DataTable DataTableUnidade()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_unidade, descricao_unidade from Unidade_Medida where status_unidade = true", "Unidade_Medida");
+        }
+
     }
 }

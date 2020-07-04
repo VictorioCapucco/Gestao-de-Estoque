@@ -179,7 +179,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(369, 214);
             this.btnCancelar.Name = "btnCancelar";
@@ -193,7 +193,7 @@
             // 
             this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
             this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluir.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluir.ForeColor = System.Drawing.Color.White;
             this.btnIncluir.Location = new System.Drawing.Point(186, 214);
             this.btnIncluir.Name = "btnIncluir";
