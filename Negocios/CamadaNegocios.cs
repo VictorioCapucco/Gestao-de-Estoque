@@ -360,6 +360,29 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Materiais_PedidoCompra (quantidade_material, id_material, id_pedido_compra) values (" + quantidadeMaterial + "," + codigoMaterial + "," + codigoPedidoCompra + ")");
         }
 
+        public DataTable DataTablePedidoCompra(Boolean statusPedidoCompra, int codigoLocal)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select PC.id_pedido_compra as Codigo, F.nome_for as Fornecedor from Pedido_Compra as PC inner join Fornecedor as F on PC.id_fornecedor = F.id_for where PC.status_pedido_compra = " + statusPedidoCompra + " and PC.id_local = " + codigoLocal, "Pedido_Compra");
+        }
+
+        public DataTable DataTableMateriaisPedidoCompra(int codigoPedidoCompra)
+        {
+            Conexao consulta = new Conexao();
+
+            return consulta.RetornarDataTable("select MPC.id_material as Codigo, M.nome_material as Nome, MPC.quantidade_material as Quantidade " +
+                                              "from Materiais_PedidoCompra as MPC " +
+                                              "inner join Material as M on MPC.id_material = M.id_material " +
+                                              "where MPC.id_pedido_compra = " + codigoPedidoCompra +
+                                              " order by MPC.id_material asc", "Materiais_PedidoCompra");
+        }
+
+        public Boolean AtualizarPedidoCopmra(int codigoPedidoCompra)
+        {
+            Conexao atualizacao = new Conexao();
+            return atualizacao.ExecutaNQ("update Pedido_Compra set status_pedido_compra = true where id_pedido_compra = " + codigoPedidoCompra);
+        }
+
 
         //Unidade de Medida
         public Boolean InserirUnidadeMedida(string descricaoUnidade, string siglaUnidade)

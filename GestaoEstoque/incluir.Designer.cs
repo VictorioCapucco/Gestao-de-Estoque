@@ -37,6 +37,7 @@
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluir = new System.Windows.Forms.GroupBox();
+            this.btnIncluirUnidadeMedida = new System.Windows.Forms.Button();
             this.btnIncluirUsuario = new System.Windows.Forms.Button();
             this.btnIncluirTipoMaterial = new System.Windows.Forms.Button();
             this.btnIncluirTipoTransferencia = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btnIncluirTransferenciaSaida = new System.Windows.Forms.Button();
             this.btnIncluirMaterial = new System.Windows.Forms.Button();
             this.btnIncluirFornecedor = new System.Windows.Forms.Button();
-            this.btnIncluirUnidadeMedida = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluir.SuspendLayout();
             this.SuspendLayout();
@@ -140,6 +140,20 @@
             this.gpbIncluir.TabIndex = 11;
             this.gpbIncluir.TabStop = false;
             // 
+            // btnIncluirUnidadeMedida
+            // 
+            this.btnIncluirUnidadeMedida.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirUnidadeMedida.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirUnidadeMedida.Location = new System.Drawing.Point(245, 256);
+            this.btnIncluirUnidadeMedida.Name = "btnIncluirUnidadeMedida";
+            this.btnIncluirUnidadeMedida.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirUnidadeMedida.TabIndex = 11;
+            this.btnIncluirUnidadeMedida.Text = "Incluir Unidade de Medida";
+            this.btnIncluirUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnIncluirUnidadeMedida.Click += new System.EventHandler(this.btnIncluirUnidadeMedida_Click);
+            // 
             // btnIncluirUsuario
             // 
             this.btnIncluirUsuario.BackColor = System.Drawing.Color.Black;
@@ -208,6 +222,7 @@
             this.btnIncluirRecebimento.TabIndex = 7;
             this.btnIncluirRecebimento.Text = "Incluir Recebimento";
             this.btnIncluirRecebimento.UseVisualStyleBackColor = false;
+            this.btnIncluirRecebimento.Click += new System.EventHandler(this.btnIncluirRecebimento_Click);
             // 
             // btnIncluirLocais
             // 
@@ -278,20 +293,6 @@
             this.btnIncluirFornecedor.Text = "Incluir Fornecedor";
             this.btnIncluirFornecedor.UseVisualStyleBackColor = false;
             this.btnIncluirFornecedor.Click += new System.EventHandler(this.btnIncluirFornecedor_Click);
-            // 
-            // btnIncluirUnidadeMedida
-            // 
-            this.btnIncluirUnidadeMedida.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirUnidadeMedida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirUnidadeMedida.Location = new System.Drawing.Point(245, 256);
-            this.btnIncluirUnidadeMedida.Name = "btnIncluirUnidadeMedida";
-            this.btnIncluirUnidadeMedida.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirUnidadeMedida.TabIndex = 11;
-            this.btnIncluirUnidadeMedida.Text = "Incluir Unidade de Medida";
-            this.btnIncluirUnidadeMedida.UseVisualStyleBackColor = false;
-            this.btnIncluirUnidadeMedida.Click += new System.EventHandler(this.btnIncluirUnidadeMedida_Click);
             // 
             // Incluir
             // 

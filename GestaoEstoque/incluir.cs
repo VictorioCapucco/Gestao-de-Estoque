@@ -156,5 +156,15 @@ namespace GestaoEstoque
             this.Hide();
             formIncluirUnidadeMedida.Show();
         }
+
+        private void btnIncluirRecebimento_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluirRecebimento = new IncluirRecebimento(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formIncluirRecebimento.Show();
+        }
     }
 }
