@@ -47,6 +47,22 @@ namespace Negocios
             return atualizar.ExecutaNQ("update Locais set status_obra = true where id_local = " + codigoLocal);
         }
 
+        public string ExisteLocal(int codigoLocal)
+        {
+            Conexao consulta = new Conexao();
+            DataTable oDtLocal = new DataTable();
+            oDtLocal = consulta.RetornarDataTable("select descricao_local from Locais where id_local = " + codigoLocal + " and obra = false and status_local = true", " Locais");
+
+            string nomeLocal;
+
+            if (oDtLocal.Rows.Count > 0)
+                nomeLocal = oDtLocal.Rows[0]["descricao_local"].ToString();
+
+            else
+                nomeLocal = "";
+
+            return nomeLocal;
+        }
 
         //Usuarios
         public Boolean InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
@@ -62,10 +78,32 @@ namespace Negocios
         }
 
         //Material
-        public Boolean InserirMaterial(string nomeMaterial, Boolean statusMaterial, int codigoTipoMaterial, int codigoUnidade)
+        public int InserirMaterial(string nomeMaterial, Boolean statusMaterial, int codigoTipoMaterial, int codigoUnidade)
         {
             Conexao insercao = new Conexao();
-            return insercao.ExecutaNQ("insert into Material (nome_material, status_material, id_tipo_material, id_unidade) values('" + nomeMaterial + "'," + statusMaterial + "," + codigoTipoMaterial + "," + codigoUnidade + ")");
+            Boolean statusInserirMaterial = insercao.ExecutaNQ("insert into Material (nome_material, status_material, id_tipo_material, id_unidade) values('" + nomeMaterial + "'," + statusMaterial + "," + codigoTipoMaterial + "," + codigoUnidade + ")");
+
+            if (statusInserirMaterial == true)
+            {
+                try
+                {
+                    //Obtendo o id do ultimo material criado
+                    DataTable oDtUltimoMaterial = new DataTable();
+
+                    oDtUltimoMaterial = insercao.RetornarDataTable("select id_material from Material where id_material = (select max (id_material) from Material)", "Material");
+                    int codigoMaterial = int.Parse(oDtUltimoMaterial.Rows[0]["id_material"].ToString());
+
+                    return codigoMaterial;
+                }
+
+                catch
+                {
+                    return 0;
+                }
+            }
+
+            else
+                return 0;
         }
 
         public Boolean ExisteMaterialLocal(int codigoMaterial, int codigoLocal)
@@ -90,6 +128,12 @@ namespace Negocios
                 nomeMaterial = "";
 
             return nomeMaterial;
+        }
+
+        public Boolean InserirMaterialLocal(int codigoMaterial, int codigoLocal)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values (0," + codigoMaterial + "," + codigoLocal + ")");
         }
 
 

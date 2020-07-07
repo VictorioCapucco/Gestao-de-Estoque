@@ -268,7 +268,7 @@
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAjuda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjuda.ForeColor = System.Drawing.Color.White;
-            this.btnAjuda.Location = new System.Drawing.Point(388, 22);
+            this.btnAjuda.Location = new System.Drawing.Point(356, 22);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.btnAjuda.Size = new System.Drawing.Size(26, 26);
@@ -295,7 +295,7 @@
             // 
             this.txtCodigoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoMaterial.ForeColor = System.Drawing.Color.Gray;
-            this.txtCodigoMaterial.Location = new System.Drawing.Point(232, 22);
+            this.txtCodigoMaterial.Location = new System.Drawing.Point(200, 22);
             this.txtCodigoMaterial.Name = "txtCodigoMaterial";
             this.txtCodigoMaterial.Size = new System.Drawing.Size(150, 26);
             this.txtCodigoMaterial.TabIndex = 6;
@@ -312,8 +312,8 @@
             this.lblCodigoMaterial.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoMaterial.Location = new System.Drawing.Point(19, 20);
             this.lblCodigoMaterial.Name = "lblCodigoMaterial";
-            this.lblCodigoMaterial.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
-            this.lblCodigoMaterial.Size = new System.Drawing.Size(194, 28);
+            this.lblCodigoMaterial.Padding = new System.Windows.Forms.Padding(5);
+            this.lblCodigoMaterial.Size = new System.Drawing.Size(174, 28);
             this.lblCodigoMaterial.TabIndex = 19;
             this.lblCodigoMaterial.Text = "Codigo do material";
             // 

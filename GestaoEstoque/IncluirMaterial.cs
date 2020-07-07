@@ -73,20 +73,58 @@ namespace GestaoEstoque
                     {
                         codigoUnidade = int.Parse(cmbUnidade.SelectedValue.ToString());
 
-                        //Pedindo à camda de negocios para incluir o material
-                        Boolean statusInsercao = camadaNegocios.InserirMaterial(nomeMaterial, true, codigoTipoMaterial, codigoUnidade);
-
-                        if (statusInsercao == true)
+                        if (lstboxLocais.Items.Count > 0)
                         {
-                            MessageBox.Show("Material incluído com sucesso!");
+                            //Pedindo à camda de negocios para incluir o material - se retornar 0, é porque deu erro
+                            int codigoMaterial = camadaNegocios.InserirMaterial(nomeMaterial, true, codigoTipoMaterial, codigoUnidade);
 
-                            //Limpando os campos
-                            txtNome.Text = "";
-                            txtNome.Focus();
+                            if (codigoMaterial != 0)
+                            {
+                                //Incluindo o material nos locais
+                                Boolean statusMaterialLocal = true;
+                                int codigoLocal;
+
+                                for (int index = (lstboxLocais.Items.Count) - 1; index >= 0; index--)
+                                {
+                                    var array = ((lstboxLocais.Items[index]).ToString()).Split('-');
+                                    codigoLocal = int.Parse(array[0].ToString());
+
+                                    statusMaterialLocal = camadaNegocios.InserirMaterialLocal(codigoMaterial, codigoLocal);
+
+                                    if (statusMaterialLocal == false)
+                                        break;
+                                }
+
+                                if (statusMaterialLocal == true)
+                                {
+                                    MessageBox.Show("Material incluído com sucesso!");
+
+                                    //Limpando os campos
+                                    txtNome.Text = "";
+                                    txtNome.Focus();
+                                    lstboxLocais.Items.Clear();
+                                }
+
+                                else
+                                {
+                                    MessageBox.Show("Material incluído. Erro ao adicionar os materiais nos locais. \n\n" +
+                                                    "Altere se necessário na consulta do material");
+
+                                    //Limpando os campos
+                                    txtNome.Text = "";
+                                    txtNome.Focus();
+                                    lstboxLocais.Items.Clear();
+                                }
+
+                            }
+
+                            else
+                                MessageBox.Show("Não foi possível incluir o material");
                         }
 
+
                         else
-                            MessageBox.Show("Não foi possível incluir o material");
+                            MessageBox.Show("Insira pelo menos 1 local");
                     }
 
                     else
@@ -175,6 +213,114 @@ namespace GestaoEstoque
 
                 btnIncluir.Focus();
             }
+        }
+
+        private void btnAdicionarLocal_Click(object sender, EventArgs e)
+        {
+            string strCodigoLocal = txtCodigoLocal.Text.ToString();
+
+            //Fazendo a validação do texto
+            Boolean statusCodigoLocal = validar.Textos(strCodigoLocal);
+            if (statusCodigoLocal == true)
+            {
+                //Verificando se é um número inteiro - Se retornar 0, é porque o código é inválido
+                int codigoLocal = validar.IsNumero(strCodigoLocal);
+
+                if (codigoLocal != 0)
+                {
+                    //Verificando se o local existe - Se o nome do local retornar como vazio, então ele não existe
+                    string nomeLocal = camadaNegocios.ExisteLocal(codigoLocal);
+                    if (nomeLocal != "")
+                    {
+                        Boolean encontrouLocalListBox = false;
+                        string item;
+                        int index;
+
+                        //Verificando se o local já está na listbox
+                        for (index = (lstboxLocais.Items.Count) - 1; index >= 0; index--)
+                        {
+                            item = lstboxLocais.Items[index].ToString();
+                            var array = item.Split('-');
+
+                            if (codigoLocal == int.Parse(array[0]))
+                            {
+                                encontrouLocalListBox = true;
+                                break;
+                            }
+                        }
+
+                        string stringCodigoLocal = codigoLocal.ToString();
+
+                        //Formatando os dados para lstbox
+                        while (stringCodigoLocal.Length < 6)
+                            stringCodigoLocal = '0' + stringCodigoLocal;
+
+
+                        //Caso o local não esteja na listbox, iremos adiciona-lo
+                        if (encontrouLocalListBox == false)
+                        {
+                            lstboxLocais.Items.Add(stringCodigoLocal + " - " + nomeLocal);
+                        }
+
+                        //Caso contrário, nada ocorre
+
+                        txtCodigoLocal.Text = "";
+                        txtCodigoLocal.Focus();
+                    }
+
+                    else
+                        MessageBox.Show("Local não existente");
+                }
+
+                else
+                    MessageBox.Show("Código de local inválido");
+            }
+
+            else
+                MessageBox.Show("Código de local inválido");
+        }
+
+        private void txtCodigoLocal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Evitando o barulho de "erro" do windows
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                btnAdicionarLocal.PerformClick();
+            }
+        }
+
+        private void txtCodigoLocal_Enter(object sender, EventArgs e)
+        {
+            if (txtCodigoLocal.Text == "  F1 para consultar" && txtCodigoLocal.ForeColor == Color.Gray)
+            {
+                txtCodigoLocal.Text = "";
+                txtCodigoLocal.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtCodigoLocal_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoLocal.Text == "")
+            {
+                txtCodigoLocal.Text = "  F1 para consultar";
+                txtCodigoLocal.ForeColor = Color.Gray;
+            }
+        }
+
+        private void btnLixeira_Click(object sender, EventArgs e)
+        {
+            if (lstboxLocais.SelectedIndex != -1)
+            {
+                lstboxLocais.Items.RemoveAt(lstboxLocais.SelectedIndex);
+            }
+        }
+
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este material só existirá nos locais que você determinar");
         }
     }
 }
