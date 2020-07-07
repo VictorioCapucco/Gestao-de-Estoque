@@ -79,5 +79,15 @@ namespace GestaoEstoque.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Seta_Esquerda {
+            get {
+                object obj = ResourceManager.GetObject("Seta_Esquerda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

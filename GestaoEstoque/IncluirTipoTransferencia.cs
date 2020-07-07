@@ -37,7 +37,7 @@ namespace GestaoEstoque
             if (statusDescricao == true)
             {
                 //Pedindo à camada de negócios para adicionar o tipo de transferencia
-                Boolean statusInsercao = camadaNegocios.InserirTipoSaida(descricao, true, saida);
+                Boolean statusInsercao = camadaNegocios.InserirTipoTransferencia(descricao, true, saida);
 
                 if (statusInsercao == true)
                 {

@@ -217,11 +217,27 @@ namespace Negocios
             return consulta.RetornarDataTable("select id_tipo_transferencia, descricao_tipo_transferencia from Tipo_Transferencia where status_tipo_transferencia = " + statusTipoSaida + " and saida = " + saida , "Tipo_Transferencia");
         }
 
-        public Boolean InserirTipoSaida(string descricaoTipoSaida, Boolean statusTipoSaida, Boolean saida)
+        public Boolean InserirTipoTransferencia(string descricaoTipoSaida, Boolean statusTipoSaida, Boolean saida)
         {
             Conexao insercao = new Conexao();
             //return insercao.ExecutaNQ("insert into Tipo_Saida (descricao_tipo_saida, status_tipo_saida) values('" + descricao_tipo_saida + "'," + status_tipo_saida + ")");
             return insercao.ExecutaNQ("insert into Tipo_Transferencia (descricao_tipo_transferencia, status_tipo_transferencia, saida) values('" + descricaoTipoSaida + "'," + statusTipoSaida + ", " + saida + ')');
+        }
+
+        public DataTable DataTableTipoTransferencia()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_tipo_transferencia, descricao_tipo_transferencia, status_tipo_transferencia from Tipo_Transferencia", "Tipo_Transferencia");
+        }
+
+        public Boolean AlterarTipoTransferencia(int codigoTipoTransferencia, string descricaoTipoTransferencia, Boolean statusTipoTransferencia)
+        {
+            Conexao alteracao = new Conexao();
+
+            if (statusTipoTransferencia == true)
+                return alteracao.ExecutaNQ("update Tipo_Transferencia set descricao_tipo_transferencia = '" + descricaoTipoTransferencia + "', status_tipo_transferencia = true where id_tipo_transferencia = " + codigoTipoTransferencia);
+            else
+                return alteracao.ExecutaNQ("update Tipo_Transferencia set descricao_tipo_transferencia = '" + descricaoTipoTransferencia + "', status_tipo_transferencia = false where id_tipo_transferencia = " + codigoTipoTransferencia);
         }
 
 
