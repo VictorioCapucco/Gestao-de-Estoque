@@ -451,11 +451,23 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Unidade_Medida (descricao_unidade, sigla_unidade, status_unidade) values ('" + descricaoUnidade + "','" + siglaUnidade + "',true)");
         }
 
-        public DataTable DataTableUnidade()
+        public DataTable DataTableUnidade(Boolean filtroStatus)
         {
             Conexao consulta = new Conexao();
-            return consulta.RetornarDataTable("select id_unidade, descricao_unidade from Unidade_Medida where status_unidade = true", "Unidade_Medida");
+            if (filtroStatus == true)
+                return consulta.RetornarDataTable("select id_unidade, descricao_unidade from Unidade_Medida where status_unidade = true", "Unidade_Medida");
+            else
+                return consulta.RetornarDataTable("select id_unidade, descricao_unidade, sigla_unidade, status_unidade from Unidade_Medida", "Unidade_Medida");
         }
 
+        public Boolean AlterarUnidadeMedida(int codigoUnidade, string descricaoUnidade, string siglaUnidade, Boolean statusUnidade)
+        {
+            Conexao alteracao = new Conexao();
+
+            if (statusUnidade == true)
+                return alteracao.ExecutaNQ("update Unidade_Medida set descricao_unidade = '" + descricaoUnidade + "', sigla_unidade = '" + siglaUnidade + "', status_unidade = true where id_unidade = " + codigoUnidade);
+            else
+                return alteracao.ExecutaNQ("update Unidade_Medida set descricao_unidade = '" + descricaoUnidade + "', sigla_unidade = '" + siglaUnidade + "', status_unidade = false where id_unidade = " + codigoUnidade);
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.btnConsultarTipoTransferencia = new System.Windows.Forms.Button();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
             this.btnConsultarSaida = new System.Windows.Forms.Button();
             this.btnConsultarRecebimento = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.btnConsultarRequisicaoSaida = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
-            this.btnConsultarTipoTransferencia = new System.Windows.Forms.Button();
+            this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             // gpbConsultar
             // 
             this.gpbConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.gpbConsultar.Controls.Add(this.btnConsultarUnidadeMedida);
             this.gpbConsultar.Controls.Add(this.btnConsultarTipoTransferencia);
             this.gpbConsultar.Controls.Add(this.btnConsultarUsuario);
             this.gpbConsultar.Controls.Add(this.btnConsultarSaida);
@@ -136,6 +138,20 @@
             this.gpbConsultar.Size = new System.Drawing.Size(717, 294);
             this.gpbConsultar.TabIndex = 2;
             this.gpbConsultar.TabStop = false;
+            // 
+            // btnConsultarTipoTransferencia
+            // 
+            this.btnConsultarTipoTransferencia.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarTipoTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarTipoTransferencia.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarTipoTransferencia.Location = new System.Drawing.Point(100, 240);
+            this.btnConsultarTipoTransferencia.Name = "btnConsultarTipoTransferencia";
+            this.btnConsultarTipoTransferencia.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarTipoTransferencia.TabIndex = 11;
+            this.btnConsultarTipoTransferencia.Text = "Consultar Tipo de transferência";
+            this.btnConsultarTipoTransferencia.UseVisualStyleBackColor = false;
+            this.btnConsultarTipoTransferencia.Click += new System.EventHandler(this.btnConsultarTipoTransferencia_Click);
             // 
             // btnConsultarUsuario
             // 
@@ -241,19 +257,19 @@
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
             // 
-            // btnConsultarTipoTransferencia
+            // btnConsultarUnidadeMedida
             // 
-            this.btnConsultarTipoTransferencia.BackColor = System.Drawing.Color.Black;
-            this.btnConsultarTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultarTipoTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarTipoTransferencia.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarTipoTransferencia.Location = new System.Drawing.Point(100, 240);
-            this.btnConsultarTipoTransferencia.Name = "btnConsultarTipoTransferencia";
-            this.btnConsultarTipoTransferencia.Size = new System.Drawing.Size(241, 32);
-            this.btnConsultarTipoTransferencia.TabIndex = 11;
-            this.btnConsultarTipoTransferencia.Text = "Consultar Tipo de transferência";
-            this.btnConsultarTipoTransferencia.UseVisualStyleBackColor = false;
-            this.btnConsultarTipoTransferencia.Click += new System.EventHandler(this.btnConsultarTipoTransferencia_Click);
+            this.btnConsultarUnidadeMedida.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarUnidadeMedida.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarUnidadeMedida.Location = new System.Drawing.Point(391, 240);
+            this.btnConsultarUnidadeMedida.Name = "btnConsultarUnidadeMedida";
+            this.btnConsultarUnidadeMedida.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarUnidadeMedida.TabIndex = 12;
+            this.btnConsultarUnidadeMedida.Text = "Consultar Unidade de medida";
+            this.btnConsultarUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnConsultarUnidadeMedida.Click += new System.EventHandler(this.btnConsultarUnidadeMedida_Click);
             // 
             // Consultar
             // 
@@ -295,5 +311,6 @@
         private System.Windows.Forms.Button btnConsultarMaterial;
         private System.Windows.Forms.Button btnConsultarFornecedor;
         private System.Windows.Forms.Button btnConsultarTipoTransferencia;
+        private System.Windows.Forms.Button btnConsultarUnidadeMedida;
     }
 }

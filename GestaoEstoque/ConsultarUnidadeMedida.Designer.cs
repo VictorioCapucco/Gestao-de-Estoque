@@ -1,6 +1,6 @@
 ﻿namespace GestaoEstoque
 {
-    partial class ConsultarTipoTransferencia
+    partial class ConsultarUnidadeMedida
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarTipoTransferencia));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarUnidadeMedida));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -38,8 +38,8 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.cmbTipoTransferencia = new System.Windows.Forms.ComboBox();
-            this.lblTipoTransferencia = new System.Windows.Forms.Label();
+            this.cmbUnidadeMedida = new System.Windows.Forms.ComboBox();
+            this.lblUnidadeMedida = new System.Windows.Forms.Label();
             this.panelStatus = new System.Windows.Forms.Panel();
             this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.rdbInativo = new System.Windows.Forms.RadioButton();
@@ -47,6 +47,8 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtSigla = new System.Windows.Forms.TextBox();
+            this.lblSigla = new System.Windows.Forms.Label();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.panelStatus.SuspendLayout();
@@ -65,7 +67,7 @@
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
-            this.toolStripMenu.TabIndex = 11;
+            this.toolStripMenu.TabIndex = 12;
             // 
             // toolStripVoltar
             // 
@@ -123,9 +125,11 @@
             // gpbConsultar
             // 
             this.gpbConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.gpbConsultar.Controls.Add(this.txtSigla);
+            this.gpbConsultar.Controls.Add(this.lblSigla);
             this.gpbConsultar.Controls.Add(this.btnConsultar);
-            this.gpbConsultar.Controls.Add(this.cmbTipoTransferencia);
-            this.gpbConsultar.Controls.Add(this.lblTipoTransferencia);
+            this.gpbConsultar.Controls.Add(this.cmbUnidadeMedida);
+            this.gpbConsultar.Controls.Add(this.lblUnidadeMedida);
             this.gpbConsultar.Controls.Add(this.panelStatus);
             this.gpbConsultar.Controls.Add(this.txtDescricao);
             this.gpbConsultar.Controls.Add(this.lblDescricao);
@@ -133,8 +137,8 @@
             this.gpbConsultar.Controls.Add(this.btnAlterar);
             this.gpbConsultar.Location = new System.Drawing.Point(112, 113);
             this.gpbConsultar.Name = "gpbConsultar";
-            this.gpbConsultar.Size = new System.Drawing.Size(717, 294);
-            this.gpbConsultar.TabIndex = 8;
+            this.gpbConsultar.Size = new System.Drawing.Size(717, 311);
+            this.gpbConsultar.TabIndex = 11;
             this.gpbConsultar.TabStop = false;
             // 
             // btnConsultar
@@ -151,37 +155,37 @@
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // cmbTipoTransferencia
+            // cmbUnidadeMedida
             // 
-            this.cmbTipoTransferencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoTransferencia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoTransferencia.FormattingEnabled = true;
-            this.cmbTipoTransferencia.Location = new System.Drawing.Point(346, 38);
-            this.cmbTipoTransferencia.Name = "cmbTipoTransferencia";
-            this.cmbTipoTransferencia.Size = new System.Drawing.Size(212, 26);
-            this.cmbTipoTransferencia.TabIndex = 0;
+            this.cmbUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUnidadeMedida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUnidadeMedida.FormattingEnabled = true;
+            this.cmbUnidadeMedida.Location = new System.Drawing.Point(346, 38);
+            this.cmbUnidadeMedida.Name = "cmbUnidadeMedida";
+            this.cmbUnidadeMedida.Size = new System.Drawing.Size(212, 26);
+            this.cmbUnidadeMedida.TabIndex = 0;
             // 
-            // lblTipoTransferencia
+            // lblUnidadeMedida
             // 
-            this.lblTipoTransferencia.AutoSize = true;
-            this.lblTipoTransferencia.BackColor = System.Drawing.Color.Gray;
-            this.lblTipoTransferencia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoTransferencia.Location = new System.Drawing.Point(130, 36);
-            this.lblTipoTransferencia.Name = "lblTipoTransferencia";
-            this.lblTipoTransferencia.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.lblTipoTransferencia.Size = new System.Drawing.Size(197, 28);
-            this.lblTipoTransferencia.TabIndex = 9;
-            this.lblTipoTransferencia.Text = "Tipo Transferência";
+            this.lblUnidadeMedida.AutoSize = true;
+            this.lblUnidadeMedida.BackColor = System.Drawing.Color.Gray;
+            this.lblUnidadeMedida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnidadeMedida.Location = new System.Drawing.Point(130, 36);
+            this.lblUnidadeMedida.Name = "lblUnidadeMedida";
+            this.lblUnidadeMedida.Padding = new System.Windows.Forms.Padding(29, 5, 29, 5);
+            this.lblUnidadeMedida.Size = new System.Drawing.Size(197, 28);
+            this.lblUnidadeMedida.TabIndex = 7;
+            this.lblUnidadeMedida.Text = "Unidade Medida";
             // 
             // panelStatus
             // 
             this.panelStatus.BackColor = System.Drawing.Color.Gray;
             this.panelStatus.Controls.Add(this.rdbAtivo);
             this.panelStatus.Controls.Add(this.rdbInativo);
-            this.panelStatus.Location = new System.Drawing.Point(133, 129);
+            this.panelStatus.Location = new System.Drawing.Point(133, 172);
             this.panelStatus.Name = "panelStatus";
             this.panelStatus.Size = new System.Drawing.Size(425, 46);
-            this.panelStatus.TabIndex = 7;
+            this.panelStatus.TabIndex = 10;
             this.panelStatus.Visible = false;
             // 
             // rdbAtivo
@@ -211,11 +215,11 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(346, 85);
-            this.txtDescricao.MaxLength = 20;
+            this.txtDescricao.Location = new System.Drawing.Point(346, 91);
+            this.txtDescricao.MaxLength = 15;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 27);
-            this.txtDescricao.TabIndex = 2;
+            this.txtDescricao.TabIndex = 1;
             this.txtDescricao.Visible = false;
             // 
             // lblDescricao
@@ -223,11 +227,11 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.BackColor = System.Drawing.Color.Gray;
             this.lblDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(130, 84);
+            this.lblDescricao.Location = new System.Drawing.Point(130, 90);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Padding = new System.Windows.Forms.Padding(55, 5, 56, 5);
             this.lblDescricao.Size = new System.Drawing.Size(197, 28);
-            this.lblDescricao.TabIndex = 10;
+            this.lblDescricao.TabIndex = 8;
             this.lblDescricao.Text = "Descrição";
             this.lblDescricao.Visible = false;
             // 
@@ -237,7 +241,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(377, 203);
+            this.btnCancelar.Location = new System.Drawing.Point(375, 245);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 32);
             this.btnCancelar.TabIndex = 6;
@@ -252,7 +256,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(194, 203);
+            this.btnAlterar.Location = new System.Drawing.Point(192, 245);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(154, 32);
             this.btnAlterar.TabIndex = 5;
@@ -261,7 +265,30 @@
             this.btnAlterar.Visible = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // ConsultarTipoTransferencia
+            // txtSigla
+            // 
+            this.txtSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigla.Location = new System.Drawing.Point(346, 132);
+            this.txtSigla.MaxLength = 3;
+            this.txtSigla.Name = "txtSigla";
+            this.txtSigla.Size = new System.Drawing.Size(212, 27);
+            this.txtSigla.TabIndex = 2;
+            this.txtSigla.Visible = false;
+            // 
+            // lblSigla
+            // 
+            this.lblSigla.AutoSize = true;
+            this.lblSigla.BackColor = System.Drawing.Color.Gray;
+            this.lblSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSigla.Location = new System.Drawing.Point(130, 131);
+            this.lblSigla.Name = "lblSigla";
+            this.lblSigla.Padding = new System.Windows.Forms.Padding(74, 5, 75, 5);
+            this.lblSigla.Size = new System.Drawing.Size(197, 28);
+            this.lblSigla.TabIndex = 9;
+            this.lblSigla.Text = "Sigla";
+            this.lblSigla.Visible = false;
+            // 
+            // ConsultarUnidadeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,11 +297,11 @@
             this.Controls.Add(this.gpbConsultar);
             this.Controls.Add(this.toolStripMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "ConsultarTipoTransferencia";
+            this.Name = "ConsultarUnidadeMedida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Consultar Tipo de Transferencia";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarTipoTransferencia_FormClosing);
-            this.Load += new System.EventHandler(this.ConsultarTipoTransferencia_Load);
+            this.Text = "Consultar Unidade de Medida";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarUnidadeMedida_FormClosing);
+            this.Load += new System.EventHandler(this.ConsultarUnidadeMedida_Load);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
             this.gpbConsultar.ResumeLayout(false);
@@ -289,13 +316,16 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStripMenu;
+        private System.Windows.Forms.ToolStripButton toolStripVoltar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripIncluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripConsultar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripVoltar;
         private System.Windows.Forms.GroupBox gpbConsultar;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.ComboBox cmbUnidadeMedida;
+        private System.Windows.Forms.Label lblUnidadeMedida;
         private System.Windows.Forms.Panel panelStatus;
         private System.Windows.Forms.RadioButton rdbAtivo;
         private System.Windows.Forms.RadioButton rdbInativo;
@@ -303,8 +333,7 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Label lblTipoTransferencia;
-        private System.Windows.Forms.ComboBox cmbTipoTransferencia;
-        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.TextBox txtSigla;
+        private System.Windows.Forms.Label lblSigla;
     }
 }

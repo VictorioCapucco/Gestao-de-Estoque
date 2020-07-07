@@ -29,8 +29,7 @@ namespace GestaoEstoque
         private void ConsultarTipoTransferencia_Load(object sender, EventArgs e)
         {
             oDtTipoTransferencia.Clear();
-
-            //statusLocal, isObra, statusObra
+                                            
             oDtTipoTransferencia = camadaNegocios.DataTableTipoTransferencia();
 
             //Preenchendo a ComboBox
