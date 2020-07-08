@@ -17,9 +17,11 @@ namespace GestaoEstoque
         CamadaNegocios camadaNegocios = new CamadaNegocios();
         Validacao validar = new Validacao();
         private Boolean xClicked = true;
+        int permissaoUsuario;
 
-        public IncluirMaterial(Form anterior, int x, int y)
+        public IncluirMaterial(Form anterior, int x, int y, int permissao)
         {
+            permissaoUsuario = permissao;
             formAnterior = anterior;
             this.Location = new Point(x, y);
             InitializeComponent();
@@ -166,7 +168,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluir.Show();
         }
@@ -176,7 +178,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultar.Show();
         }

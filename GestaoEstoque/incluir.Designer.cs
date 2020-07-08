@@ -286,6 +286,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Incluir";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Incluir_FormClosing);
+            this.Load += new System.EventHandler(this.Incluir_Load);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
             this.gpbIncluir.ResumeLayout(false);

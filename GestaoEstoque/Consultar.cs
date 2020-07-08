@@ -13,9 +13,11 @@ namespace GestaoEstoque
     public partial class Consultar : Form
     {
         Form formAnterior;
+        int permissaoUsuario;
 
-        public Consultar(Form anterior, int x, int y)
+        public Consultar(Form anterior, int x, int y, int permissao)
         {
+            permissaoUsuario = permissao;
             this.Location = new Point(x, y);
             formAnterior = anterior;
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluir.Show();
         }
@@ -41,7 +43,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultar.Show();
         }
@@ -52,7 +54,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarTipoTransferencia = new ConsultarTipoTransferencia(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarTipoTransferencia = new ConsultarTipoTransferencia(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarTipoTransferencia.Show();
         }
@@ -62,7 +64,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarUnidadeMedida = new ConsultarUnidadeMedida(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarUnidadeMedida = new ConsultarUnidadeMedida(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarUnidadeMedida.Show();
         }
@@ -72,7 +74,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarUsuario = new ConsultarUsuario(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarUsuario = new ConsultarUsuario(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarUsuario.Show();
         }
@@ -82,7 +84,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarRecebimento = new ConsultarRecebimento(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarRecebimento = new ConsultarRecebimento(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarRecebimento.Show();
         }
@@ -92,7 +94,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarPedidoCompra = new ConsultarPedidoCompra(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarPedidoCompra = new ConsultarPedidoCompra(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarPedidoCompra.Show();
         }
@@ -102,7 +104,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarMaterial = new ConsultarMaterial(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarMaterial = new ConsultarMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarMaterial.Show();
         }
@@ -112,7 +114,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarTransferencia = new ConsultarTransferencias(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarTransferencia = new ConsultarTransferencias(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarTransferencia.Show();
         }
@@ -122,7 +124,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarFornecedor = new ConsultarFornecedor(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarFornecedor = new ConsultarFornecedor(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultarFornecedor.Show();
         }

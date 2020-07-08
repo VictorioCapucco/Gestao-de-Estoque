@@ -590,5 +590,28 @@ namespace Negocios
             Conexao consulta = new Conexao();
             return consulta.RetornarDataTable("select id_recebimento, dt_recebimento, id_pedido_compra from Recebimento", "Recebimento");
         }
+
+
+        //Autenticação
+        public int AutenticarSenha(int codigoUsuario, string senhaUsuario)
+        {
+            Conexao consulta = new Conexao();
+            DataTable oDtUsuario = consulta.RetornarDataTable("select * from Usuario where id_usuario = " + codigoUsuario + " and senha_usuario = '" + senhaUsuario + "'" , "Usuario");
+
+            if (oDtUsuario.Rows.Count > 0)
+            {
+                return int.Parse(oDtUsuario.Rows[0]["tipo_usuario"].ToString());
+            }
+
+            else
+                return 99;
+        }
+
+        public void AbreSessao(int codigoUsuario)
+        {
+            Conexao insercao = new Conexao();
+            insercao.ExecutaNQ("insert into Sessao (status_sessao, id_usuario) values (1," + codigoUsuario + ")");
+            return;
+        }
     }
 }

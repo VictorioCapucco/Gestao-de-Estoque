@@ -13,9 +13,11 @@ namespace GestaoEstoque
     public partial class Incluir : Form
     {
         Form formAnterior;
+        int permissaoUsuario;
 
-        public Incluir(Form anterior, int x, int y)
+        public Incluir(Form anterior, int x, int y, int permissao)
         {
+            permissaoUsuario = permissao;
             this.Location = new Point(x, y);
             formAnterior = anterior;
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluir.Show();
         }
@@ -36,7 +38,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultar.Show();
         }
@@ -47,7 +49,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirTipoMaterial = new IncluirTipoMaterial(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTipoMaterial = new IncluirTipoMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirTipoMaterial.Show();
         }
@@ -62,7 +64,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirTipoTransferencia = new IncluirTipoTransferencia(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTipoTransferencia = new IncluirTipoTransferencia(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirTipoTransferencia.Show();
         }
@@ -72,7 +74,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirLocais = new IncluirLocais(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirLocais = new IncluirLocais(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirLocais.Show();
         }
@@ -82,7 +84,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirUsuario = new IncluirUsuario(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirUsuario = new IncluirUsuario(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirUsuario.Show();
         }
@@ -92,7 +94,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirMaterial = new IncluirMaterial(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirMaterial = new IncluirMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirMaterial.Show();
         }
@@ -102,7 +104,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirTransferenciaSaida = new IncluirTransferenciaSaida(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTransferenciaSaida = new IncluirTransferenciaSaida(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirTransferenciaSaida.Show();
         }
@@ -112,7 +114,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirTransferenciaEntrada = new IncluirTransferenciaEntrada(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirTransferenciaEntrada = new IncluirTransferenciaEntrada(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirTransferenciaEntrada.Show();
         }
@@ -122,7 +124,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirFornecedor = new IncluirFornecedor(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirFornecedor = new IncluirFornecedor(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirFornecedor.Show();
         }
@@ -132,7 +134,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirPedidoCompra = new IncluirPedidoCompra(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirPedidoCompra = new IncluirPedidoCompra(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirPedidoCompra.Show();
         }
@@ -142,7 +144,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirUnidadeMedida = new IncluirUnidadeMedida(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirUnidadeMedida = new IncluirUnidadeMedida(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirUnidadeMedida.Show();
         }
@@ -152,9 +154,14 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluirRecebimento = new IncluirRecebimento(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluirRecebimento = new IncluirRecebimento(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluirRecebimento.Show();
+        }
+
+        private void Incluir_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,9 +18,11 @@ namespace GestaoEstoque
         DataTable oDtTipoTransferencia = new DataTable();
         Form formAnterior;
         private Boolean xClicked = true;
+        int permissaoUsuario;
 
-        public ConsultarPedidoCompra(Form anterior, int x, int y)
+        public ConsultarPedidoCompra(Form anterior, int x, int y, int permissao)
         {
+            permissaoUsuario = permissao;
             formAnterior = anterior;
             this.Location = new Point(x, y);
             InitializeComponent();
@@ -181,7 +183,7 @@ namespace GestaoEstoque
                 Point posicaoForm = new Point(100, 100);
                 posicaoForm = this.Location;
 
-                Form formConsultarPedidoCompra = new ConsultarPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y);
+                Form formConsultarPedidoCompra = new ConsultarPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
                 xClicked = false;
                 this.Close();
                 formConsultarPedidoCompra.Show();
@@ -198,7 +200,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarPedidoCompra = new ConsultarPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarPedidoCompra = new ConsultarPedidoCompra(formAnterior, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             xClicked = false;
             this.Close();
             formConsultarPedidoCompra.Show();
@@ -224,7 +226,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y);
+            Form formIncluir = new Incluir(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formIncluir.Show();
         }
@@ -234,7 +236,7 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultar = new Consultar(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
             formConsultar.Show();
         }
