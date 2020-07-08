@@ -38,13 +38,14 @@
             this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
             this.btnConsultarTipoTransferencia = new System.Windows.Forms.Button();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
-            this.btnConsultarSaida = new System.Windows.Forms.Button();
             this.btnConsultarRecebimento = new System.Windows.Forms.Button();
             this.btnConsultarLocais = new System.Windows.Forms.Button();
             this.btnConsultarPedidoCompra = new System.Windows.Forms.Button();
             this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
+            this.btnOperações = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -101,10 +102,11 @@
             // gpbConsultar
             // 
             this.gpbConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.gpbConsultar.Controls.Add(this.btnOperações);
+            this.gpbConsultar.Controls.Add(this.btnCadastros);
             this.gpbConsultar.Controls.Add(this.btnConsultarUnidadeMedida);
             this.gpbConsultar.Controls.Add(this.btnConsultarTipoTransferencia);
             this.gpbConsultar.Controls.Add(this.btnConsultarUsuario);
-            this.gpbConsultar.Controls.Add(this.btnConsultarSaida);
             this.gpbConsultar.Controls.Add(this.btnConsultarRecebimento);
             this.gpbConsultar.Controls.Add(this.btnConsultarLocais);
             this.gpbConsultar.Controls.Add(this.btnConsultarPedidoCompra);
@@ -129,6 +131,7 @@
             this.btnConsultarUnidadeMedida.TabIndex = 12;
             this.btnConsultarUnidadeMedida.Text = "Consultar Unidade de medida";
             this.btnConsultarUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnConsultarUnidadeMedida.Visible = false;
             this.btnConsultarUnidadeMedida.Click += new System.EventHandler(this.btnConsultarUnidadeMedida_Click);
             // 
             // btnConsultarTipoTransferencia
@@ -137,12 +140,13 @@
             this.btnConsultarTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarTipoTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarTipoTransferencia.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarTipoTransferencia.Location = new System.Drawing.Point(100, 240);
+            this.btnConsultarTipoTransferencia.Location = new System.Drawing.Point(100, 34);
             this.btnConsultarTipoTransferencia.Name = "btnConsultarTipoTransferencia";
             this.btnConsultarTipoTransferencia.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarTipoTransferencia.TabIndex = 11;
             this.btnConsultarTipoTransferencia.Text = "Consultar Tipo de transferência";
             this.btnConsultarTipoTransferencia.UseVisualStyleBackColor = false;
+            this.btnConsultarTipoTransferencia.Visible = false;
             this.btnConsultarTipoTransferencia.Click += new System.EventHandler(this.btnConsultarTipoTransferencia_Click);
             // 
             // btnConsultarUsuario
@@ -151,26 +155,14 @@
             this.btnConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarUsuario.Location = new System.Drawing.Point(391, 190);
+            this.btnConsultarUsuario.Location = new System.Drawing.Point(220, 144);
             this.btnConsultarUsuario.Name = "btnConsultarUsuario";
             this.btnConsultarUsuario.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarUsuario.TabIndex = 10;
             this.btnConsultarUsuario.Text = "Consultar Usuario";
             this.btnConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btnConsultarUsuario.Visible = false;
             this.btnConsultarUsuario.Click += new System.EventHandler(this.btnConsultarUsuario_Click);
-            // 
-            // btnConsultarSaida
-            // 
-            this.btnConsultarSaida.BackColor = System.Drawing.Color.Black;
-            this.btnConsultarSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultarSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarSaida.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarSaida.Location = new System.Drawing.Point(391, 138);
-            this.btnConsultarSaida.Name = "btnConsultarSaida";
-            this.btnConsultarSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnConsultarSaida.TabIndex = 9;
-            this.btnConsultarSaida.Text = "Consultar Saida";
-            this.btnConsultarSaida.UseVisualStyleBackColor = false;
             // 
             // btnConsultarRecebimento
             // 
@@ -178,12 +170,13 @@
             this.btnConsultarRecebimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarRecebimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarRecebimento.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarRecebimento.Location = new System.Drawing.Point(391, 86);
+            this.btnConsultarRecebimento.Location = new System.Drawing.Point(100, 240);
             this.btnConsultarRecebimento.Name = "btnConsultarRecebimento";
             this.btnConsultarRecebimento.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarRecebimento.TabIndex = 8;
             this.btnConsultarRecebimento.Text = "Consultar Recebimento";
             this.btnConsultarRecebimento.UseVisualStyleBackColor = false;
+            this.btnConsultarRecebimento.Visible = false;
             this.btnConsultarRecebimento.Click += new System.EventHandler(this.btnConsultarRecebimento_Click);
             // 
             // btnConsultarLocais
@@ -198,6 +191,7 @@
             this.btnConsultarLocais.TabIndex = 7;
             this.btnConsultarLocais.Text = "Consultar Locais";
             this.btnConsultarLocais.UseVisualStyleBackColor = false;
+            this.btnConsultarLocais.Visible = false;
             // 
             // btnConsultarPedidoCompra
             // 
@@ -205,12 +199,13 @@
             this.btnConsultarPedidoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarPedidoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarPedidoCompra.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPedidoCompra.Location = new System.Drawing.Point(100, 190);
+            this.btnConsultarPedidoCompra.Location = new System.Drawing.Point(391, 240);
             this.btnConsultarPedidoCompra.Name = "btnConsultarPedidoCompra";
             this.btnConsultarPedidoCompra.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarPedidoCompra.TabIndex = 5;
             this.btnConsultarPedidoCompra.Text = "Consultar Pedido de compra";
             this.btnConsultarPedidoCompra.UseVisualStyleBackColor = false;
+            this.btnConsultarPedidoCompra.Visible = false;
             this.btnConsultarPedidoCompra.Click += new System.EventHandler(this.btnConsultarPedidoCompra_Click);
             // 
             // btnConsultarTransferencias
@@ -219,12 +214,13 @@
             this.btnConsultarTransferencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarTransferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarTransferencias.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarTransferencias.Location = new System.Drawing.Point(100, 138);
+            this.btnConsultarTransferencias.Location = new System.Drawing.Point(391, 34);
             this.btnConsultarTransferencias.Name = "btnConsultarTransferencias";
             this.btnConsultarTransferencias.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarTransferencias.TabIndex = 4;
             this.btnConsultarTransferencias.Text = "Consultar Transferências";
             this.btnConsultarTransferencias.UseVisualStyleBackColor = false;
+            this.btnConsultarTransferencias.Visible = false;
             this.btnConsultarTransferencias.Click += new System.EventHandler(this.btnConsultarTransferencias_Click);
             // 
             // btnConsultarMaterial
@@ -233,12 +229,13 @@
             this.btnConsultarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultarMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarMaterial.Location = new System.Drawing.Point(100, 86);
+            this.btnConsultarMaterial.Location = new System.Drawing.Point(100, 240);
             this.btnConsultarMaterial.Name = "btnConsultarMaterial";
             this.btnConsultarMaterial.Size = new System.Drawing.Size(241, 32);
             this.btnConsultarMaterial.TabIndex = 3;
             this.btnConsultarMaterial.Text = "Consultar Material";
             this.btnConsultarMaterial.UseVisualStyleBackColor = false;
+            this.btnConsultarMaterial.Visible = false;
             this.btnConsultarMaterial.Click += new System.EventHandler(this.btnConsultarMaterial_Click);
             // 
             // btnConsultarFornecedor
@@ -253,7 +250,36 @@
             this.btnConsultarFornecedor.TabIndex = 2;
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Visible = false;
             this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.BackColor = System.Drawing.Color.Black;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.Location = new System.Drawing.Point(44, 144);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
+            this.btnCadastros.TabIndex = 13;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = false;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
+            // 
+            // btnOperações
+            // 
+            this.btnOperações.BackColor = System.Drawing.Color.Black;
+            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperações.ForeColor = System.Drawing.Color.White;
+            this.btnOperações.Location = new System.Drawing.Point(411, 144);
+            this.btnOperações.Name = "btnOperações";
+            this.btnOperações.Size = new System.Drawing.Size(241, 32);
+            this.btnOperações.TabIndex = 14;
+            this.btnOperações.Text = "Operações";
+            this.btnOperações.UseVisualStyleBackColor = false;
+            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click);
             // 
             // Consultar
             // 
@@ -285,7 +311,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.GroupBox gpbConsultar;
         private System.Windows.Forms.Button btnConsultarUsuario;
-        private System.Windows.Forms.Button btnConsultarSaida;
         private System.Windows.Forms.Button btnConsultarRecebimento;
         private System.Windows.Forms.Button btnConsultarLocais;
         private System.Windows.Forms.Button btnConsultarPedidoCompra;
@@ -294,5 +319,7 @@
         private System.Windows.Forms.Button btnConsultarFornecedor;
         private System.Windows.Forms.Button btnConsultarTipoTransferencia;
         private System.Windows.Forms.Button btnConsultarUnidadeMedida;
+        private System.Windows.Forms.Button btnOperações;
+        private System.Windows.Forms.Button btnCadastros;
     }
 }

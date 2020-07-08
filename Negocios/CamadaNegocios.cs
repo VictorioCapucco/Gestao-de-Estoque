@@ -88,10 +88,20 @@ namespace Negocios
         }
 
         //Usuarios
-        public Boolean InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
+        public int InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
         {
             Conexao insercao = new Conexao();
-            return insercao.ExecutaNQ("insert into Usuario (nome_usuario, tipo_usuario, status_usuario, senha_usuario) values('" + nomeUsuario + "'," + tipoUsuario + "," + statusUsuario + ",'" + senhaUsuario + "')");
+            Boolean statusInsercao = insercao.ExecutaNQ("insert into Usuario (nome_usuario, tipo_usuario, status_usuario, senha_usuario) values('" + nomeUsuario + "'," + tipoUsuario + "," + statusUsuario + ",'" + senhaUsuario + "')");
+
+            if (statusInsercao == true)
+            {
+                DataTable oDtUsuario = new DataTable();
+                oDtUsuario = insercao.RetornarDataTable("select id_usuario from Usuario where id_usuario = (select max(id_usuario) from Usuario)", "Usuario");
+                return int.Parse(oDtUsuario.Rows[0]["id_usuario"].ToString());
+            }
+
+            else
+                return 0;
         }
 
         public Boolean ExisteUsuario(string nomeUsuario)

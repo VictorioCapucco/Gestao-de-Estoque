@@ -69,11 +69,12 @@ namespace GestaoEstoque
                             if (existeUsuario == false)
                             {
                                 //Pedindo à camada de negócios para adicionar o usuário
-                                Boolean statusInsercao = camadaNegocios.InserirUsuario(nome, tipoUsuario, true, senhaCriptografada);
+                                int codigoUsuario = camadaNegocios.InserirUsuario(nome, tipoUsuario, true, senhaCriptografada);
 
-                                if (statusInsercao == true)
+                                if (codigoUsuario != 0)
                                 {
-                                    MessageBox.Show("Usuário incluído com sucesso!");
+                                    MessageBox.Show("Usuário incluído com sucesso! \n" +
+                                                    "Código de usuário: " + codigoUsuario);
 
                                     //Limpando os campos
                                     txtNome.Text = "";
@@ -210,6 +211,26 @@ namespace GestaoEstoque
 
             formAnterior.Location = this.Location;
             formAnterior.Show();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
