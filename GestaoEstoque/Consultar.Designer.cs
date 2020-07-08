@@ -275,6 +275,7 @@
             this.btnConsultarFornecedor.TabIndex = 2;
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
             // 
             // Consultar
             // 

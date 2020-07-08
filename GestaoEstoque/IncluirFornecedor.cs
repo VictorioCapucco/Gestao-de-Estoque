@@ -66,7 +66,7 @@ namespace GestaoEstoque
                                         statusInsercaoMaterial = camadaNegocios.InserirMateriaisFornecedor(codigoFornecedor, codigoMaterial);
                                         if (statusInsercaoMaterial == false)
                                         {
-                                            MessageBox.Show("Erro inesperado ao inserir a transferencia. Contate o suporte");
+                                            MessageBox.Show("Erro inesperado ao inserir o fornecedor. Contate o suporte");
                                             break;
                                         }
                                     }

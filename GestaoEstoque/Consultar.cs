@@ -126,5 +126,15 @@ namespace GestaoEstoque
             this.Hide();
             formConsultarTransferencia.Show();
         }
+
+        private void btnConsultarFornecedor_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarFornecedor = new ConsultarFornecedor(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultarFornecedor.Show();
+        }
     }
 }

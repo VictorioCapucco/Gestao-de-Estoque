@@ -446,13 +446,31 @@ namespace Negocios
             if (filtroStatus == true)
                 return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor where status_for = " + statusFornecedor, "Fornecedor");
             else
-                return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor", "Fornecedor");   
+                return consulta.RetornarDataTable("select * from Fornecedor", "Fornecedor");   
         }
 
         public Boolean ExisteMaterialFornecedor(int codigoFornecedor, int codigoMaterial)
         {
             Conexao consulta = new Conexao();
             return consulta.ExisteRegistro("select id_material_fornecedor from Materiais_Fornecedor where id_for = " + codigoFornecedor + " and id_material = " + codigoMaterial, "Materiais_Fornecedor");
+        }
+
+        public DataTable DataTableMateriaisFornecedor(int codigoFornecedor)
+        {
+            Conexao consulta = new Conexao();
+
+            return consulta.RetornarDataTable("select MF.id_material as Codigo, M.nome_material as Nome " +
+                                              "from Materiais_Fornecedor as MF " +
+                                              "inner join Material as M on MF.id_material = M.id_material " +
+                                              "where MF.id_for = " + codigoFornecedor +
+                                              " order by MF.id_material asc", "Materiais_Fornecedor");
+        }
+
+        public Boolean AlterarFornecedor(int codigoFornecedor, string nomeFornecedor, string cnpjFornecedor, string telefoneFornecedor, string enderecoFornecedor, Boolean statusFornecedor)
+        {
+            Conexao alterar = new Conexao();
+            string stringStatusFornecedor = statusFornecedor.ToString();
+            return alterar.ExecutaNQ("update Fornecedor set nome_for = '" + nomeFornecedor + "', cnpj_for = '" + cnpjFornecedor + "', telefone_for = '" + telefoneFornecedor + "', endereco_for = '" + enderecoFornecedor + "', status_for = " + stringStatusFornecedor + " where id_for = " + codigoFornecedor);
         }
 
         //Pedido Compra
