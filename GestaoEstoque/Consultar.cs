@@ -72,9 +72,19 @@ namespace GestaoEstoque
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form frmConsultarUnidadeMedida = new ConsultarUnidadeMedida(this, posicaoForm.X, posicaoForm.Y);
+            Form formConsultarUnidadeMedida = new ConsultarUnidadeMedida(this, posicaoForm.X, posicaoForm.Y);
             this.Hide();
-            frmConsultarUnidadeMedida.Show();
+            formConsultarUnidadeMedida.Show();
+        }
+
+        private void btnConsultarUsuario_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarUsuario = new ConsultarUsuario(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultarUsuario.Show();
         }
     }
 }

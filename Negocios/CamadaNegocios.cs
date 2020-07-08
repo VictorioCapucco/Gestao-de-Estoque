@@ -77,6 +77,25 @@ namespace Negocios
             return consulta.ExisteRegistro("select nome_usuario from Usuario where nome_usuario = '" + nomeUsuario + "'", "Usuario");
         }
 
+        public DataTable DataTableUsuario()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_usuario, nome_usuario, tipo_usuario, status_usuario from Usuario", "Usuario");
+        }
+
+        public Boolean AlterarUsuario(int codigoUsuario, string nomeUsuario, int tipoUsuario, string senhaUsuario, Boolean statusUsuario)
+        {
+            Conexao alteracao = new Conexao();
+
+            string stringStatusUsuario = statusUsuario.ToString();
+
+            if (senhaUsuario == "")
+                return alteracao.ExecutaNQ("update Usuario set nome_usuario = '" + nomeUsuario + "', tipo_usuario = " + tipoUsuario + ", status_usuario = " + stringStatusUsuario + " where id_usuario = " + codigoUsuario);
+            else
+                return alteracao.ExecutaNQ("update Usuario set nome_usuario = '" + nomeUsuario + "', tipo_usuario = " + tipoUsuario + ", status_usuario = " + stringStatusUsuario + ", senha_usuario = '" + senhaUsuario + "' where id_usuario = " + codigoUsuario);
+        }
+
+
         //Material
         public int InserirMaterial(string nomeMaterial, Boolean statusMaterial, int codigoTipoMaterial, int codigoUnidade)
         {

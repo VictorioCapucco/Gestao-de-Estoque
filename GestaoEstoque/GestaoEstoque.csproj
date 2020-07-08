@@ -70,6 +70,12 @@
     <Compile Include="ConsultarUnidadeMedida.Designer.cs">
       <DependentUpon>ConsultarUnidadeMedida.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUsuario.Designer.cs">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Criptografia.cs" />
     <Compile Include="Excluir.cs">
       <SubType>Form</SubType>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUnidadeMedida.resx">
       <DependentUpon>ConsultarUnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarUsuario.resx">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Excluir.resx">
       <DependentUpon>Excluir.cs</DependentUpon>

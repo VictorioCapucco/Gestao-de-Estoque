@@ -165,6 +165,7 @@
             this.btnConsultarUsuario.TabIndex = 10;
             this.btnConsultarUsuario.Text = "Consultar Usuario";
             this.btnConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btnConsultarUsuario.Click += new System.EventHandler(this.btnConsultarUsuario_Click);
             // 
             // btnConsultarSaida
             // 
