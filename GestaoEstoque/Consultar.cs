@@ -106,5 +106,15 @@ namespace GestaoEstoque
             this.Hide();
             formConsultarPedidoCompra.Show();
         }
+
+        private void btnConsultarMaterial_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarMaterial = new ConsultarMaterial(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultarMaterial.Show();
+        }
     }
 }

@@ -155,6 +155,25 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values (0," + codigoMaterial + "," + codigoLocal + ")");
         }
 
+        public DataTable DataTableMaterial()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select * from Material order by id_material asc", "Material");
+        }
+
+        public DataTable DataTableMaterialLocais(int codigoMaterial)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select L.id_local as Codigo, L.descricao_local as Descricao, QM.id_material from Locais as L inner join Quantidade_Material as QM on L.id_local = QM.id_local where QM.id_material = " + codigoMaterial + " and L.obra = false", "Locais");
+        }
+
+        public Boolean AlterarMaterial(int codigoMaterial, Boolean statusMaterial, int codigoTipoMaterial, int codigoUnidade)
+        {
+            Conexao alteracao = new Conexao();
+            string stringStatusMaterial = statusMaterial.ToString();
+
+            return alteracao.ExecutaNQ("update Material set status_material = " + statusMaterial + ", id_tipo_material = " + codigoTipoMaterial + ", id_unidade = " + codigoUnidade + " where id_material = " + codigoMaterial);
+        }
 
         //Transferencia
         public int InserirTransferencia(int codigoLocalOrigem, int codigoLocalDestino, int codigoTipoTransferencia, string dataTransferencia)

@@ -40,7 +40,7 @@ namespace GestaoEstoque
             cmbTipoMaterial.SelectedItem = "";
             cmbTipoMaterial.Refresh();
 
-            //Criando o DataTable dos tipos de material
+            //Criando o DataTable da unidade de medida
             DataTable oDtUnidade = new DataTable();
             oDtUnidade.Clear();
                                                         //filtroStatus

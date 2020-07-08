@@ -260,6 +260,7 @@
             this.btnConsultarMaterial.TabIndex = 3;
             this.btnConsultarMaterial.Text = "Consultar Material";
             this.btnConsultarMaterial.UseVisualStyleBackColor = false;
+            this.btnConsultarMaterial.Click += new System.EventHandler(this.btnConsultarMaterial_Click);
             // 
             // btnConsultarFornecedor
             // 
