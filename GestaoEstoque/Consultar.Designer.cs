@@ -233,6 +233,7 @@
             this.btnConsultarPedidoCompra.TabIndex = 5;
             this.btnConsultarPedidoCompra.Text = "Consultar Pedido de compra";
             this.btnConsultarPedidoCompra.UseVisualStyleBackColor = false;
+            this.btnConsultarPedidoCompra.Click += new System.EventHandler(this.btnConsultarPedidoCompra_Click);
             // 
             // btnConsultarRequisicaoSaida
             // 

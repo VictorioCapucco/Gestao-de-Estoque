@@ -437,6 +437,12 @@ namespace Negocios
             Conexao consulta = new Conexao();
             return consulta.RetornarDataTable("select PC.id_pedido_compra as Codigo, F.nome_for as Fornecedor from Pedido_Compra as PC inner join Fornecedor as F on PC.id_fornecedor = F.id_for where PC.status_pedido_compra = " + statusPedidoCompra + " and PC.id_local = " + codigoLocal, "Pedido_Compra");
         }
+        
+        public DataTable DataTablePedidoCompraFornecedor(Boolean statusPedidoCompra, int codigoLocal, int codigoFornecedor)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_pedido_compra from Pedido_Compra where status_pedido_compra = " + statusPedidoCompra + " and id_fornecedor = " + codigoFornecedor + " and id_local = " + codigoLocal, "Pedido_Compra");
+        }
 
         public DataTable DataTableMateriaisPedidoCompra(int codigoPedidoCompra)
         {
@@ -453,6 +459,18 @@ namespace Negocios
         {
             Conexao atualizacao = new Conexao();
             return atualizacao.ExecutaNQ("update Pedido_Compra set status_pedido_compra = true where id_pedido_compra = " + codigoPedidoCompra);
+        }
+
+        public Boolean ExcluirPedidoCOmpra(int codigoPedidoCompra)
+        {
+            Conexao exclusao = new Conexao();
+            return exclusao.ExecutaNQ("delete from Pedido_Compra where id_pedido_compra = " + codigoPedidoCompra);
+        }
+
+        public Boolean ExcluirMateriaisPedidoCompra(int codigoPedidoCompra)
+        {
+            Conexao exclusao = new Conexao();
+            return exclusao.ExecutaNQ("delete from Materiais_PedidoCompra where id_pedido_compra = " + codigoPedidoCompra);
         }
 
 
