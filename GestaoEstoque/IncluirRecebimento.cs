@@ -207,6 +207,9 @@ namespace GestaoEstoque
 
                     if (statusAtualizarPedido == true)
                     {
+                        //Incluindo o recebimento
+                        camadaNegocios.InserirRecebimento(dataRecebimento, codigoPedidoCompra);
+
                         MessageBox.Show("Recebimento incluído com sucesso");
 
                         //Recarregando a página

@@ -192,16 +192,6 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Materiais_Transferencia (quantidade_material, id_material, id_transferencia) values (" + quantidadeMaterial + "," + codigoMaterial + "," + codigoTransferencia + ")");
         }
 
-        public DataTable DataTableRequisicao(Boolean filtrarLocal, int codigoLocal, Boolean requisicaoValidada)
-        {
-            Conexao consulta = new Conexao();
-            if (filtrarLocal == true)
-                return consulta.RetornarDataTable("select id_requisicao from Requisicao where status_requisicao = " + requisicaoValidada + " and id_local = " + codigoLocal, "Requisicao");
-            else
-                return consulta.RetornarDataTable("select id_requisicao from Requisicao where status_requisicao = " + requisicaoValidada, "Requisicao");
-        }
-
-
         public DataSet ConsultaCodigoMateriaisTransferencia(int codigoTransferencia)
         {
             Conexao consulta = new Conexao();
@@ -391,10 +381,13 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Materiais_Fornecedor (id_for, id_material) values (" + codigoFornecedor + "," + codigoMaterial + ")");
         }
 
-        public DataTable DataTableFornecedor(Boolean statusFornecedor)
+        public DataTable DataTableFornecedor(Boolean filtroStatus, Boolean statusFornecedor)
         {
             Conexao consulta = new Conexao();
-            return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor where status_for = " + statusFornecedor, "Fornecedor");
+            if (filtroStatus == true)
+                return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor where status_for = " + statusFornecedor, "Fornecedor");
+            else
+                return consulta.RetornarDataTable("select id_for, nome_for from Fornecedor", "Fornecedor");   
         }
 
         public Boolean ExisteMaterialFornecedor(int codigoFornecedor, int codigoMaterial)
@@ -487,6 +480,20 @@ namespace Negocios
                 return alteracao.ExecutaNQ("update Unidade_Medida set descricao_unidade = '" + descricaoUnidade + "', sigla_unidade = '" + siglaUnidade + "', status_unidade = true where id_unidade = " + codigoUnidade);
             else
                 return alteracao.ExecutaNQ("update Unidade_Medida set descricao_unidade = '" + descricaoUnidade + "', sigla_unidade = '" + siglaUnidade + "', status_unidade = false where id_unidade = " + codigoUnidade);
+        }
+
+        
+        //Recebimento
+        public Boolean InserirRecebimento(string dataRecebimento, int codigoPedidoCompra)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Recebimento (dt_recebimento, id_pedido_compra) values ('" + dataRecebimento + "'," + codigoPedidoCompra + ")");
+        }
+
+        public DataTable DataTableRecebimento()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_recebimento, dt_recebimento, id_pedido_compra from Recebimento", "Recebimento");
         }
     }
 }

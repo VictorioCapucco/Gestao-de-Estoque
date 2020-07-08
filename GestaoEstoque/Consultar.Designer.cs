@@ -37,6 +37,7 @@
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
             this.btnConsultarTipoTransferencia = new System.Windows.Forms.Button();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
             this.btnConsultarSaida = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.btnConsultarRequisicaoSaida = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
-            this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,20 @@
             this.gpbConsultar.TabIndex = 2;
             this.gpbConsultar.TabStop = false;
             // 
+            // btnConsultarUnidadeMedida
+            // 
+            this.btnConsultarUnidadeMedida.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarUnidadeMedida.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarUnidadeMedida.Location = new System.Drawing.Point(391, 240);
+            this.btnConsultarUnidadeMedida.Name = "btnConsultarUnidadeMedida";
+            this.btnConsultarUnidadeMedida.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarUnidadeMedida.TabIndex = 12;
+            this.btnConsultarUnidadeMedida.Text = "Consultar Unidade de medida";
+            this.btnConsultarUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnConsultarUnidadeMedida.Click += new System.EventHandler(this.btnConsultarUnidadeMedida_Click);
+            // 
             // btnConsultarTipoTransferencia
             // 
             this.btnConsultarTipoTransferencia.BackColor = System.Drawing.Color.Black;
@@ -192,6 +206,7 @@
             this.btnConsultarRecebimento.TabIndex = 8;
             this.btnConsultarRecebimento.Text = "Consultar Recebimento";
             this.btnConsultarRecebimento.UseVisualStyleBackColor = false;
+            this.btnConsultarRecebimento.Click += new System.EventHandler(this.btnConsultarRecebimento_Click);
             // 
             // btnConsultarLocais
             // 
@@ -257,20 +272,6 @@
             this.btnConsultarFornecedor.TabIndex = 2;
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
-            // 
-            // btnConsultarUnidadeMedida
-            // 
-            this.btnConsultarUnidadeMedida.BackColor = System.Drawing.Color.Black;
-            this.btnConsultarUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultarUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarUnidadeMedida.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarUnidadeMedida.Location = new System.Drawing.Point(391, 240);
-            this.btnConsultarUnidadeMedida.Name = "btnConsultarUnidadeMedida";
-            this.btnConsultarUnidadeMedida.Size = new System.Drawing.Size(241, 32);
-            this.btnConsultarUnidadeMedida.TabIndex = 12;
-            this.btnConsultarUnidadeMedida.Text = "Consultar Unidade de medida";
-            this.btnConsultarUnidadeMedida.UseVisualStyleBackColor = false;
-            this.btnConsultarUnidadeMedida.Click += new System.EventHandler(this.btnConsultarUnidadeMedida_Click);
             // 
             // Consultar
             // 

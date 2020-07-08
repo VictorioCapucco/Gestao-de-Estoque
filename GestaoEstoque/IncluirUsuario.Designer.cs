@@ -37,18 +37,18 @@
             this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirUsuario = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnIncluir = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.lblConfirmarSenha = new System.Windows.Forms.Label();
-            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdbAuxiliar = new System.Windows.Forms.RadioButton();
             this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.rdbSupervisor = new System.Windows.Forms.RadioButton();
-            this.rdbAuxiliar = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.lblConfirmarSenha = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -141,101 +141,29 @@
             this.gpbIncluirUsuario.TabIndex = 12;
             this.gpbIncluirUsuario.TabStop = false;
             // 
-            // btnCancelar
+            // panel1
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(370, 239);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(154, 32);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.rdbAuxiliar);
+            this.panel1.Controls.Add(this.rdbAdmin);
+            this.panel1.Controls.Add(this.rdbSupervisor);
+            this.panel1.Location = new System.Drawing.Point(140, 166);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(417, 46);
+            this.panel1.TabIndex = 12;
             // 
-            // btnIncluir
+            // rdbAuxiliar
             // 
-            this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluir.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluir.ForeColor = System.Drawing.Color.White;
-            this.btnIncluir.Location = new System.Drawing.Point(187, 239);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(154, 32);
-            this.btnIncluir.TabIndex = 7;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.UseVisualStyleBackColor = false;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(345, 36);
-            this.txtNome.MaxLength = 40;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(212, 27);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.BackColor = System.Drawing.Color.Gray;
-            this.lblNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(137, 35);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Padding = new System.Windows.Forms.Padding(55, 5, 55, 5);
-            this.lblNome.Size = new System.Drawing.Size(165, 28);
-            this.lblNome.TabIndex = 9;
-            this.lblNome.Text = "Nome";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.Gray;
-            this.lblSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(137, 77);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Padding = new System.Windows.Forms.Padding(53, 5, 54, 5);
-            this.lblSenha.Size = new System.Drawing.Size(165, 28);
-            this.lblSenha.TabIndex = 10;
-            this.lblSenha.Text = "Senha";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(345, 78);
-            this.txtSenha.MaxLength = 40;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(212, 27);
-            this.txtSenha.TabIndex = 2;
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
-            // 
-            // lblConfirmarSenha
-            // 
-            this.lblConfirmarSenha.AutoSize = true;
-            this.lblConfirmarSenha.BackColor = System.Drawing.Color.Gray;
-            this.lblConfirmarSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(137, 120);
-            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
-            this.lblConfirmarSenha.Padding = new System.Windows.Forms.Padding(6, 5, 7, 5);
-            this.lblConfirmarSenha.Size = new System.Drawing.Size(165, 28);
-            this.lblConfirmarSenha.TabIndex = 11;
-            this.lblConfirmarSenha.Text = "Confirme a senha";
-            // 
-            // txtConfirmarSenha
-            // 
-            this.txtConfirmarSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(345, 121);
-            this.txtConfirmarSenha.MaxLength = 40;
-            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.PasswordChar = '*';
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(212, 27);
-            this.txtConfirmarSenha.TabIndex = 3;
-            this.txtConfirmarSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfirmarSenha_KeyDown);
+            this.rdbAuxiliar.AutoSize = true;
+            this.rdbAuxiliar.Checked = true;
+            this.rdbAuxiliar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbAuxiliar.Location = new System.Drawing.Point(313, 11);
+            this.rdbAuxiliar.Name = "rdbAuxiliar";
+            this.rdbAuxiliar.Size = new System.Drawing.Size(87, 22);
+            this.rdbAuxiliar.TabIndex = 6;
+            this.rdbAuxiliar.TabStop = true;
+            this.rdbAuxiliar.Text = "Auxiliar";
+            this.rdbAuxiliar.UseVisualStyleBackColor = true;
             // 
             // rdbAdmin
             // 
@@ -259,29 +187,101 @@
             this.rdbSupervisor.Text = "Supervisor";
             this.rdbSupervisor.UseVisualStyleBackColor = true;
             // 
-            // rdbAuxiliar
+            // txtConfirmarSenha
             // 
-            this.rdbAuxiliar.AutoSize = true;
-            this.rdbAuxiliar.Checked = true;
-            this.rdbAuxiliar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbAuxiliar.Location = new System.Drawing.Point(313, 11);
-            this.rdbAuxiliar.Name = "rdbAuxiliar";
-            this.rdbAuxiliar.Size = new System.Drawing.Size(87, 22);
-            this.rdbAuxiliar.TabIndex = 6;
-            this.rdbAuxiliar.TabStop = true;
-            this.rdbAuxiliar.Text = "Auxiliar";
-            this.rdbAuxiliar.UseVisualStyleBackColor = true;
+            this.txtConfirmarSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(345, 121);
+            this.txtConfirmarSenha.MaxLength = 35;
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.PasswordChar = '*';
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(212, 27);
+            this.txtConfirmarSenha.TabIndex = 3;
+            this.txtConfirmarSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConfirmarSenha_KeyDown);
             // 
-            // panel1
+            // lblConfirmarSenha
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.rdbAuxiliar);
-            this.panel1.Controls.Add(this.rdbAdmin);
-            this.panel1.Controls.Add(this.rdbSupervisor);
-            this.panel1.Location = new System.Drawing.Point(140, 166);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 46);
-            this.panel1.TabIndex = 12;
+            this.lblConfirmarSenha.AutoSize = true;
+            this.lblConfirmarSenha.BackColor = System.Drawing.Color.Gray;
+            this.lblConfirmarSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(137, 120);
+            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
+            this.lblConfirmarSenha.Padding = new System.Windows.Forms.Padding(6, 5, 7, 5);
+            this.lblConfirmarSenha.Size = new System.Drawing.Size(165, 28);
+            this.lblConfirmarSenha.TabIndex = 11;
+            this.lblConfirmarSenha.Text = "Confirme a senha";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(345, 78);
+            this.txtSenha.MaxLength = 35;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(212, 27);
+            this.txtSenha.TabIndex = 2;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.Gray;
+            this.lblSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(137, 77);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Padding = new System.Windows.Forms.Padding(53, 5, 54, 5);
+            this.lblSenha.Size = new System.Drawing.Size(165, 28);
+            this.lblSenha.TabIndex = 10;
+            this.lblSenha.Text = "Senha";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(345, 36);
+            this.txtNome.MaxLength = 15;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(212, 27);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Gray;
+            this.lblNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(137, 35);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Padding = new System.Windows.Forms.Padding(55, 5, 55, 5);
+            this.lblNome.Size = new System.Drawing.Size(165, 28);
+            this.lblNome.TabIndex = 9;
+            this.lblNome.Text = "Nome";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(370, 239);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(154, 32);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.ForeColor = System.Drawing.Color.White;
+            this.btnIncluir.Location = new System.Drawing.Point(187, 239);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(154, 32);
+            this.btnIncluir.TabIndex = 7;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = false;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // IncluirUsuario
             // 

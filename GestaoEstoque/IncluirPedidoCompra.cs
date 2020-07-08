@@ -34,8 +34,8 @@ namespace GestaoEstoque
             //Criando o DataTable dos Fornecedores
             DataTable oDtFornecedores = new DataTable();
             oDtFornecedores.Clear();
-            //statusFornecedor
-            oDtFornecedores = camadaNegocios.DataTableFornecedor(true);
+                                                                //filtraStatus, statusFornecedor
+            oDtFornecedores = camadaNegocios.DataTableFornecedor(true, true);
 
             //statusLocal, isObra, statusObra
             oDtLocais = camadaNegocios.DataTableLocais(true, false, false);

@@ -322,7 +322,7 @@
             // 
             this.txtSenha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(346, 133);
-            this.txtSenha.MaxLength = 15;
+            this.txtSenha.MaxLength = 35;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(212, 27);

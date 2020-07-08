@@ -86,5 +86,15 @@ namespace GestaoEstoque
             this.Hide();
             formConsultarUsuario.Show();
         }
+
+        private void btnConsultarRecebimento_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarRecebimento = new ConsultarRecebimento(this, posicaoForm.X, posicaoForm.Y);
+            this.Hide();
+            formConsultarRecebimento.Show();
+        }
     }
 }
