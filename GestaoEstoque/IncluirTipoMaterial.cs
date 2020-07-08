@@ -134,14 +134,14 @@ namespace GestaoEstoque
             formConsultar.Show();
         }
 
-        private void toolStripExcluir_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
 
-            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
-            this.Hide();
-            formExcluir.Show();
+        private void toolStripVoltar_Click(object sender, EventArgs e)
+        {
+            xClicked = false;
+            this.Close();
+
+            formAnterior.Location = this.Location;
+            formAnterior.Show();
         }
     }
 }

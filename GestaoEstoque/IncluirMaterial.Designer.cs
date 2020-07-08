@@ -34,25 +34,25 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirMaterial = new System.Windows.Forms.GroupBox();
             this.lblUnidade = new System.Windows.Forms.Label();
             this.cmbUnidade = new System.Windows.Forms.ComboBox();
             this.cmbTipoMaterial = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnIncluir = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.gpbLocal = new System.Windows.Forms.GroupBox();
+            this.btnAjuda = new System.Windows.Forms.Button();
             this.btnAdicionarLocal = new System.Windows.Forms.Button();
             this.txtCodigoLocal = new System.Windows.Forms.TextBox();
             this.lblCodigoMaterial = new System.Windows.Forms.Label();
             this.lblLegenda = new System.Windows.Forms.Label();
             this.btnLixeira = new System.Windows.Forms.Button();
             this.lstboxLocais = new System.Windows.Forms.ListBox();
-            this.btnAjuda = new System.Windows.Forms.Button();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirMaterial.SuspendLayout();
             this.gpbLocal.SuspendLayout();
@@ -62,12 +62,12 @@
             // 
             this.toolStripMenu.BackColor = System.Drawing.Color.Purple;
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripVoltar,
+            this.toolStripSeparator3,
             this.toolStripIncluir,
             this.toolStripSeparator1,
             this.toolStripConsultar,
-            this.toolStripSeparator2,
-            this.toolStripExcluir,
-            this.toolStripSeparator3});
+            this.toolStripSeparator2});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
@@ -108,19 +108,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
-            // 
-            // toolStripExcluir
-            // 
-            this.toolStripExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripExcluir.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripExcluir.ForeColor = System.Drawing.Color.White;
-            this.toolStripExcluir.Image = ((System.Drawing.Image)(resources.GetObject("toolStripExcluir.Image")));
-            this.toolStripExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripExcluir.Name = "toolStripExcluir";
-            this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
-            this.toolStripExcluir.Text = "Excluir";
-            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
             // 
             // toolStripSeparator3
             // 
@@ -175,34 +162,6 @@
             this.cmbTipoMaterial.TabIndex = 2;
             this.cmbTipoMaterial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbTipoMaterial_KeyDown);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(495, 412);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(154, 32);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnIncluir
-            // 
-            this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluir.ForeColor = System.Drawing.Color.White;
-            this.btnIncluir.Location = new System.Drawing.Point(312, 412);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(154, 32);
-            this.btnIncluir.TabIndex = 3;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.UseVisualStyleBackColor = false;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,6 +196,34 @@
             this.lblNome.TabIndex = 5;
             this.lblNome.Text = "Nome";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(495, 412);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(154, 32);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.ForeColor = System.Drawing.Color.White;
+            this.btnIncluir.Location = new System.Drawing.Point(312, 412);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(154, 32);
+            this.btnIncluir.TabIndex = 3;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = false;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
             // gpbLocal
             // 
             this.gpbLocal.BackColor = System.Drawing.Color.DimGray;
@@ -251,6 +238,22 @@
             this.gpbLocal.Size = new System.Drawing.Size(460, 100);
             this.gpbLocal.TabIndex = 22;
             this.gpbLocal.TabStop = false;
+            // 
+            // btnAjuda
+            // 
+            this.btnAjuda.BackColor = System.Drawing.Color.Black;
+            this.btnAjuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAjuda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjuda.ForeColor = System.Drawing.Color.White;
+            this.btnAjuda.Location = new System.Drawing.Point(399, 19);
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnAjuda.Size = new System.Drawing.Size(26, 26);
+            this.btnAjuda.TabIndex = 33;
+            this.btnAjuda.Text = "? ";
+            this.btnAjuda.UseVisualStyleBackColor = false;
+            this.btnAjuda.Click += new System.EventHandler(this.btnAjuda_Click);
             // 
             // btnAdicionarLocal
             // 
@@ -324,21 +327,17 @@
             this.lstboxLocais.Size = new System.Drawing.Size(363, 276);
             this.lstboxLocais.TabIndex = 24;
             // 
-            // btnAjuda
+            // toolStripVoltar
             // 
-            this.btnAjuda.BackColor = System.Drawing.Color.Black;
-            this.btnAjuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAjuda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjuda.ForeColor = System.Drawing.Color.White;
-            this.btnAjuda.Location = new System.Drawing.Point(399, 19);
-            this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnAjuda.Size = new System.Drawing.Size(26, 26);
-            this.btnAjuda.TabIndex = 33;
-            this.btnAjuda.Text = "? ";
-            this.btnAjuda.UseVisualStyleBackColor = false;
-            this.btnAjuda.Click += new System.EventHandler(this.btnAjuda_Click);
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
             // 
             // IncluirMaterial
             // 
@@ -378,7 +377,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripConsultar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.GroupBox gpbIncluirMaterial;
         private System.Windows.Forms.TextBox txtNome;
@@ -397,5 +395,6 @@
         private System.Windows.Forms.Button btnLixeira;
         private System.Windows.Forms.ListBox lstboxLocais;
         private System.Windows.Forms.Button btnAjuda;
+        private System.Windows.Forms.ToolStripButton toolStripVoltar;
     }
 }

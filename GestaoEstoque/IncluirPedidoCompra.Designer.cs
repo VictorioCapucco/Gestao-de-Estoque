@@ -34,17 +34,17 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbInformacoesPedidoCompra = new System.Windows.Forms.GroupBox();
+            this.btnConfirmarFornecedorLocal = new System.Windows.Forms.Button();
+            this.cmbLocal = new System.Windows.Forms.ComboBox();
+            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.gpbMateriais = new System.Windows.Forms.GroupBox();
             this.btnAdicionarMaterial = new System.Windows.Forms.Button();
             this.txtCodigoMaterial = new System.Windows.Forms.TextBox();
             this.lblCodigoMaterial = new System.Windows.Forms.Label();
-            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
-            this.cmbLocal = new System.Windows.Forms.ComboBox();
             this.lblLegenda = new System.Windows.Forms.Label();
             this.btnLixeira = new System.Windows.Forms.Button();
             this.btnMenos = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.lstboxMateriais = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluirPedidoCompra = new System.Windows.Forms.Button();
-            this.btnConfirmarFornecedorLocal = new System.Windows.Forms.Button();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.gpbInformacoesPedidoCompra.SuspendLayout();
             this.gpbMateriais.SuspendLayout();
@@ -62,12 +62,12 @@
             // 
             this.toolStripMenu.BackColor = System.Drawing.Color.Purple;
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripVoltar,
+            this.toolStripSeparator3,
             this.toolStripIncluir,
             this.toolStripSeparator1,
             this.toolStripConsultar,
-            this.toolStripSeparator2,
-            this.toolStripExcluir,
-            this.toolStripSeparator3});
+            this.toolStripSeparator2});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
@@ -109,19 +109,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
-            // toolStripExcluir
-            // 
-            this.toolStripExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripExcluir.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripExcluir.ForeColor = System.Drawing.Color.White;
-            this.toolStripExcluir.Image = ((System.Drawing.Image)(resources.GetObject("toolStripExcluir.Image")));
-            this.toolStripExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripExcluir.Name = "toolStripExcluir";
-            this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
-            this.toolStripExcluir.Text = "Excluir";
-            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -142,6 +129,40 @@
             this.gpbInformacoesPedidoCompra.Size = new System.Drawing.Size(420, 141);
             this.gpbInformacoesPedidoCompra.TabIndex = 24;
             this.gpbInformacoesPedidoCompra.TabStop = false;
+            // 
+            // btnConfirmarFornecedorLocal
+            // 
+            this.btnConfirmarFornecedorLocal.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnConfirmarFornecedorLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarFornecedorLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarFornecedorLocal.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarFornecedorLocal.Location = new System.Drawing.Point(89, 96);
+            this.btnConfirmarFornecedorLocal.Name = "btnConfirmarFornecedorLocal";
+            this.btnConfirmarFornecedorLocal.Size = new System.Drawing.Size(239, 30);
+            this.btnConfirmarFornecedorLocal.TabIndex = 23;
+            this.btnConfirmarFornecedorLocal.Text = "Confirmar Fornecedor e Local";
+            this.btnConfirmarFornecedorLocal.UseVisualStyleBackColor = false;
+            this.btnConfirmarFornecedorLocal.Click += new System.EventHandler(this.btnConfirmarFornecedorLocal_Click);
+            // 
+            // cmbLocal
+            // 
+            this.cmbLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLocal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLocal.FormattingEnabled = true;
+            this.cmbLocal.Location = new System.Drawing.Point(170, 55);
+            this.cmbLocal.Name = "cmbLocal";
+            this.cmbLocal.Size = new System.Drawing.Size(212, 26);
+            this.cmbLocal.TabIndex = 22;
+            // 
+            // cmbFornecedor
+            // 
+            this.cmbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFornecedor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFornecedor.FormattingEnabled = true;
+            this.cmbFornecedor.Location = new System.Drawing.Point(170, 20);
+            this.cmbFornecedor.Name = "cmbFornecedor";
+            this.cmbFornecedor.Size = new System.Drawing.Size(212, 26);
+            this.cmbFornecedor.TabIndex = 21;
             // 
             // lblFornecedor
             // 
@@ -221,26 +242,6 @@
             this.lblCodigoMaterial.Size = new System.Drawing.Size(194, 28);
             this.lblCodigoMaterial.TabIndex = 19;
             this.lblCodigoMaterial.Text = "Codigo do material";
-            // 
-            // cmbFornecedor
-            // 
-            this.cmbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFornecedor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFornecedor.FormattingEnabled = true;
-            this.cmbFornecedor.Location = new System.Drawing.Point(170, 20);
-            this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(212, 26);
-            this.cmbFornecedor.TabIndex = 21;
-            // 
-            // cmbLocal
-            // 
-            this.cmbLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLocal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbLocal.FormattingEnabled = true;
-            this.cmbLocal.Location = new System.Drawing.Point(170, 55);
-            this.cmbLocal.Name = "cmbLocal";
-            this.cmbLocal.Size = new System.Drawing.Size(212, 26);
-            this.cmbLocal.TabIndex = 22;
             // 
             // lblLegenda
             // 
@@ -335,19 +336,17 @@
             this.btnIncluirPedidoCompra.Visible = false;
             this.btnIncluirPedidoCompra.Click += new System.EventHandler(this.btnIncluirPedidoCompra_Click);
             // 
-            // btnConfirmarFornecedorLocal
+            // toolStripVoltar
             // 
-            this.btnConfirmarFornecedorLocal.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnConfirmarFornecedorLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarFornecedorLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarFornecedorLocal.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarFornecedorLocal.Location = new System.Drawing.Point(89, 96);
-            this.btnConfirmarFornecedorLocal.Name = "btnConfirmarFornecedorLocal";
-            this.btnConfirmarFornecedorLocal.Size = new System.Drawing.Size(239, 30);
-            this.btnConfirmarFornecedorLocal.TabIndex = 23;
-            this.btnConfirmarFornecedorLocal.Text = "Confirmar Fornecedor e Local";
-            this.btnConfirmarFornecedorLocal.UseVisualStyleBackColor = false;
-            this.btnConfirmarFornecedorLocal.Click += new System.EventHandler(this.btnConfirmarFornecedorLocal_Click);
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
             // 
             // IncluirPedidoCompra
             // 
@@ -389,7 +388,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripConsultar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.GroupBox gpbInformacoesPedidoCompra;
         private System.Windows.Forms.Label lblFornecedor;
@@ -408,5 +406,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnIncluirPedidoCompra;
         private System.Windows.Forms.Button btnConfirmarFornecedorLocal;
+        private System.Windows.Forms.ToolStripButton toolStripVoltar;
     }
 }

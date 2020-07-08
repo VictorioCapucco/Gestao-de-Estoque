@@ -136,15 +136,13 @@ namespace GestaoEstoque
             formConsultar.Show();
         }
 
-
-        private void toolStripExcluir_Click(object sender, EventArgs e)
+        private void toolStripVoltar_Click(object sender, EventArgs e)
         {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
+            xClicked = false;
+            this.Close();
 
-            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
-            this.Hide();
-            formExcluir.Show();
+            formAnterior.Location = this.Location;
+            formAnterior.Show();
         }
     }
 }

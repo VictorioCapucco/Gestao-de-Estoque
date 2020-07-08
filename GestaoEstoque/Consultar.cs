@@ -47,16 +47,6 @@ namespace GestaoEstoque
         }
 
 
-        private void toolStripExcluir_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
-            this.Hide();
-            formExcluir.Show();
-        }
-
         private void btnConsultarTipoTransferencia_Click(object sender, EventArgs e)
         {
             Point posicaoForm = new Point(100, 100);

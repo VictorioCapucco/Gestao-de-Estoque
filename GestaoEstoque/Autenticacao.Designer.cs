@@ -45,9 +45,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 169);
+            this.BackgroundImage = global::GestaoEstoque.Properties.Resources.Fundo;
+            this.ClientSize = new System.Drawing.Size(488, 169);
             this.Controls.Add(this.btnEntrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Autenticacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autenticacao";
             this.ResumeLayout(false);
 

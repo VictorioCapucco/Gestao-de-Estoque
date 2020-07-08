@@ -182,16 +182,6 @@ namespace GestaoEstoque
         }
 
 
-        private void toolStripExcluir_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formExcluir = new Excluir(this, posicaoForm.X, posicaoForm.Y);
-            this.Hide();
-            formExcluir.Show();
-        }
-
         private void txtNome_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -322,6 +312,15 @@ namespace GestaoEstoque
         private void btnAjuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Este material só existirá nos locais que você determinar");
+        }
+
+        private void toolStripVoltar_Click(object sender, EventArgs e)
+        {
+            xClicked = false;
+            this.Close();
+
+            formAnterior.Location = this.Location;
+            formAnterior.Show();
         }
     }
 }

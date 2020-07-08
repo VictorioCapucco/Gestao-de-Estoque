@@ -107,12 +107,6 @@
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Criptografia.cs" />
-    <Compile Include="Excluir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Excluir.Designer.cs">
-      <DependentUpon>Excluir.cs</DependentUpon>
-    </Compile>
     <Compile Include="Incluir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,9 +211,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUsuario.resx">
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Excluir.resx">
-      <DependentUpon>Excluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Incluir.resx">
       <DependentUpon>Incluir.cs</DependentUpon>

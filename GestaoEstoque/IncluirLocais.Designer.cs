@@ -34,16 +34,16 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripExcluir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirLocais = new System.Windows.Forms.GroupBox();
+            this.checkboxObra = new System.Windows.Forms.CheckBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
-            this.checkboxObra = new System.Windows.Forms.CheckBox();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirLocais.SuspendLayout();
             this.SuspendLayout();
@@ -52,11 +52,11 @@
             // 
             this.toolStripMenu.BackColor = System.Drawing.Color.Purple;
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripVoltar,
+            this.toolStripSeparator2,
             this.toolStripIncluir,
             this.toolStripSeparator1,
             this.toolStripConsultar,
-            this.toolStripSeparator2,
-            this.toolStripExcluir,
             this.toolStripSeparator3});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
@@ -99,24 +99,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
-            // toolStripExcluir
-            // 
-            this.toolStripExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripExcluir.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripExcluir.ForeColor = System.Drawing.Color.White;
-            this.toolStripExcluir.Image = ((System.Drawing.Image)(resources.GetObject("toolStripExcluir.Image")));
-            this.toolStripExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripExcluir.Name = "toolStripExcluir";
-            this.toolStripExcluir.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.toolStripExcluir.Size = new System.Drawing.Size(136, 39);
-            this.toolStripExcluir.Text = "Excluir";
-            this.toolStripExcluir.Click += new System.EventHandler(this.toolStripExcluir_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
-            // 
             // gpbIncluirLocais
             // 
             this.gpbIncluirLocais.BackColor = System.Drawing.Color.DimGray;
@@ -132,6 +114,19 @@
             this.gpbIncluirLocais.Size = new System.Drawing.Size(717, 294);
             this.gpbIncluirLocais.TabIndex = 6;
             this.gpbIncluirLocais.TabStop = false;
+            // 
+            // checkboxObra
+            // 
+            this.checkboxObra.AutoSize = true;
+            this.checkboxObra.BackColor = System.Drawing.Color.Gray;
+            this.checkboxObra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxObra.Location = new System.Drawing.Point(281, 149);
+            this.checkboxObra.Name = "checkboxObra";
+            this.checkboxObra.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.checkboxObra.Size = new System.Drawing.Size(146, 22);
+            this.checkboxObra.TabIndex = 7;
+            this.checkboxObra.Text = "Obra";
+            this.checkboxObra.UseVisualStyleBackColor = false;
             // 
             // txtEndereco
             // 
@@ -181,7 +176,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.DarkRed;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(370, 213);
             this.btnCancelar.Name = "btnCancelar";
@@ -195,7 +190,7 @@
             // 
             this.btnIncluir.BackColor = System.Drawing.Color.OliveDrab;
             this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluir.Font = new System.Drawing.Font("Myriad Pro SemiExt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluir.ForeColor = System.Drawing.Color.White;
             this.btnIncluir.Location = new System.Drawing.Point(187, 213);
             this.btnIncluir.Name = "btnIncluir";
@@ -205,18 +200,22 @@
             this.btnIncluir.UseVisualStyleBackColor = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
-            // checkboxObra
+            // toolStripVoltar
             // 
-            this.checkboxObra.AutoSize = true;
-            this.checkboxObra.BackColor = System.Drawing.Color.Gray;
-            this.checkboxObra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxObra.Location = new System.Drawing.Point(281, 149);
-            this.checkboxObra.Name = "checkboxObra";
-            this.checkboxObra.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.checkboxObra.Size = new System.Drawing.Size(146, 22);
-            this.checkboxObra.TabIndex = 7;
-            this.checkboxObra.Text = "Obra";
-            this.checkboxObra.UseVisualStyleBackColor = false;
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
             // IncluirLocais
             // 
@@ -247,8 +246,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripConsultar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripExcluir;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.GroupBox gpbIncluirLocais;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnIncluir;
@@ -257,5 +254,7 @@
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.CheckBox checkboxObra;
+        private System.Windows.Forms.ToolStripButton toolStripVoltar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
