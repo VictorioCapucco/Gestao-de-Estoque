@@ -44,7 +44,7 @@
             this.btnConsultarRecebimento = new System.Windows.Forms.Button();
             this.btnConsultarLocais = new System.Windows.Forms.Button();
             this.btnConsultarPedidoCompra = new System.Windows.Forms.Button();
-            this.btnConsultarRequisicaoSaida = new System.Windows.Forms.Button();
+            this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
@@ -130,7 +130,7 @@
             this.gpbConsultar.Controls.Add(this.btnConsultarRecebimento);
             this.gpbConsultar.Controls.Add(this.btnConsultarLocais);
             this.gpbConsultar.Controls.Add(this.btnConsultarPedidoCompra);
-            this.gpbConsultar.Controls.Add(this.btnConsultarRequisicaoSaida);
+            this.gpbConsultar.Controls.Add(this.btnConsultarTransferencias);
             this.gpbConsultar.Controls.Add(this.btnConsultarMaterial);
             this.gpbConsultar.Controls.Add(this.btnConsultarFornecedor);
             this.gpbConsultar.Location = new System.Drawing.Point(123, 126);
@@ -235,18 +235,19 @@
             this.btnConsultarPedidoCompra.UseVisualStyleBackColor = false;
             this.btnConsultarPedidoCompra.Click += new System.EventHandler(this.btnConsultarPedidoCompra_Click);
             // 
-            // btnConsultarRequisicaoSaida
+            // btnConsultarTransferencias
             // 
-            this.btnConsultarRequisicaoSaida.BackColor = System.Drawing.Color.Black;
-            this.btnConsultarRequisicaoSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultarRequisicaoSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarRequisicaoSaida.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarRequisicaoSaida.Location = new System.Drawing.Point(100, 138);
-            this.btnConsultarRequisicaoSaida.Name = "btnConsultarRequisicaoSaida";
-            this.btnConsultarRequisicaoSaida.Size = new System.Drawing.Size(241, 32);
-            this.btnConsultarRequisicaoSaida.TabIndex = 4;
-            this.btnConsultarRequisicaoSaida.Text = "Consultar Requisição de saída";
-            this.btnConsultarRequisicaoSaida.UseVisualStyleBackColor = false;
+            this.btnConsultarTransferencias.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarTransferencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarTransferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarTransferencias.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarTransferencias.Location = new System.Drawing.Point(100, 138);
+            this.btnConsultarTransferencias.Name = "btnConsultarTransferencias";
+            this.btnConsultarTransferencias.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarTransferencias.TabIndex = 4;
+            this.btnConsultarTransferencias.Text = "Consultar Transferências";
+            this.btnConsultarTransferencias.UseVisualStyleBackColor = false;
+            this.btnConsultarTransferencias.Click += new System.EventHandler(this.btnConsultarTransferencias_Click);
             // 
             // btnConsultarMaterial
             // 
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Button btnConsultarRecebimento;
         private System.Windows.Forms.Button btnConsultarLocais;
         private System.Windows.Forms.Button btnConsultarPedidoCompra;
-        private System.Windows.Forms.Button btnConsultarRequisicaoSaida;
+        private System.Windows.Forms.Button btnConsultarTransferencias;
         private System.Windows.Forms.Button btnConsultarMaterial;
         private System.Windows.Forms.Button btnConsultarFornecedor;
         private System.Windows.Forms.Button btnConsultarTipoTransferencia;

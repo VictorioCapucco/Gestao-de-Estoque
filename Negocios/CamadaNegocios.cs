@@ -41,6 +41,12 @@ namespace Negocios
                 return consulta.RetornarDataTable("select id_local, descricao_local from Locais where status_local = " + statusLocal + " and obra = " + isObra, "Locais");
         }
 
+        public DataTable DataTableTodosLocais()
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_local, descricao_local from Locais", "Locais");
+        }
+
         public Boolean ValidarObra(int codigoLocal)
         {
             Conexao atualizar = new Conexao();
@@ -62,6 +68,23 @@ namespace Negocios
                 nomeLocal = "";
 
             return nomeLocal;
+        }
+
+        public string DescricaoLocal(int codigoLocal)
+        {
+            Conexao consulta = new Conexao();
+            DataTable oDtLocal = new DataTable();
+            oDtLocal = consulta.RetornarDataTable("select descricao_local from Locais where id_local = " + codigoLocal, "Locais");
+
+            if (oDtLocal.Rows.Count > 0)
+            {
+                string descricaoLocal = oDtLocal.Rows[0]["descricao_local"].ToString();
+
+                return descricaoLocal;
+            }
+
+            else
+                return "";
         }
 
         //Usuarios
@@ -238,6 +261,12 @@ namespace Negocios
             return alterar.ExecutaNQ("update Materiais_Transferencia set quantidade_material = " + quantidadeMaterial + " where id_material = " + codigoMaterial + " and id_transferencia = " + codigoTransferencia);
         }
 
+        public DataTable DataTableTransferencia(int codigoLocalDestino, int codigoTipoTransferencia)
+        {
+            Conexao consultar = new Conexao();
+            return consultar.RetornarDataTable("select * from Transferencia where id_local_destino = " + codigoLocalDestino + " and id_tipo_transferencia = " + codigoTipoTransferencia, "Transferencia");
+        }
+
         //Tipos de Transferencia
         public DataTable DataTableTipoTransferencia(Boolean statusTipoSaida, Boolean saida)
         {
@@ -362,6 +391,17 @@ namespace Negocios
 
             //Obtendo os materiais da transferencia
             return consulta.RetornarDataTable("select MT.id_transferencia as CodigoTransferencia, M.id_material as Codigo, M.nome_material as Nome, MT.quantidade_material as Quantidade from Material as M " +
+                                                "inner join Materiais_Transferencia as MT on M.id_material = MT.id_material " +
+                                                "where MT.id_transferencia = " + codigoTransferencia + " order by M.id_material asc", "Materiais_Transferencia");
+        }
+
+
+        public DataTable DataTableMateriaisCodigoTransferencia(int codigoTransferencia)
+        {
+            Conexao consulta = new Conexao();
+
+            //Obtendo os materiais da transferencia
+            return consulta.RetornarDataTable("select M.id_material as Codigo, M.nome_material as Nome, MT.quantidade_material as Quantidade from Material as M " +
                                                 "inner join Materiais_Transferencia as MT on M.id_material = MT.id_material " +
                                                 "where MT.id_transferencia = " + codigoTransferencia + " order by M.id_material asc", "Materiais_Transferencia");
         }

@@ -82,6 +82,12 @@
     <Compile Include="ConsultarTipoTransferencia.Designer.cs">
       <DependentUpon>ConsultarTipoTransferencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarTransferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarTransferencias.Designer.cs">
+      <DependentUpon>ConsultarTransferencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarUnidadeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarTipoTransferencia.resx">
       <DependentUpon>ConsultarTipoTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarTransferencias.resx">
+      <DependentUpon>ConsultarTransferencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUnidadeMedida.resx">
       <DependentUpon>ConsultarUnidadeMedida.cs</DependentUpon>

@@ -122,7 +122,6 @@ namespace GestaoEstoque
 
                 int codigoPedidoCompra = int.Parse(cmbPedidoCompra.SelectedValue.ToString());
 
-
                 try
                 {
                     lstboxMateriais.Items.Clear();
