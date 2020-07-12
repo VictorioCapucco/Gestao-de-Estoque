@@ -46,6 +46,8 @@
             this.btnIncluirTransferenciaSaida = new System.Windows.Forms.Button();
             this.btnIncluirMaterial = new System.Windows.Forms.Button();
             this.btnIncluirFornecedor = new System.Windows.Forms.Button();
+            this.btnOperações = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluir.SuspendLayout();
             this.SuspendLayout();
@@ -101,14 +103,16 @@
             // 
             // gpbIncluir
             // 
+            this.gpbIncluir.Controls.Add(this.btnOperações);
+            this.gpbIncluir.Controls.Add(this.btnCadastros);
             this.gpbIncluir.Controls.Add(this.btnIncluirUnidadeMedida);
             this.gpbIncluir.Controls.Add(this.btnIncluirUsuario);
+            this.gpbIncluir.Controls.Add(this.btnIncluirPedidoCompra);
             this.gpbIncluir.Controls.Add(this.btnIncluirTipoMaterial);
             this.gpbIncluir.Controls.Add(this.btnIncluirTipoTransferencia);
             this.gpbIncluir.Controls.Add(this.btnIncluirTransferenciaEntrada);
             this.gpbIncluir.Controls.Add(this.btnIncluirRecebimento);
             this.gpbIncluir.Controls.Add(this.btnIncluirLocais);
-            this.gpbIncluir.Controls.Add(this.btnIncluirPedidoCompra);
             this.gpbIncluir.Controls.Add(this.btnIncluirTransferenciaSaida);
             this.gpbIncluir.Controls.Add(this.btnIncluirMaterial);
             this.gpbIncluir.Controls.Add(this.btnIncluirFornecedor);
@@ -124,12 +128,13 @@
             this.btnIncluirUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirUnidadeMedida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirUnidadeMedida.Location = new System.Drawing.Point(245, 256);
+            this.btnIncluirUnidadeMedida.Location = new System.Drawing.Point(99, 213);
             this.btnIncluirUnidadeMedida.Name = "btnIncluirUnidadeMedida";
             this.btnIncluirUnidadeMedida.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirUnidadeMedida.TabIndex = 11;
             this.btnIncluirUnidadeMedida.Text = "Incluir Unidade de Medida";
             this.btnIncluirUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnIncluirUnidadeMedida.Visible = false;
             this.btnIncluirUnidadeMedida.Click += new System.EventHandler(this.btnIncluirUnidadeMedida_Click);
             // 
             // btnIncluirUsuario
@@ -138,12 +143,13 @@
             this.btnIncluirUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirUsuario.Location = new System.Drawing.Point(391, 218);
+            this.btnIncluirUsuario.Location = new System.Drawing.Point(99, 254);
             this.btnIncluirUsuario.Name = "btnIncluirUsuario";
             this.btnIncluirUsuario.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirUsuario.TabIndex = 10;
             this.btnIncluirUsuario.Text = "Incluir Usuário";
             this.btnIncluirUsuario.UseVisualStyleBackColor = false;
+            this.btnIncluirUsuario.Visible = false;
             this.btnIncluirUsuario.Click += new System.EventHandler(this.btnIncluirUsuario_Click);
             // 
             // btnIncluirTipoMaterial
@@ -152,12 +158,13 @@
             this.btnIncluirTipoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTipoMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTipoMaterial.Location = new System.Drawing.Point(100, 218);
+            this.btnIncluirTipoMaterial.Location = new System.Drawing.Point(99, 170);
             this.btnIncluirTipoMaterial.Name = "btnIncluirTipoMaterial";
             this.btnIncluirTipoMaterial.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTipoMaterial.TabIndex = 5;
             this.btnIncluirTipoMaterial.Text = "Incluir Tipo de Material";
             this.btnIncluirTipoMaterial.UseVisualStyleBackColor = false;
+            this.btnIncluirTipoMaterial.Visible = false;
             this.btnIncluirTipoMaterial.Click += new System.EventHandler(this.btnIncluirTipoMaterial_Click);
             // 
             // btnIncluirTipoTransferencia
@@ -166,12 +173,13 @@
             this.btnIncluirTipoTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirTipoTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTipoTransferencia.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTipoTransferencia.Location = new System.Drawing.Point(391, 170);
+            this.btnIncluirTipoTransferencia.Location = new System.Drawing.Point(438, 140);
             this.btnIncluirTipoTransferencia.Name = "btnIncluirTipoTransferencia";
             this.btnIncluirTipoTransferencia.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTipoTransferencia.TabIndex = 9;
             this.btnIncluirTipoTransferencia.Text = "Incluir Tipo de Transferência";
             this.btnIncluirTipoTransferencia.UseVisualStyleBackColor = false;
+            this.btnIncluirTipoTransferencia.Visible = false;
             this.btnIncluirTipoTransferencia.Click += new System.EventHandler(this.btnIncluirTipoSaida_Click);
             // 
             // btnIncluirTransferenciaEntrada
@@ -180,12 +188,13 @@
             this.btnIncluirTransferenciaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirTransferenciaEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTransferenciaEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTransferenciaEntrada.Location = new System.Drawing.Point(391, 122);
+            this.btnIncluirTransferenciaEntrada.Location = new System.Drawing.Point(438, 92);
             this.btnIncluirTransferenciaEntrada.Name = "btnIncluirTransferenciaEntrada";
             this.btnIncluirTransferenciaEntrada.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTransferenciaEntrada.TabIndex = 8;
             this.btnIncluirTransferenciaEntrada.Text = "Incluir Transferência entrada";
             this.btnIncluirTransferenciaEntrada.UseVisualStyleBackColor = false;
+            this.btnIncluirTransferenciaEntrada.Visible = false;
             this.btnIncluirTransferenciaEntrada.Click += new System.EventHandler(this.btnIncluirSaida_Click);
             // 
             // btnIncluirRecebimento
@@ -194,12 +203,13 @@
             this.btnIncluirRecebimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirRecebimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirRecebimento.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirRecebimento.Location = new System.Drawing.Point(391, 74);
+            this.btnIncluirRecebimento.Location = new System.Drawing.Point(438, 43);
             this.btnIncluirRecebimento.Name = "btnIncluirRecebimento";
             this.btnIncluirRecebimento.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirRecebimento.TabIndex = 7;
             this.btnIncluirRecebimento.Text = "Incluir Recebimento";
             this.btnIncluirRecebimento.UseVisualStyleBackColor = false;
+            this.btnIncluirRecebimento.Visible = false;
             this.btnIncluirRecebimento.Click += new System.EventHandler(this.btnIncluirRecebimento_Click);
             // 
             // btnIncluirLocais
@@ -208,12 +218,13 @@
             this.btnIncluirLocais.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirLocais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirLocais.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirLocais.Location = new System.Drawing.Point(391, 26);
+            this.btnIncluirLocais.Location = new System.Drawing.Point(99, 124);
             this.btnIncluirLocais.Name = "btnIncluirLocais";
             this.btnIncluirLocais.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirLocais.TabIndex = 6;
             this.btnIncluirLocais.Text = "Incluir Locais";
             this.btnIncluirLocais.UseVisualStyleBackColor = false;
+            this.btnIncluirLocais.Visible = false;
             this.btnIncluirLocais.Click += new System.EventHandler(this.btnIncluirLocais_Click);
             // 
             // btnIncluirPedidoCompra
@@ -222,12 +233,13 @@
             this.btnIncluirPedidoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirPedidoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirPedidoCompra.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(100, 170);
+            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(438, 237);
             this.btnIncluirPedidoCompra.Name = "btnIncluirPedidoCompra";
             this.btnIncluirPedidoCompra.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirPedidoCompra.TabIndex = 4;
             this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
             this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
+            this.btnIncluirPedidoCompra.Visible = false;
             this.btnIncluirPedidoCompra.Click += new System.EventHandler(this.btnIncluirPedidoCompra_Click);
             // 
             // btnIncluirTransferenciaSaida
@@ -236,12 +248,13 @@
             this.btnIncluirTransferenciaSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirTransferenciaSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirTransferenciaSaida.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirTransferenciaSaida.Location = new System.Drawing.Point(100, 122);
+            this.btnIncluirTransferenciaSaida.Location = new System.Drawing.Point(438, 188);
             this.btnIncluirTransferenciaSaida.Name = "btnIncluirTransferenciaSaida";
             this.btnIncluirTransferenciaSaida.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirTransferenciaSaida.TabIndex = 3;
             this.btnIncluirTransferenciaSaida.Text = "Incluir Transferência saída";
             this.btnIncluirTransferenciaSaida.UseVisualStyleBackColor = false;
+            this.btnIncluirTransferenciaSaida.Visible = false;
             this.btnIncluirTransferenciaSaida.Click += new System.EventHandler(this.btnIncluirRequisicaoSaida_Click);
             // 
             // btnIncluirMaterial
@@ -250,12 +263,13 @@
             this.btnIncluirMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirMaterial.Location = new System.Drawing.Point(100, 74);
+            this.btnIncluirMaterial.Location = new System.Drawing.Point(99, 76);
             this.btnIncluirMaterial.Name = "btnIncluirMaterial";
             this.btnIncluirMaterial.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirMaterial.TabIndex = 2;
             this.btnIncluirMaterial.Text = "Incluir Material";
             this.btnIncluirMaterial.UseVisualStyleBackColor = false;
+            this.btnIncluirMaterial.Visible = false;
             this.btnIncluirMaterial.Click += new System.EventHandler(this.btnIncluirMaterial_Click);
             // 
             // btnIncluirFornecedor
@@ -264,13 +278,42 @@
             this.btnIncluirFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncluirFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluirFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirFornecedor.Location = new System.Drawing.Point(100, 26);
+            this.btnIncluirFornecedor.Location = new System.Drawing.Point(99, 28);
             this.btnIncluirFornecedor.Name = "btnIncluirFornecedor";
             this.btnIncluirFornecedor.Size = new System.Drawing.Size(241, 32);
             this.btnIncluirFornecedor.TabIndex = 1;
             this.btnIncluirFornecedor.Text = "Incluir Fornecedor";
             this.btnIncluirFornecedor.UseVisualStyleBackColor = false;
+            this.btnIncluirFornecedor.Visible = false;
             this.btnIncluirFornecedor.Click += new System.EventHandler(this.btnIncluirFornecedor_Click);
+            // 
+            // btnOperações
+            // 
+            this.btnOperações.BackColor = System.Drawing.Color.Black;
+            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperações.ForeColor = System.Drawing.Color.White;
+            this.btnOperações.Location = new System.Drawing.Point(446, 130);
+            this.btnOperações.Name = "btnOperações";
+            this.btnOperações.Size = new System.Drawing.Size(241, 32);
+            this.btnOperações.TabIndex = 16;
+            this.btnOperações.Text = "Operações";
+            this.btnOperações.UseVisualStyleBackColor = false;
+            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click_1);
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.BackColor = System.Drawing.Color.Black;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.Location = new System.Drawing.Point(79, 130);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
+            this.btnCadastros.TabIndex = 15;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = false;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
             // 
             // Incluir
             // 
@@ -314,6 +357,8 @@
         private System.Windows.Forms.Button btnIncluirUsuario;
         private System.Windows.Forms.Button btnIncluirTipoMaterial;
         private System.Windows.Forms.Button btnIncluirUnidadeMedida;
+        private System.Windows.Forms.Button btnOperações;
+        private System.Windows.Forms.Button btnCadastros;
     }
 }
 

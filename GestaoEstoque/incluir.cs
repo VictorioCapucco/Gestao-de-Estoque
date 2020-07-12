@@ -163,5 +163,50 @@ namespace GestaoEstoque
         {
 
         }
+
+        private void btnCadastros_Click(object sender, EventArgs e)
+        {
+            btnCadastros.Visible = false;
+            btnOperações.Visible = false;
+
+            if (permissaoUsuario == 2 || permissaoUsuario == 0)
+            {
+                btnIncluirFornecedor.Visible = true;
+                btnIncluirMaterial.Visible = true;
+                btnIncluirLocais.Visible = true;
+                btnIncluirTipoMaterial.Visible = true;
+                btnIncluirUnidadeMedida.Visible = true;
+            }
+
+            if (permissaoUsuario == 1 || permissaoUsuario == 0)
+            {
+                btnIncluirUsuario.Visible = true;
+                if (permissaoUsuario == 1)
+                    btnIncluirUsuario.Location = new Point(266, 130);
+            }
+
+        }
+
+        private void btnOperações_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnOperações_Click_1(object sender, EventArgs e)
+        {
+            if (permissaoUsuario == 2 || permissaoUsuario == 0)
+            {
+                btnCadastros.Visible = false;
+                btnOperações.Visible = false;
+
+
+                btnIncluirRecebimento.Visible = true;
+                btnIncluirTransferenciaEntrada.Visible = true;
+                btnIncluirTipoTransferencia.Visible = true;
+                btnIncluirTransferenciaSaida.Visible = true;
+                btnIncluirPedidoCompra.Visible = true;
+            }
+        }
     }
 }

@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirTransferenciaEntrada));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripIncluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirTransferencia = new System.Windows.Forms.GroupBox();
             this.btnConfirmarObraOrigem = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.btnIncluirTransferência = new System.Windows.Forms.Button();
             this.btnMandaParaDestino = new System.Windows.Forms.Button();
             this.btnMandaParaObra = new System.Windows.Forms.Button();
-            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirTransferencia.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,23 @@
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
             this.toolStripMenu.TabIndex = 21;
+            // 
+            // toolStripVoltar
+            // 
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripIncluir
             // 
@@ -105,11 +122,6 @@
             this.toolStripConsultar.Size = new System.Drawing.Size(167, 39);
             this.toolStripConsultar.Text = "Consultar";
             this.toolStripConsultar.Click += new System.EventHandler(this.toolStripConsultar_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripSeparator3
             // 
@@ -379,18 +391,6 @@
             this.btnMandaParaObra.UseVisualStyleBackColor = true;
             this.btnMandaParaObra.Visible = false;
             this.btnMandaParaObra.Click += new System.EventHandler(this.btnMandaParaObra_Click);
-            // 
-            // toolStripVoltar
-            // 
-            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripVoltar.Name = "toolStripVoltar";
-            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
-            this.toolStripVoltar.Text = "toolStripButton1";
-            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
             // 
             // IncluirTransferenciaEntrada
             // 

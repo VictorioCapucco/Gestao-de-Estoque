@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirUsuario));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripIncluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirUsuario = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdbAuxiliar = new System.Windows.Forms.RadioButton();
@@ -48,7 +49,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
-            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +68,23 @@
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
             this.toolStripMenu.TabIndex = 13;
+            // 
+            // toolStripVoltar
+            // 
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripIncluir
             // 
@@ -104,11 +121,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
             // gpbIncluirUsuario
             // 
@@ -206,6 +218,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(212, 27);
             this.txtSenha.TabIndex = 2;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // lblSenha
@@ -219,6 +232,7 @@
             this.lblSenha.Size = new System.Drawing.Size(165, 28);
             this.lblSenha.TabIndex = 10;
             this.lblSenha.Text = "Senha";
+            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
             // 
             // txtNome
             // 
@@ -228,6 +242,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(212, 27);
             this.txtNome.TabIndex = 1;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblNome
@@ -241,6 +256,7 @@
             this.lblNome.Size = new System.Drawing.Size(165, 28);
             this.lblNome.TabIndex = 9;
             this.lblNome.Text = "Nome";
+            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
             // 
             // btnCancelar
             // 
@@ -269,18 +285,6 @@
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
-            // toolStripVoltar
-            // 
-            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripVoltar.Name = "toolStripVoltar";
-            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
-            this.toolStripVoltar.Text = "toolStripButton1";
-            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
             // 
             // IncluirUsuario
             // 

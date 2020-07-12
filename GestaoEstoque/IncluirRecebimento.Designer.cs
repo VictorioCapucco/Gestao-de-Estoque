@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncluirRecebimento));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
+            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripIncluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluirRecebimento = new System.Windows.Forms.GroupBox();
+            this.mskDataRecebimento = new System.Windows.Forms.MaskedTextBox();
+            this.lblDataRecebimento = new System.Windows.Forms.Label();
             this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.btnConfirmarLocal = new System.Windows.Forms.Button();
@@ -43,18 +47,16 @@
             this.btnUtilizarPedido = new System.Windows.Forms.Button();
             this.lblPedidoCompra = new System.Windows.Forms.Label();
             this.cmbPedidoCompra = new System.Windows.Forms.ComboBox();
-            this.gpbData = new System.Windows.Forms.GroupBox();
-            this.lblDataRecebimento = new System.Windows.Forms.Label();
-            this.mskDataRecebimento = new System.Windows.Forms.MaskedTextBox();
-            this.lblLegenda = new System.Windows.Forms.Label();
+            this.lblLegendaPedidoCompra = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
-            this.lstboxMateriais = new System.Windows.Forms.ListBox();
-            this.toolStripVoltar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lstboxMateriaisPedido = new System.Windows.Forms.ListBox();
+            this.btnMandaPedido = new System.Windows.Forms.Button();
+            this.btnMandaRecebimento = new System.Windows.Forms.Button();
+            this.lblLegendaRecebimento = new System.Windows.Forms.Label();
+            this.lstboxMateriaisRecebimento = new System.Windows.Forms.ListBox();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluirRecebimento.SuspendLayout();
-            this.gpbData.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
@@ -71,6 +73,23 @@
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
             this.toolStripMenu.TabIndex = 16;
+            // 
+            // toolStripVoltar
+            // 
+            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
+            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripVoltar.Name = "toolStripVoltar";
+            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
+            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
+            this.toolStripVoltar.Text = "toolStripButton1";
+            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
             // 
             // toolStripIncluir
             // 
@@ -112,6 +131,8 @@
             // 
             this.gpbIncluirRecebimento.BackColor = System.Drawing.Color.DimGray;
             this.gpbIncluirRecebimento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gpbIncluirRecebimento.Controls.Add(this.mskDataRecebimento);
+            this.gpbIncluirRecebimento.Controls.Add(this.lblDataRecebimento);
             this.gpbIncluirRecebimento.Controls.Add(this.txtFornecedor);
             this.gpbIncluirRecebimento.Controls.Add(this.lblFornecedor);
             this.gpbIncluirRecebimento.Controls.Add(this.btnConfirmarLocal);
@@ -121,17 +142,40 @@
             this.gpbIncluirRecebimento.Controls.Add(this.lblPedidoCompra);
             this.gpbIncluirRecebimento.Controls.Add(this.cmbPedidoCompra);
             this.gpbIncluirRecebimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gpbIncluirRecebimento.Location = new System.Drawing.Point(34, 93);
+            this.gpbIncluirRecebimento.Location = new System.Drawing.Point(34, 80);
             this.gpbIncluirRecebimento.Name = "gpbIncluirRecebimento";
-            this.gpbIncluirRecebimento.Size = new System.Drawing.Size(499, 211);
+            this.gpbIncluirRecebimento.Size = new System.Drawing.Size(864, 121);
             this.gpbIncluirRecebimento.TabIndex = 13;
             this.gpbIncluirRecebimento.TabStop = false;
+            // 
+            // mskDataRecebimento
+            // 
+            this.mskDataRecebimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskDataRecebimento.Location = new System.Drawing.Point(653, 70);
+            this.mskDataRecebimento.Mask = "99/99/9999";
+            this.mskDataRecebimento.Name = "mskDataRecebimento";
+            this.mskDataRecebimento.Size = new System.Drawing.Size(86, 26);
+            this.mskDataRecebimento.TabIndex = 4;
+            this.mskDataRecebimento.Visible = false;
+            // 
+            // lblDataRecebimento
+            // 
+            this.lblDataRecebimento.AutoSize = true;
+            this.lblDataRecebimento.BackColor = System.Drawing.Color.Gray;
+            this.lblDataRecebimento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataRecebimento.Location = new System.Drawing.Point(429, 68);
+            this.lblDataRecebimento.Name = "lblDataRecebimento";
+            this.lblDataRecebimento.Padding = new System.Windows.Forms.Padding(17, 5, 16, 5);
+            this.lblDataRecebimento.Size = new System.Drawing.Size(218, 28);
+            this.lblDataRecebimento.TabIndex = 12;
+            this.lblDataRecebimento.Text = "Data do Recebimento";
+            this.lblDataRecebimento.Visible = false;
             // 
             // txtFornecedor
             // 
             this.txtFornecedor.Enabled = false;
             this.txtFornecedor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFornecedor.Location = new System.Drawing.Point(258, 124);
+            this.txtFornecedor.Location = new System.Drawing.Point(237, 70);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(174, 27);
             this.txtFornecedor.TabIndex = 8;
@@ -142,7 +186,7 @@
             this.lblFornecedor.AutoSize = true;
             this.lblFornecedor.BackColor = System.Drawing.Color.Gray;
             this.lblFornecedor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFornecedor.Location = new System.Drawing.Point(54, 123);
+            this.lblFornecedor.Location = new System.Drawing.Point(33, 69);
             this.lblFornecedor.Name = "lblFornecedor";
             this.lblFornecedor.Padding = new System.Windows.Forms.Padding(48, 5, 49, 5);
             this.lblFornecedor.Size = new System.Drawing.Size(194, 28);
@@ -156,7 +200,7 @@
             this.btnConfirmarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmarLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarLocal.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarLocal.Location = new System.Drawing.Point(131, 84);
+            this.btnConfirmarLocal.Location = new System.Drawing.Point(432, 25);
             this.btnConfirmarLocal.Name = "btnConfirmarLocal";
             this.btnConfirmarLocal.Size = new System.Drawing.Size(239, 30);
             this.btnConfirmarLocal.TabIndex = 1;
@@ -169,7 +213,7 @@
             this.cmbLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLocal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLocal.FormattingEnabled = true;
-            this.cmbLocal.Location = new System.Drawing.Point(258, 47);
+            this.cmbLocal.Location = new System.Drawing.Point(237, 29);
             this.cmbLocal.Name = "cmbLocal";
             this.cmbLocal.Size = new System.Drawing.Size(174, 26);
             this.cmbLocal.TabIndex = 0;
@@ -179,7 +223,7 @@
             this.lblLocal.AutoSize = true;
             this.lblLocal.BackColor = System.Drawing.Color.Gray;
             this.lblLocal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.Location = new System.Drawing.Point(54, 47);
+            this.lblLocal.Location = new System.Drawing.Point(33, 29);
             this.lblLocal.Name = "lblLocal";
             this.lblLocal.Padding = new System.Windows.Forms.Padding(72, 5, 72, 5);
             this.lblLocal.Size = new System.Drawing.Size(194, 28);
@@ -192,7 +236,7 @@
             this.btnUtilizarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUtilizarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUtilizarPedido.ForeColor = System.Drawing.Color.White;
-            this.btnUtilizarPedido.Location = new System.Drawing.Point(131, 165);
+            this.btnUtilizarPedido.Location = new System.Drawing.Point(432, 67);
             this.btnUtilizarPedido.Name = "btnUtilizarPedido";
             this.btnUtilizarPedido.Size = new System.Drawing.Size(239, 30);
             this.btnUtilizarPedido.TabIndex = 3;
@@ -206,10 +250,10 @@
             this.lblPedidoCompra.AutoSize = true;
             this.lblPedidoCompra.BackColor = System.Drawing.Color.Gray;
             this.lblPedidoCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPedidoCompra.Location = new System.Drawing.Point(54, 85);
+            this.lblPedidoCompra.Location = new System.Drawing.Point(429, 29);
             this.lblPedidoCompra.Name = "lblPedidoCompra";
-            this.lblPedidoCompra.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.lblPedidoCompra.Size = new System.Drawing.Size(194, 28);
+            this.lblPedidoCompra.Padding = new System.Windows.Forms.Padding(32, 5, 32, 5);
+            this.lblPedidoCompra.Size = new System.Drawing.Size(218, 28);
             this.lblPedidoCompra.TabIndex = 10;
             this.lblPedidoCompra.Text = "Pedido de compra";
             this.lblPedidoCompra.Visible = false;
@@ -219,7 +263,7 @@
             this.cmbPedidoCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPedidoCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPedidoCompra.FormattingEnabled = true;
-            this.cmbPedidoCompra.Location = new System.Drawing.Point(258, 87);
+            this.cmbPedidoCompra.Location = new System.Drawing.Point(653, 31);
             this.cmbPedidoCompra.Name = "cmbPedidoCompra";
             this.cmbPedidoCompra.Size = new System.Drawing.Size(174, 26);
             this.cmbPedidoCompra.TabIndex = 2;
@@ -227,53 +271,18 @@
             this.cmbPedidoCompra.SelectedIndexChanged += new System.EventHandler(this.cmbPedidoCompra_SelectedIndexChanged);
             this.cmbPedidoCompra.SelectionChangeCommitted += new System.EventHandler(this.cmbPedidoCompra_SelectionChangeCommitted);
             // 
-            // gpbData
+            // lblLegendaPedidoCompra
             // 
-            this.gpbData.BackColor = System.Drawing.Color.DimGray;
-            this.gpbData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gpbData.Controls.Add(this.lblDataRecebimento);
-            this.gpbData.Controls.Add(this.mskDataRecebimento);
-            this.gpbData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gpbData.Location = new System.Drawing.Point(34, 310);
-            this.gpbData.Name = "gpbData";
-            this.gpbData.Size = new System.Drawing.Size(499, 65);
-            this.gpbData.TabIndex = 14;
-            this.gpbData.TabStop = false;
-            this.gpbData.Visible = false;
-            // 
-            // lblDataRecebimento
-            // 
-            this.lblDataRecebimento.AutoSize = true;
-            this.lblDataRecebimento.BackColor = System.Drawing.Color.Gray;
-            this.lblDataRecebimento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataRecebimento.Location = new System.Drawing.Point(79, 22);
-            this.lblDataRecebimento.Name = "lblDataRecebimento";
-            this.lblDataRecebimento.Padding = new System.Windows.Forms.Padding(17, 5, 16, 5);
-            this.lblDataRecebimento.Size = new System.Drawing.Size(218, 28);
-            this.lblDataRecebimento.TabIndex = 12;
-            this.lblDataRecebimento.Text = "Data do Recebimento";
-            // 
-            // mskDataRecebimento
-            // 
-            this.mskDataRecebimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDataRecebimento.Location = new System.Drawing.Point(315, 24);
-            this.mskDataRecebimento.Mask = "99/99/9999";
-            this.mskDataRecebimento.Name = "mskDataRecebimento";
-            this.mskDataRecebimento.Size = new System.Drawing.Size(86, 26);
-            this.mskDataRecebimento.TabIndex = 4;
-            // 
-            // lblLegenda
-            // 
-            this.lblLegenda.AutoSize = true;
-            this.lblLegenda.BackColor = System.Drawing.Color.Transparent;
-            this.lblLegenda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLegenda.ForeColor = System.Drawing.Color.White;
-            this.lblLegenda.Location = new System.Drawing.Point(552, 79);
-            this.lblLegenda.Name = "lblLegenda";
-            this.lblLegenda.Size = new System.Drawing.Size(350, 18);
-            this.lblLegenda.TabIndex = 15;
-            this.lblLegenda.Text = "Codigo     Nome                   Quantidade";
-            this.lblLegenda.Visible = false;
+            this.lblLegendaPedidoCompra.AutoSize = true;
+            this.lblLegendaPedidoCompra.BackColor = System.Drawing.Color.Transparent;
+            this.lblLegendaPedidoCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLegendaPedidoCompra.ForeColor = System.Drawing.Color.White;
+            this.lblLegendaPedidoCompra.Location = new System.Drawing.Point(40, 216);
+            this.lblLegendaPedidoCompra.Name = "lblLegendaPedidoCompra";
+            this.lblLegendaPedidoCompra.Size = new System.Drawing.Size(157, 18);
+            this.lblLegendaPedidoCompra.TabIndex = 15;
+            this.lblLegendaPedidoCompra.Text = "Pedido de Compra";
+            this.lblLegendaPedidoCompra.Visible = false;
             // 
             // btnCancelar
             // 
@@ -304,33 +313,68 @@
             this.btnIncluir.Visible = false;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
-            // lstboxMateriais
+            // lstboxMateriaisPedido
             // 
-            this.lstboxMateriais.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstboxMateriais.FormattingEnabled = true;
-            this.lstboxMateriais.ItemHeight = 16;
-            this.lstboxMateriais.Location = new System.Drawing.Point(551, 99);
-            this.lstboxMateriais.Name = "lstboxMateriais";
-            this.lstboxMateriais.Size = new System.Drawing.Size(363, 276);
-            this.lstboxMateriais.TabIndex = 7;
-            this.lstboxMateriais.Visible = false;
+            this.lstboxMateriaisPedido.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstboxMateriaisPedido.FormattingEnabled = true;
+            this.lstboxMateriaisPedido.ItemHeight = 16;
+            this.lstboxMateriaisPedido.Location = new System.Drawing.Point(43, 238);
+            this.lstboxMateriaisPedido.Name = "lstboxMateriaisPedido";
+            this.lstboxMateriaisPedido.Size = new System.Drawing.Size(363, 164);
+            this.lstboxMateriaisPedido.TabIndex = 7;
+            this.lstboxMateriaisPedido.Visible = false;
             // 
-            // toolStripVoltar
+            // btnMandaPedido
             // 
-            this.toolStripVoltar.BackgroundImage = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripVoltar.Image = global::GestaoEstoque.Properties.Resources.Seta_Esquerda;
-            this.toolStripVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripVoltar.Name = "toolStripVoltar";
-            this.toolStripVoltar.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.toolStripVoltar.Size = new System.Drawing.Size(100, 39);
-            this.toolStripVoltar.Text = "toolStripButton1";
-            this.toolStripVoltar.Click += new System.EventHandler(this.toolStripVoltar_Click);
+            this.btnMandaPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMandaPedido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMandaPedido.Location = new System.Drawing.Point(462, 351);
+            this.btnMandaPedido.Name = "btnMandaPedido";
+            this.btnMandaPedido.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnMandaPedido.Size = new System.Drawing.Size(53, 37);
+            this.btnMandaPedido.TabIndex = 18;
+            this.btnMandaPedido.Text = "<<";
+            this.btnMandaPedido.UseVisualStyleBackColor = true;
+            this.btnMandaPedido.Visible = false;
+            this.btnMandaPedido.Click += new System.EventHandler(this.btnMandaPedido_Click);
             // 
-            // toolStripSeparator3
+            // btnMandaRecebimento
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
+            this.btnMandaRecebimento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMandaRecebimento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMandaRecebimento.Location = new System.Drawing.Point(413, 261);
+            this.btnMandaRecebimento.Name = "btnMandaRecebimento";
+            this.btnMandaRecebimento.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnMandaRecebimento.Size = new System.Drawing.Size(53, 37);
+            this.btnMandaRecebimento.TabIndex = 17;
+            this.btnMandaRecebimento.Text = ">>";
+            this.btnMandaRecebimento.UseVisualStyleBackColor = true;
+            this.btnMandaRecebimento.Visible = false;
+            this.btnMandaRecebimento.Click += new System.EventHandler(this.btnMandaRecebimento_Click);
+            // 
+            // lblLegendaRecebimento
+            // 
+            this.lblLegendaRecebimento.AutoSize = true;
+            this.lblLegendaRecebimento.BackColor = System.Drawing.Color.Transparent;
+            this.lblLegendaRecebimento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLegendaRecebimento.ForeColor = System.Drawing.Color.White;
+            this.lblLegendaRecebimento.Location = new System.Drawing.Point(518, 216);
+            this.lblLegendaRecebimento.Name = "lblLegendaRecebimento";
+            this.lblLegendaRecebimento.Size = new System.Drawing.Size(119, 18);
+            this.lblLegendaRecebimento.TabIndex = 20;
+            this.lblLegendaRecebimento.Text = "Recebimemto";
+            this.lblLegendaRecebimento.Visible = false;
+            // 
+            // lstboxMateriaisRecebimento
+            // 
+            this.lstboxMateriaisRecebimento.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstboxMateriaisRecebimento.FormattingEnabled = true;
+            this.lstboxMateriaisRecebimento.ItemHeight = 16;
+            this.lstboxMateriaisRecebimento.Location = new System.Drawing.Point(521, 238);
+            this.lstboxMateriaisRecebimento.Name = "lstboxMateriaisRecebimento";
+            this.lstboxMateriaisRecebimento.Size = new System.Drawing.Size(363, 164);
+            this.lstboxMateriaisRecebimento.TabIndex = 19;
+            this.lstboxMateriaisRecebimento.Visible = false;
             // 
             // IncluirRecebimento
             // 
@@ -338,11 +382,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoEstoque.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(941, 478);
-            this.Controls.Add(this.lblLegenda);
+            this.Controls.Add(this.lblLegendaRecebimento);
+            this.Controls.Add(this.lstboxMateriaisRecebimento);
+            this.Controls.Add(this.btnMandaPedido);
+            this.Controls.Add(this.btnMandaRecebimento);
+            this.Controls.Add(this.lblLegendaPedidoCompra);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIncluir);
-            this.Controls.Add(this.lstboxMateriais);
-            this.Controls.Add(this.gpbData);
+            this.Controls.Add(this.lstboxMateriaisPedido);
             this.Controls.Add(this.gpbIncluirRecebimento);
             this.Controls.Add(this.toolStripMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -355,8 +402,6 @@
             this.toolStripMenu.PerformLayout();
             this.gpbIncluirRecebimento.ResumeLayout(false);
             this.gpbIncluirRecebimento.PerformLayout();
-            this.gpbData.ResumeLayout(false);
-            this.gpbData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,13 +418,12 @@
         private System.Windows.Forms.Button btnUtilizarPedido;
         private System.Windows.Forms.Label lblPedidoCompra;
         private System.Windows.Forms.ComboBox cmbPedidoCompra;
-        private System.Windows.Forms.GroupBox gpbData;
         private System.Windows.Forms.Label lblDataRecebimento;
         private System.Windows.Forms.MaskedTextBox mskDataRecebimento;
-        private System.Windows.Forms.Label lblLegenda;
+        private System.Windows.Forms.Label lblLegendaPedidoCompra;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.ListBox lstboxMateriais;
+        private System.Windows.Forms.ListBox lstboxMateriaisPedido;
         private System.Windows.Forms.Button btnConfirmarLocal;
         private System.Windows.Forms.ComboBox cmbLocal;
         private System.Windows.Forms.Label lblLocal;
@@ -387,5 +431,9 @@
         private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.ToolStripButton toolStripVoltar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Button btnMandaPedido;
+        private System.Windows.Forms.Button btnMandaRecebimento;
+        private System.Windows.Forms.Label lblLegendaRecebimento;
+        private System.Windows.Forms.ListBox lstboxMateriaisRecebimento;
     }
 }

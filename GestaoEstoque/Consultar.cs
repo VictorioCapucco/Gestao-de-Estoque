@@ -128,5 +128,37 @@ namespace GestaoEstoque
             this.Hide();
             formConsultarFornecedor.Show();
         }
+
+        private void btnCadastros_Click(object sender, EventArgs e)
+        {
+            btnCadastros.Visible = false;
+            btnOperações.Visible = false;
+
+            btnConsultarFornecedor.Visible = true;
+            btnConsultarMaterial.Visible = true;
+            btnConsultarLocais.Visible = true;
+            btnConsultarUnidadeMedida.Visible = true;
+
+            if  (permissaoUsuario == 1 || permissaoUsuario == 0)
+            {
+                btnConsultarUsuario.Visible = true;
+            }
+
+        }
+
+        private void btnOperações_Click(object sender, EventArgs e)
+        {
+            btnCadastros.Visible = false;
+            btnOperações.Visible = false;
+
+            btnConsultarTransferencias.Visible = true;
+            btnConsultarRecebimento.Visible = true;
+
+            if (permissaoUsuario == 2 || permissaoUsuario == 0)
+            {
+                btnConsultarPedidoCompra.Visible = true;
+                btnConsultarTipoTransferencia.Visible = true;
+            }
+        }
     }
 }

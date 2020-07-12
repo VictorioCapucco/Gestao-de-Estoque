@@ -88,10 +88,20 @@ namespace Negocios
         }
 
         //Usuarios
-        public Boolean InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
+        public int InserirUsuario(string nomeUsuario, int tipoUsuario, Boolean statusUsuario, string senhaUsuario)
         {
             Conexao insercao = new Conexao();
-            return insercao.ExecutaNQ("insert into Usuario (nome_usuario, tipo_usuario, status_usuario, senha_usuario) values('" + nomeUsuario + "'," + tipoUsuario + "," + statusUsuario + ",'" + senhaUsuario + "')");
+            Boolean statusInsercao = insercao.ExecutaNQ("insert into Usuario (nome_usuario, tipo_usuario, status_usuario, senha_usuario) values('" + nomeUsuario + "'," + tipoUsuario + "," + statusUsuario + ",'" + senhaUsuario + "')");
+
+            if (statusInsercao == true)
+            {
+                DataTable oDtUsuario = new DataTable();
+                oDtUsuario = insercao.RetornarDataTable("select id_usuario from Usuario where id_usuario = (select max(id_usuario) from Usuario)", "Usuario");
+                return int.Parse(oDtUsuario.Rows[0]["id_usuario"].ToString());
+            }
+
+            else
+                return 0;
         }
 
         public Boolean ExisteUsuario(string nomeUsuario)
@@ -525,7 +535,7 @@ namespace Negocios
         {
             Conexao consulta = new Conexao();
 
-            return consulta.RetornarDataTable("select MPC.id_material as Codigo, M.nome_material as Nome, MPC.quantidade_material as Quantidade " +
+            return consulta.RetornarDataTable("select MPC.id_material as Codigo, M.nome_material as Nome, MPC.quantidade_material as Quantidade, MPC.quantidade_recebida as Quantidade_Recebida " +
                                               "from Materiais_PedidoCompra as MPC " +
                                               "inner join Material as M on MPC.id_material = M.id_material " +
                                               "where MPC.id_pedido_compra = " + codigoPedidoCompra +
@@ -548,6 +558,12 @@ namespace Negocios
         {
             Conexao exclusao = new Conexao();
             return exclusao.ExecutaNQ("delete from Materiais_PedidoCompra where id_pedido_compra = " + codigoPedidoCompra);
+        }
+
+        public Boolean AlterarMateralPedido(int codigoPedidoCompra, int codigoMaterial, int quantidadeMaterial)
+        {
+            Conexao alteracao = new Conexao();
+            return alteracao.ExecutaNQ("update Materiais_PedidoCompra set quantidade_recebida = quantidade_recebida + " + quantidadeMaterial + " where id_pedido_compra = " + codigoPedidoCompra + " and id_material = " + codigoMaterial);
         }
 
 
@@ -579,16 +595,41 @@ namespace Negocios
 
         
         //Recebimento
-        public Boolean InserirRecebimento(string dataRecebimento, int codigoPedidoCompra)
+        public int InserirRecebimento(string dataRecebimento, int codigoPedidoCompra)
         {
             Conexao insercao = new Conexao();
-            return insercao.ExecutaNQ("insert into Recebimento (dt_recebimento, id_pedido_compra) values ('" + dataRecebimento + "'," + codigoPedidoCompra + ")");
+            Boolean statusInsercao;
+            statusInsercao = insercao.ExecutaNQ("insert into Recebimento (dt_recebimento, id_pedido_compra) values ('" + dataRecebimento + "'," + codigoPedidoCompra + ")");
+
+            if (statusInsercao == true)
+            {
+                try
+                {
+                    DataTable oDtRecebimento = new DataTable();
+                    oDtRecebimento = insercao.RetornarDataTable("select id_recebimento from Recebimento where id_recebimento = (select max(id_recebimento) from Recebimento)", "Recebimento");
+                    return int.Parse(oDtRecebimento.Rows[0]["id_recebimento"].ToString());
+                }
+
+                catch
+                {
+                    return 0;
+                }
+            }
+
+            else
+                return 0;
         }
 
         public DataTable DataTableRecebimento()
         {
             Conexao consulta = new Conexao();
             return consulta.RetornarDataTable("select id_recebimento, dt_recebimento, id_pedido_compra from Recebimento", "Recebimento");
+        }
+
+        public Boolean InserirMaterialRecebimento(int codigoMaterial, int codigoRecebimento, int quantidadeMaterial)
+        {
+            Conexao insercao = new Conexao();
+            return insercao.ExecutaNQ("insert into Materiais_Recebimento (id_material, id_recebimento, quantidade_material) values (" + codigoMaterial + "," + codigoRecebimento + "," + quantidadeMaterial + ")");
         }
 
 

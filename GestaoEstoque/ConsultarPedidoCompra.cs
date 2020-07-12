@@ -127,7 +127,7 @@ namespace GestaoEstoque
                 try
                 {
                     lstboxMateriais.Items.Clear();
-                    //Atualizando a lstbox dos materiais da obra
+                    //Atualizando a lstbox dos materiais do pedido
 
                     DataTable oDtMateriaisPedidoCompra = new DataTable();
                     oDtMateriaisPedidoCompra = camadaNegocios.DataTableMateriaisPedidoCompra(codigoPedidoCompra);

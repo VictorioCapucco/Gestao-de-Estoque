@@ -37,6 +37,8 @@
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.txtSigla = new System.Windows.Forms.TextBox();
+            this.lblSigla = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cmbUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.lblUnidadeMedida = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.txtSigla = new System.Windows.Forms.TextBox();
-            this.lblSigla = new System.Windows.Forms.Label();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.panelStatus.SuspendLayout();
@@ -68,6 +68,7 @@
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(941, 42);
             this.toolStripMenu.TabIndex = 12;
+            this.toolStripMenu.Text = "--";
             // 
             // toolStripVoltar
             // 
@@ -140,6 +141,29 @@
             this.gpbConsultar.Size = new System.Drawing.Size(717, 311);
             this.gpbConsultar.TabIndex = 11;
             this.gpbConsultar.TabStop = false;
+            // 
+            // txtSigla
+            // 
+            this.txtSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigla.Location = new System.Drawing.Point(346, 132);
+            this.txtSigla.MaxLength = 3;
+            this.txtSigla.Name = "txtSigla";
+            this.txtSigla.Size = new System.Drawing.Size(212, 27);
+            this.txtSigla.TabIndex = 2;
+            this.txtSigla.Visible = false;
+            // 
+            // lblSigla
+            // 
+            this.lblSigla.AutoSize = true;
+            this.lblSigla.BackColor = System.Drawing.Color.Gray;
+            this.lblSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSigla.Location = new System.Drawing.Point(130, 131);
+            this.lblSigla.Name = "lblSigla";
+            this.lblSigla.Padding = new System.Windows.Forms.Padding(74, 5, 75, 5);
+            this.lblSigla.Size = new System.Drawing.Size(197, 28);
+            this.lblSigla.TabIndex = 9;
+            this.lblSigla.Text = "Sigla";
+            this.lblSigla.Visible = false;
             // 
             // btnConsultar
             // 
@@ -264,29 +288,6 @@
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Visible = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // txtSigla
-            // 
-            this.txtSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSigla.Location = new System.Drawing.Point(346, 132);
-            this.txtSigla.MaxLength = 3;
-            this.txtSigla.Name = "txtSigla";
-            this.txtSigla.Size = new System.Drawing.Size(212, 27);
-            this.txtSigla.TabIndex = 2;
-            this.txtSigla.Visible = false;
-            // 
-            // lblSigla
-            // 
-            this.lblSigla.AutoSize = true;
-            this.lblSigla.BackColor = System.Drawing.Color.Gray;
-            this.lblSigla.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSigla.Location = new System.Drawing.Point(130, 131);
-            this.lblSigla.Name = "lblSigla";
-            this.lblSigla.Padding = new System.Windows.Forms.Padding(74, 5, 75, 5);
-            this.lblSigla.Size = new System.Drawing.Size(197, 28);
-            this.lblSigla.TabIndex = 9;
-            this.lblSigla.Text = "Sigla";
-            this.lblSigla.Visible = false;
             // 
             // ConsultarUnidadeMedida
             // 
