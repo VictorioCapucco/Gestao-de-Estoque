@@ -484,6 +484,7 @@ namespace Negocios
         }
 
         //Pedido Compra
+
         public int InserirPedidoCompra(int codigoFornecedor, int codigoLocal)
         {
             //Criando a requisição
