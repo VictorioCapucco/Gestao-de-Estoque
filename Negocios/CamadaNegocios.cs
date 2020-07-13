@@ -505,11 +505,6 @@ namespace Negocios
             return atualizacao.ExecutaNQ("update Pedido_Compra set status_pedido_compra = true where id_pedido_compra = " + codigoPedidoCompra);
         }
 
-        public Boolean ExcluirPedidoCOmpra(int codigoPedidoCompra)
-        {
-            Conexao exclusao = new Conexao();
-            return exclusao.ExecutaNQ("delete from Pedido_Compra where id_pedido_compra = " + codigoPedidoCompra);
-        }
 
         public Boolean ExcluirMateriaisPedidoCompra(int codigoPedidoCompra)
         {

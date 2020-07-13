@@ -168,13 +168,10 @@ namespace GestaoEstoque
         {
             int codigoPedidoCompra = int.Parse(cmbPedidoCompra.SelectedValue.ToString());
 
-            //Excluindo o pedido de compra
-            Boolean statusExcluirPedido = camadaNegocios.ExcluirPedidoCOmpra(codigoPedidoCompra);
+            //Excluindo o pedido de compra (apenas logicamente)
+            Boolean statusExcluirPedido = camadaNegocios.AtualizarPedidoCopmra(codigoPedidoCompra);
 
-            //Excluindo os materiais deste pedido de compra
-            Boolean statusExcluirMateriais = camadaNegocios.ExcluirMateriaisPedidoCompra(codigoPedidoCompra);
-
-            if (statusExcluirMateriais == true && statusExcluirPedido == true)
+            if (statusExcluirPedido == true)
             {
                 MessageBox.Show("Pedido de compra excluído com sucesso");
 
