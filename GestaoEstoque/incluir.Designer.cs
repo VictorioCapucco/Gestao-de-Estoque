@@ -35,19 +35,20 @@
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbIncluir = new System.Windows.Forms.GroupBox();
+            this.btnOperações = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
             this.btnIncluirUnidadeMedida = new System.Windows.Forms.Button();
             this.btnIncluirUsuario = new System.Windows.Forms.Button();
+            this.btnIncluirPedidoCompra = new System.Windows.Forms.Button();
             this.btnIncluirTipoMaterial = new System.Windows.Forms.Button();
             this.btnIncluirTipoTransferencia = new System.Windows.Forms.Button();
             this.btnIncluirTransferenciaEntrada = new System.Windows.Forms.Button();
             this.btnIncluirRecebimento = new System.Windows.Forms.Button();
             this.btnIncluirLocais = new System.Windows.Forms.Button();
-            this.btnIncluirPedidoCompra = new System.Windows.Forms.Button();
             this.btnIncluirTransferenciaSaida = new System.Windows.Forms.Button();
             this.btnIncluirMaterial = new System.Windows.Forms.Button();
             this.btnIncluirFornecedor = new System.Windows.Forms.Button();
-            this.btnOperações = new System.Windows.Forms.Button();
-            this.btnCadastros = new System.Windows.Forms.Button();
+            this.btnIncluirEntradaManual = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbIncluir.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // gpbIncluir
             // 
+            this.gpbIncluir.Controls.Add(this.btnIncluirEntradaManual);
             this.gpbIncluir.Controls.Add(this.btnOperações);
             this.gpbIncluir.Controls.Add(this.btnCadastros);
             this.gpbIncluir.Controls.Add(this.btnIncluirUnidadeMedida);
@@ -121,6 +123,34 @@
             this.gpbIncluir.Size = new System.Drawing.Size(717, 294);
             this.gpbIncluir.TabIndex = 11;
             this.gpbIncluir.TabStop = false;
+            // 
+            // btnOperações
+            // 
+            this.btnOperações.BackColor = System.Drawing.Color.Black;
+            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperações.ForeColor = System.Drawing.Color.White;
+            this.btnOperações.Location = new System.Drawing.Point(446, 130);
+            this.btnOperações.Name = "btnOperações";
+            this.btnOperações.Size = new System.Drawing.Size(241, 32);
+            this.btnOperações.TabIndex = 16;
+            this.btnOperações.Text = "Operações";
+            this.btnOperações.UseVisualStyleBackColor = false;
+            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click_1);
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.BackColor = System.Drawing.Color.Black;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.Location = new System.Drawing.Point(79, 130);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
+            this.btnCadastros.TabIndex = 15;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = false;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
             // 
             // btnIncluirUnidadeMedida
             // 
@@ -151,6 +181,21 @@
             this.btnIncluirUsuario.UseVisualStyleBackColor = false;
             this.btnIncluirUsuario.Visible = false;
             this.btnIncluirUsuario.Click += new System.EventHandler(this.btnIncluirUsuario_Click);
+            // 
+            // btnIncluirPedidoCompra
+            // 
+            this.btnIncluirPedidoCompra.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirPedidoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirPedidoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirPedidoCompra.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(438, 237);
+            this.btnIncluirPedidoCompra.Name = "btnIncluirPedidoCompra";
+            this.btnIncluirPedidoCompra.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirPedidoCompra.TabIndex = 4;
+            this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
+            this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
+            this.btnIncluirPedidoCompra.Visible = false;
+            this.btnIncluirPedidoCompra.Click += new System.EventHandler(this.btnIncluirPedidoCompra_Click);
             // 
             // btnIncluirTipoMaterial
             // 
@@ -227,21 +272,6 @@
             this.btnIncluirLocais.Visible = false;
             this.btnIncluirLocais.Click += new System.EventHandler(this.btnIncluirLocais_Click);
             // 
-            // btnIncluirPedidoCompra
-            // 
-            this.btnIncluirPedidoCompra.BackColor = System.Drawing.Color.Black;
-            this.btnIncluirPedidoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncluirPedidoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirPedidoCompra.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirPedidoCompra.Location = new System.Drawing.Point(438, 237);
-            this.btnIncluirPedidoCompra.Name = "btnIncluirPedidoCompra";
-            this.btnIncluirPedidoCompra.Size = new System.Drawing.Size(241, 32);
-            this.btnIncluirPedidoCompra.TabIndex = 4;
-            this.btnIncluirPedidoCompra.Text = "Incluir Pedido de Compra";
-            this.btnIncluirPedidoCompra.UseVisualStyleBackColor = false;
-            this.btnIncluirPedidoCompra.Visible = false;
-            this.btnIncluirPedidoCompra.Click += new System.EventHandler(this.btnIncluirPedidoCompra_Click);
-            // 
             // btnIncluirTransferenciaSaida
             // 
             this.btnIncluirTransferenciaSaida.BackColor = System.Drawing.Color.Black;
@@ -287,33 +317,19 @@
             this.btnIncluirFornecedor.Visible = false;
             this.btnIncluirFornecedor.Click += new System.EventHandler(this.btnIncluirFornecedor_Click);
             // 
-            // btnOperações
+            // btnIncluirEntradaManual
             // 
-            this.btnOperações.BackColor = System.Drawing.Color.Black;
-            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperações.ForeColor = System.Drawing.Color.White;
-            this.btnOperações.Location = new System.Drawing.Point(446, 130);
-            this.btnOperações.Name = "btnOperações";
-            this.btnOperações.Size = new System.Drawing.Size(241, 32);
-            this.btnOperações.TabIndex = 16;
-            this.btnOperações.Text = "Operações";
-            this.btnOperações.UseVisualStyleBackColor = false;
-            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click_1);
-            // 
-            // btnCadastros
-            // 
-            this.btnCadastros.BackColor = System.Drawing.Color.Black;
-            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastros.ForeColor = System.Drawing.Color.White;
-            this.btnCadastros.Location = new System.Drawing.Point(79, 130);
-            this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
-            this.btnCadastros.TabIndex = 15;
-            this.btnCadastros.Text = "Cadastros";
-            this.btnCadastros.UseVisualStyleBackColor = false;
-            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
+            this.btnIncluirEntradaManual.BackColor = System.Drawing.Color.Black;
+            this.btnIncluirEntradaManual.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncluirEntradaManual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirEntradaManual.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirEntradaManual.Location = new System.Drawing.Point(279, 216);
+            this.btnIncluirEntradaManual.Name = "btnIncluirEntradaManual";
+            this.btnIncluirEntradaManual.Size = new System.Drawing.Size(241, 32);
+            this.btnIncluirEntradaManual.TabIndex = 17;
+            this.btnIncluirEntradaManual.Text = "Incluir Entrada Manual";
+            this.btnIncluirEntradaManual.UseVisualStyleBackColor = false;
+            this.btnIncluirEntradaManual.Click += new System.EventHandler(this.btnIncluirEntradaManual_Click);
             // 
             // Incluir
             // 
@@ -359,6 +375,7 @@
         private System.Windows.Forms.Button btnIncluirUnidadeMedida;
         private System.Windows.Forms.Button btnOperações;
         private System.Windows.Forms.Button btnCadastros;
+        private System.Windows.Forms.Button btnIncluirEntradaManual;
     }
 }
 

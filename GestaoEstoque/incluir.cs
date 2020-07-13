@@ -208,5 +208,15 @@ namespace GestaoEstoque
                 btnIncluirPedidoCompra.Visible = true;
             }
         }
+
+        private void btnIncluirEntradaManual_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formIncluirEntradaManual = new IncluirEntradaManual(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            this.Hide();
+            formIncluirEntradaManual.Show();
+        }
     }
 }
