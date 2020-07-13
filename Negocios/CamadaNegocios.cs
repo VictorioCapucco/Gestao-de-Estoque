@@ -309,85 +309,6 @@ namespace Negocios
 
 
         //Materiais Transferencia
-        public Boolean DiminuiEstoque(int codigoMaterial, int codigoLocal, int quantidadeMaterial)
-        {
-            Conexao atualizar = new Conexao();
-            DataTable oDtEstoque = new DataTable();
-
-            try
-            {
-                oDtEstoque = atualizar.RetornarDataTable("select * from Quantidade_Material where id_material = " + codigoMaterial + "and id_local = " + codigoLocal, "Quantidade_Material");
-                int codigoQuantidadeMaterial;
-                //Se não existir ainda, será registrado este material neste local
-                if (oDtEstoque.Rows.Count == 0)
-                {
-                    atualizar.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values(" + 0 + "," + codigoMaterial + "," + codigoLocal + ")");
-                    //Pegando o id criado
-                    DataTable oDtUltimoQuantidadeMaterial = new DataTable();
-                    oDtUltimoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_quantidade_material = (select max (id_quantidade_material) from Quantidade_Material)", "Quantidade_Material");
-                    codigoQuantidadeMaterial = int.Parse(oDtUltimoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
-                }
-
-                //Se existir, deve-se pegar o código da quantidade_material
-                else
-                {
-                    DataTable oDtCodigoQuantidadeMaterial = new DataTable();
-
-                    oDtCodigoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_material = " + codigoMaterial + " and id_local = " + codigoLocal, "Quantidade_Material");
-                    codigoQuantidadeMaterial = int.Parse(oDtCodigoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
-                }
-
-                //Atualizando a quantidade do material
-                atualizar.ExecutaNQ("update Quantidade_Material set quantidade_material = quantidade_material - " + quantidadeMaterial + " where id_quantidade_material = " + codigoQuantidadeMaterial);
-
-                return true;
-            }
-
-            catch
-            {
-                return false;
-            }
-        }
-
-        public Boolean AumentaEstoque(int codigoMaterial, int codigoLocal, int quantidadeMaterial)
-        {
-            Conexao atualizar = new Conexao();
-            DataTable oDtEstoque = new DataTable();
-
-            try
-            {
-                oDtEstoque = atualizar.RetornarDataTable("select * from Quantidade_Material where id_material = " + codigoMaterial + "and id_local = " + codigoLocal, "Quantidade_Material");
-                int codigoQuantidadeMaterial;
-                //Se não existir ainda, será registrado este material neste local
-                if (oDtEstoque.Rows.Count == 0)
-                {
-                    atualizar.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values(" + 0 + "," + codigoMaterial + "," + codigoLocal + ")");
-                    //Pegando o id criado
-                    DataTable oDtUltimoQuantidadeMaterial = new DataTable();
-                    oDtUltimoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_quantidade_material = (select max (id_quantidade_material) from Quantidade_Material)", "Quantidade_Material");
-                    codigoQuantidadeMaterial = int.Parse(oDtUltimoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
-                }
-
-                //Se existir, deve-se pegar o código da quantidade_material
-                else
-                {
-                    DataTable oDtCodigoQuantidadeMaterial = new DataTable();
-
-                    oDtCodigoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_material = " + codigoMaterial + " and id_local = " + codigoLocal, "Quantidade_Material");
-                    codigoQuantidadeMaterial = int.Parse(oDtCodigoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
-                }
-
-                //Atualizando a quantidade do material
-                atualizar.ExecutaNQ("update Quantidade_Material set quantidade_material = quantidade_material + " + quantidadeMaterial + " where id_quantidade_material = " + codigoQuantidadeMaterial);
-
-                return true;
-            }
-
-            catch
-            {
-                return false;
-            }
-        }
 
         public DataTable DataTableMateriaisTransferencia(int codigoLocal)
         {
@@ -655,5 +576,98 @@ namespace Negocios
             insercao.ExecutaNQ("insert into Sessao (status_sessao, id_usuario) values (1," + codigoUsuario + ")");
             return;
         }
+
+
+        //Estoque
+        public Boolean DiminuiEstoque(int codigoMaterial, int codigoLocal, int quantidadeMaterial)
+        {
+            Conexao atualizar = new Conexao();
+            DataTable oDtEstoque = new DataTable();
+
+            try
+            {
+                oDtEstoque = atualizar.RetornarDataTable("select * from Quantidade_Material where id_material = " + codigoMaterial + "and id_local = " + codigoLocal, "Quantidade_Material");
+                int codigoQuantidadeMaterial;
+                //Se não existir ainda, será registrado este material neste local
+                if (oDtEstoque.Rows.Count == 0)
+                {
+                    atualizar.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values(" + 0 + "," + codigoMaterial + "," + codigoLocal + ")");
+                    //Pegando o id criado
+                    DataTable oDtUltimoQuantidadeMaterial = new DataTable();
+                    oDtUltimoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_quantidade_material = (select max (id_quantidade_material) from Quantidade_Material)", "Quantidade_Material");
+                    codigoQuantidadeMaterial = int.Parse(oDtUltimoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
+                }
+
+                //Se existir, deve-se pegar o código da quantidade_material
+                else
+                {
+                    DataTable oDtCodigoQuantidadeMaterial = new DataTable();
+
+                    oDtCodigoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_material = " + codigoMaterial + " and id_local = " + codigoLocal, "Quantidade_Material");
+                    codigoQuantidadeMaterial = int.Parse(oDtCodigoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
+                }
+
+                //Atualizando a quantidade do material
+                atualizar.ExecutaNQ("update Quantidade_Material set quantidade_material = quantidade_material - " + quantidadeMaterial + " where id_quantidade_material = " + codigoQuantidadeMaterial);
+
+                return true;
+            }
+
+            catch
+            {
+                return false;
+            }
+        }
+
+        public Boolean AumentaEstoque(int codigoMaterial, int codigoLocal, int quantidadeMaterial)
+        {
+            Conexao atualizar = new Conexao();
+            DataTable oDtEstoque = new DataTable();
+
+            try
+            {
+                oDtEstoque = atualizar.RetornarDataTable("select * from Quantidade_Material where id_material = " + codigoMaterial + "and id_local = " + codigoLocal, "Quantidade_Material");
+                int codigoQuantidadeMaterial;
+                //Se não existir ainda, será registrado este material neste local
+                if (oDtEstoque.Rows.Count == 0)
+                {
+                    atualizar.ExecutaNQ("insert into Quantidade_Material (quantidade_material, id_material, id_local) values(" + 0 + "," + codigoMaterial + "," + codigoLocal + ")");
+                    //Pegando o id criado
+                    DataTable oDtUltimoQuantidadeMaterial = new DataTable();
+                    oDtUltimoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_quantidade_material = (select max (id_quantidade_material) from Quantidade_Material)", "Quantidade_Material");
+                    codigoQuantidadeMaterial = int.Parse(oDtUltimoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
+                }
+
+                //Se existir, deve-se pegar o código da quantidade_material
+                else
+                {
+                    DataTable oDtCodigoQuantidadeMaterial = new DataTable();
+
+                    oDtCodigoQuantidadeMaterial = atualizar.RetornarDataTable("select id_quantidade_material from Quantidade_Material where id_material = " + codigoMaterial + " and id_local = " + codigoLocal, "Quantidade_Material");
+                    codigoQuantidadeMaterial = int.Parse(oDtCodigoQuantidadeMaterial.Rows[0]["id_quantidade_material"].ToString());
+                }
+
+                //Atualizando a quantidade do material
+                atualizar.ExecutaNQ("update Quantidade_Material set quantidade_material = quantidade_material + " + quantidadeMaterial + " where id_quantidade_material = " + codigoQuantidadeMaterial);
+
+                return true;
+            }
+
+            catch
+            {
+                return false;
+            }
+        }
+
+        public DataTable ConsultaEstoque(int codigoLocal)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select M.id_material as Codigo, M.nome_material as Nome, QM.quantidade_material as Quantidade " +
+                                                "from Material as M " +
+                                                "inner join Quantidade_Material as QM " +
+                                                "on M.id_material = QM.id_material " +
+                                                "where QM.id_local = " + codigoLocal, "Quantidade_Material");
+        }
     }
+
 }

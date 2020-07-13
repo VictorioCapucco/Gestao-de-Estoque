@@ -35,6 +35,8 @@
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.btnOperações = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
             this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
             this.btnConsultarTipoTransferencia = new System.Windows.Forms.Button();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
@@ -44,8 +46,7 @@
             this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
-            this.btnCadastros = new System.Windows.Forms.Button();
-            this.btnOperações = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +103,7 @@
             // gpbConsultar
             // 
             this.gpbConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.gpbConsultar.Controls.Add(this.btnEstoque);
             this.gpbConsultar.Controls.Add(this.btnOperações);
             this.gpbConsultar.Controls.Add(this.btnCadastros);
             this.gpbConsultar.Controls.Add(this.btnConsultarUnidadeMedida);
@@ -118,6 +120,34 @@
             this.gpbConsultar.Size = new System.Drawing.Size(717, 294);
             this.gpbConsultar.TabIndex = 2;
             this.gpbConsultar.TabStop = false;
+            // 
+            // btnOperações
+            // 
+            this.btnOperações.BackColor = System.Drawing.Color.Black;
+            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperações.ForeColor = System.Drawing.Color.White;
+            this.btnOperações.Location = new System.Drawing.Point(411, 144);
+            this.btnOperações.Name = "btnOperações";
+            this.btnOperações.Size = new System.Drawing.Size(241, 32);
+            this.btnOperações.TabIndex = 14;
+            this.btnOperações.Text = "Operações";
+            this.btnOperações.UseVisualStyleBackColor = false;
+            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click);
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.BackColor = System.Drawing.Color.Black;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.Location = new System.Drawing.Point(44, 144);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
+            this.btnCadastros.TabIndex = 13;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = false;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
             // 
             // btnConsultarUnidadeMedida
             // 
@@ -253,33 +283,19 @@
             this.btnConsultarFornecedor.Visible = false;
             this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
             // 
-            // btnCadastros
+            // btnEstoque
             // 
-            this.btnCadastros.BackColor = System.Drawing.Color.Black;
-            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastros.ForeColor = System.Drawing.Color.White;
-            this.btnCadastros.Location = new System.Drawing.Point(44, 144);
-            this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Size = new System.Drawing.Size(241, 32);
-            this.btnCadastros.TabIndex = 13;
-            this.btnCadastros.Text = "Cadastros";
-            this.btnCadastros.UseVisualStyleBackColor = false;
-            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
-            // 
-            // btnOperações
-            // 
-            this.btnOperações.BackColor = System.Drawing.Color.Black;
-            this.btnOperações.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOperações.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperações.ForeColor = System.Drawing.Color.White;
-            this.btnOperações.Location = new System.Drawing.Point(411, 144);
-            this.btnOperações.Name = "btnOperações";
-            this.btnOperações.Size = new System.Drawing.Size(241, 32);
-            this.btnOperações.TabIndex = 14;
-            this.btnOperações.Text = "Operações";
-            this.btnOperações.UseVisualStyleBackColor = false;
-            this.btnOperações.Click += new System.EventHandler(this.btnOperações_Click);
+            this.btnEstoque.BackColor = System.Drawing.Color.Black;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.Color.White;
+            this.btnEstoque.Location = new System.Drawing.Point(235, 182);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(241, 32);
+            this.btnEstoque.TabIndex = 15;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // Consultar
             // 
@@ -321,5 +337,6 @@
         private System.Windows.Forms.Button btnConsultarUnidadeMedida;
         private System.Windows.Forms.Button btnOperações;
         private System.Windows.Forms.Button btnCadastros;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }

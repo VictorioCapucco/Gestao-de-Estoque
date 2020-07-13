@@ -26,7 +26,8 @@ namespace Dados.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\GestaoEstoque\\Banco_Sistema.mdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Projetos\\GestaoEstoque\\Banco_Sist" +
+            "ema.mdb")]
         public string ConBanco {
             get {
                 return ((string)(this["ConBanco"]));

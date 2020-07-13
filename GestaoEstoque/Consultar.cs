@@ -129,6 +129,16 @@ namespace GestaoEstoque
             formConsultarFornecedor.Show();
         }
 
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarEstoque = new ConsultarEstoque(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            this.Hide();
+            formConsultarEstoque.Show();
+        }
+
         private void btnCadastros_Click(object sender, EventArgs e)
         {
             btnCadastros.Visible = false;
