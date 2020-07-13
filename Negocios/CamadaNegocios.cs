@@ -243,6 +243,12 @@ namespace Negocios
             return alteracao.ExecutaNQ("update Material set status_material = " + statusMaterial + ", id_tipo_material = " + codigoTipoMaterial + ", id_unidade = " + codigoUnidade + " where id_material = " + codigoMaterial);
         }
 
+        public DataTable BuscaMaterial(string nomeBusca)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_material, nome_material from Material where nome_material like '%" + nomeBusca + "%'", "Material");
+        }
+
         //Transferencia
         public int InserirTransferencia(int codigoLocalOrigem, int codigoLocalDestino, int codigoTipoTransferencia, string dataTransferencia)
         {

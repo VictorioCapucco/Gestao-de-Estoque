@@ -96,7 +96,6 @@ namespace GestaoEstoque
                 Form formBuscarLocal = new BuscaLocal(this, posicaoForm.X, posicaoForm.Y);
                 this.Hide();
                 formBuscarLocal.Show();
-
             }
         }
 

@@ -58,6 +58,12 @@
     <Compile Include="BuscaLocal.Designer.cs">
       <DependentUpon>BuscaLocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMaterial.Designer.cs">
+      <DependentUpon>BuscarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscaLocal.resx">
       <DependentUpon>BuscaLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMaterial.resx">
+      <DependentUpon>BuscarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>

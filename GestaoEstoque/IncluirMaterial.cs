@@ -284,6 +284,21 @@ namespace GestaoEstoque
 
                 btnAdicionarLocal.PerformClick();
             }
+
+            if (e.KeyCode == Keys.F1)
+            {
+                //Evitando o barulho de "erro" do windows
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                Point posicaoForm = new Point(100, 100);
+                posicaoForm = this.Location;
+
+
+                Form formBuscarLocal = new BuscaLocal(this, posicaoForm.X, posicaoForm.Y);
+                this.Hide();
+                formBuscarLocal.Show();
+            }
         }
 
         private void txtCodigoLocal_Enter(object sender, EventArgs e)

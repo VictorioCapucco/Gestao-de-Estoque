@@ -35,6 +35,7 @@
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.btnConsultarTipoMaterial = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnOperações = new System.Windows.Forms.Button();
             this.btnCadastros = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
-            this.btnConsultarTipoMaterial = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +122,20 @@
             this.gpbConsultar.Size = new System.Drawing.Size(717, 294);
             this.gpbConsultar.TabIndex = 2;
             this.gpbConsultar.TabStop = false;
+            // 
+            // btnConsultarTipoMaterial
+            // 
+            this.btnConsultarTipoMaterial.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarTipoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarTipoMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarTipoMaterial.Location = new System.Drawing.Point(235, 90);
+            this.btnConsultarTipoMaterial.Name = "btnConsultarTipoMaterial";
+            this.btnConsultarTipoMaterial.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarTipoMaterial.TabIndex = 16;
+            this.btnConsultarTipoMaterial.Text = "Consultar Tipo Material";
+            this.btnConsultarTipoMaterial.UseVisualStyleBackColor = false;
+            this.btnConsultarTipoMaterial.Click += new System.EventHandler(this.btnConsultarTipoMaterial_Click);
             // 
             // btnEstoque
             // 
@@ -299,20 +313,6 @@
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
             this.btnConsultarFornecedor.Visible = false;
             this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
-            // 
-            // btnConsultarTipoMaterial
-            // 
-            this.btnConsultarTipoMaterial.BackColor = System.Drawing.Color.Black;
-            this.btnConsultarTipoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultarTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarTipoMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarTipoMaterial.Location = new System.Drawing.Point(235, 90);
-            this.btnConsultarTipoMaterial.Name = "btnConsultarTipoMaterial";
-            this.btnConsultarTipoMaterial.Size = new System.Drawing.Size(241, 32);
-            this.btnConsultarTipoMaterial.TabIndex = 16;
-            this.btnConsultarTipoMaterial.Text = "Consultar Tipo Material";
-            this.btnConsultarTipoMaterial.UseVisualStyleBackColor = false;
-            this.btnConsultarTipoMaterial.Click += new System.EventHandler(this.btnConsultarTipoMaterial_Click);
             // 
             // Consultar
             // 

@@ -26,6 +26,8 @@ namespace GestaoEstoque
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            lstboxLocais.Items.Clear();
+
             string descricaoBusca = txtDescricao.Text.ToString().Trim();
             
             //Validando a caixa de busca
@@ -36,9 +38,6 @@ namespace GestaoEstoque
                 DataTable oDtLocais = new DataTable();
 
                 oDtLocais = camadaNegocios.BuscaLocais(descricaoBusca);
-
-                lstboxLocais.Items.Clear();
-
 
                 string codigoLocal;
                 string descricaoLocal;
