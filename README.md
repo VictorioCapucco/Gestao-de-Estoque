@@ -2,8 +2,7 @@
 <p>Este sistema tem como objetivo a gestão do estoque de empresas que fazem obras (construção civil).</p>
 
 <h1>Como utilizar?</h1>
-<p>Basta compilar o projeto e colocar o banco de dados (Banco_Sistema.mdb) na mesma pasta que o arquivo executável (GestãoEstoque\bin\debug). É possível então copiar os arquivos desta pasta e utilizar o sistema em qualquer local do</p>
-<p>computador. Existem 3 usuários pré-cadastrados no sistema (1, 2, 3), todos com senha 1234.</p>
+<p>Basta compilar o projeto e colocar o banco de dados (Banco_Sistema.mdb) na mesma pasta que o arquivo executável (GestãoEstoque\bin\debug). É possível então copiar os arquivos desta pasta e utilizar o sistema em qualquer local do computador. Existem 3 usuários pré-cadastrados no sistema (1, 2, 3), todos com senha 1234.</p>
 
 <h1>Quais funcionalidades existem no projeto?</h1>
 <p>É possível cadastrar materiais, tipos de materiais, unidades de medida, fornecedores, locais de armazenagem, usuários (administrador, auxiliar de estoque e supervisor), assim como tipos de transferência. Além disso, quando o assunto é operações, é possível dar entrada no estoque manualmente e por pedido de compra, sendo que no segundo caso resultará posteriormente em um recebimento (que poderá ser fracionado). Por fim, existe também a possibilidade de fazer as operações de entrada e saída das obras.</p>
