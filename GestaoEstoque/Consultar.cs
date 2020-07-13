@@ -49,85 +49,16 @@ namespace GestaoEstoque
         }
 
 
-        private void btnConsultarTipoTransferencia_Click(object sender, EventArgs e)
+        private void btnCadastros_Click(object sender, EventArgs e)
         {
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarTipoTransferencia = new ConsultarTipoTransferencia(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            Form formConsultarCadastros = new ConsultarCadastros(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
-            formConsultarTipoTransferencia.Show();
+            formConsultarCadastros.Show();
         }
 
-        private void btnConsultarUnidadeMedida_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarUnidadeMedida = new ConsultarUnidadeMedida(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarUnidadeMedida.Show();
-        }
-
-        private void btnConsultarUsuario_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarUsuario = new ConsultarUsuario(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarUsuario.Show();
-        }
-
-        private void btnConsultarRecebimento_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarRecebimento = new ConsultarRecebimento(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarRecebimento.Show();
-        }
-
-        private void btnConsultarPedidoCompra_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarPedidoCompra = new ConsultarPedidoCompra(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarPedidoCompra.Show();
-        }
-
-        private void btnConsultarMaterial_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarMaterial = new ConsultarMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarMaterial.Show();
-        }
-
-        private void btnConsultarTransferencias_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarTransferencia = new ConsultarTransferencias(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarTransferencia.Show();
-        }
-
-        private void btnConsultarFornecedor_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarFornecedor = new ConsultarFornecedor(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarFornecedor.Show();
-        }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
@@ -139,56 +70,14 @@ namespace GestaoEstoque
             formConsultarEstoque.Show();
         }
 
-        private void btnCadastros_Click(object sender, EventArgs e)
-        {
-            btnCadastros.Visible = false;
-            btnOperações.Visible = false;
-
-            btnConsultarFornecedor.Visible = true;
-            btnConsultarMaterial.Visible = true;
-            btnConsultarLocais.Visible = true;
-            btnConsultarUnidadeMedida.Visible = true;
-
-            if  (permissaoUsuario == 1 || permissaoUsuario == 0)
-            {
-                btnConsultarUsuario.Visible = true;
-            }
-
-        }
-
-        private void btnOperações_Click(object sender, EventArgs e)
-        {
-            btnCadastros.Visible = false;
-            btnOperações.Visible = false;
-
-            btnConsultarTransferencias.Visible = true;
-            btnConsultarRecebimento.Visible = true;
-
-            if (permissaoUsuario == 2 || permissaoUsuario == 0)
-            {
-                btnConsultarPedidoCompra.Visible = true;
-                btnConsultarTipoTransferencia.Visible = true;
-            }
-        }
-
-        private void btnConsultarLocais_Click(object sender, EventArgs e)
+        private void btnOperações_Click_1(object sender, EventArgs e)
         {
             Point posicaoForm = new Point(100, 100);
             posicaoForm = this.Location;
 
-            Form formConsultarLocais = new ConsultarLocais(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            Form formConsultarOperacoes = new ConsultarOperacoes(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
             this.Hide();
-            formConsultarLocais.Show();
-        }
-
-        private void btnConsultarTipoMaterial_Click(object sender, EventArgs e)
-        {
-            Point posicaoForm = new Point(100, 100);
-            posicaoForm = this.Location;
-
-            Form formConsultarTipoMaterial = new ConsultarTipoMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
-            this.Hide();
-            formConsultarTipoMaterial.Show();
+            formConsultarOperacoes.Show();
         }
     }
 }

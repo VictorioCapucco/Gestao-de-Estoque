@@ -10,7 +10,7 @@ namespace Dados
 {
     public class Conexao
     {
-        OleDbConnection myDBConnection = new OleDbConnection(Properties.Settings.Default.ConBanco);
+        OleDbConnection myDBConnection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Banco_Sistema.mdb");
 
         public void AbrirConexao()
         {

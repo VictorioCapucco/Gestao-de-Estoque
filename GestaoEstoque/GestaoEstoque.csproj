@@ -52,6 +52,18 @@
     <Compile Include="Autenticacao.Designer.cs">
       <DependentUpon>Autenticacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarCadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCadastros.Designer.cs">
+      <DependentUpon>ConsultarCadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarOperacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarOperacoes.Designer.cs">
+      <DependentUpon>ConsultarOperacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscaLocal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Criptografia.cs" />
+    <Compile Include="IncluirCadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirCadastros.Designer.cs">
+      <DependentUpon>IncluirCadastros.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirEntradaManual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +184,12 @@
     </Compile>
     <Compile Include="IncluirMaterial.Designer.cs">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirOperacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirOperacoes.Designer.cs">
+      <DependentUpon>IncluirOperacoes.cs</DependentUpon>
     </Compile>
     <Compile Include="IncluirPedidoCompra.cs">
       <SubType>Form</SubType>
@@ -230,6 +254,9 @@
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCadastros.resx">
+      <DependentUpon>ConsultarCadastros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEstoque.resx">
       <DependentUpon>ConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMaterial.resx">
       <DependentUpon>ConsultarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarOperacoes.resx">
+      <DependentUpon>ConsultarOperacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarPedidoCompra.resx">
       <DependentUpon>ConsultarPedidoCompra.cs</DependentUpon>
@@ -263,6 +293,9 @@
     <EmbeddedResource Include="ConsultarUsuario.resx">
       <DependentUpon>ConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncluirCadastros.resx">
+      <DependentUpon>IncluirCadastros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IncluirEntradaManual.resx">
       <DependentUpon>IncluirEntradaManual.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirMaterial.resx">
       <DependentUpon>IncluirMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirOperacoes.resx">
+      <DependentUpon>IncluirOperacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirPedidoCompra.resx">
       <DependentUpon>IncluirPedidoCompra.cs</DependentUpon>
