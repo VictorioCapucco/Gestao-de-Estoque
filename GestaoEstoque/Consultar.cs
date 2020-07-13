@@ -180,5 +180,15 @@ namespace GestaoEstoque
             this.Hide();
             formConsultarLocais.Show();
         }
+
+        private void btnConsultarTipoMaterial_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarTipoMaterial = new ConsultarTipoMaterial(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            this.Hide();
+            formConsultarTipoMaterial.Show();
+        }
     }
 }

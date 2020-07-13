@@ -47,6 +47,7 @@
             this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
+            this.btnConsultarTipoMaterial = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // gpbConsultar
             // 
             this.gpbConsultar.BackColor = System.Drawing.Color.DimGray;
+            this.gpbConsultar.Controls.Add(this.btnConsultarTipoMaterial);
             this.gpbConsultar.Controls.Add(this.btnEstoque);
             this.gpbConsultar.Controls.Add(this.btnOperações);
             this.gpbConsultar.Controls.Add(this.btnCadastros);
@@ -298,6 +300,20 @@
             this.btnConsultarFornecedor.Visible = false;
             this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
             // 
+            // btnConsultarTipoMaterial
+            // 
+            this.btnConsultarTipoMaterial.BackColor = System.Drawing.Color.Black;
+            this.btnConsultarTipoMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultarTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarTipoMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarTipoMaterial.Location = new System.Drawing.Point(235, 90);
+            this.btnConsultarTipoMaterial.Name = "btnConsultarTipoMaterial";
+            this.btnConsultarTipoMaterial.Size = new System.Drawing.Size(241, 32);
+            this.btnConsultarTipoMaterial.TabIndex = 16;
+            this.btnConsultarTipoMaterial.Text = "Consultar Tipo Material";
+            this.btnConsultarTipoMaterial.UseVisualStyleBackColor = false;
+            this.btnConsultarTipoMaterial.Click += new System.EventHandler(this.btnConsultarTipoMaterial_Click);
+            // 
             // Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,5 +355,6 @@
         private System.Windows.Forms.Button btnOperações;
         private System.Windows.Forms.Button btnCadastros;
         private System.Windows.Forms.Button btnEstoque;
+        private System.Windows.Forms.Button btnConsultarTipoMaterial;
     }
 }

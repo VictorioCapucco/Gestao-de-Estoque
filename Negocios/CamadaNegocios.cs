@@ -18,11 +18,28 @@ namespace Negocios
 
         }
 
-        public DataTable DataTableTipoMaterial()
+        public DataTable DataTableTipoMaterial(Boolean filtraCodigo, Boolean filtraStatus, int codigoTipoMaterial)
         {
             Conexao consulta = new Conexao();
-            return consulta.RetornarDataTable("select id_tipo_material, descricao_reduzida_tipo_material from Tipo_Material where status_tipo_material = true", "Tipo_Material");
+            if (filtraCodigo == true)
+                return consulta.RetornarDataTable("select * from Tipo_Material where id_tipo_material = " + codigoTipoMaterial, "Tipo_Material");
+            else
+            {
+                if (filtraStatus == true)
+                    return consulta.RetornarDataTable("select id_tipo_material, descricao_reduzida_tipo_material from Tipo_Material where status_tipo_material = true", "Tipo_Material");
+                else
+                    return consulta.RetornarDataTable("select id_tipo_material, descricao_reduzida_tipo_material from Tipo_Material", "Tipo_Material");
+            }
         }
+
+        public Boolean AlterarTipoMaterial(int codigoTipoMaterial, string descricaoReduzida, string descricao, Boolean statusTipoMaterial)
+        {
+            Conexao alteracao = new Conexao();
+            string stringStatusTipoMaterial = statusTipoMaterial.ToString();
+
+            return alteracao.ExecutaNQ("update Tipo_Material set descricao_reduzida_tipo_material = '" + descricaoReduzida + "', descricao_tipo_material = '" + descricao + "', status_tipo_material = " + stringStatusTipoMaterial + " where id_tipo_material = " + codigoTipoMaterial);
+        }
+
 
 
         //Locais

@@ -90,7 +90,7 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(364, 131);
-            this.txtEndereco.MaxLength = 20;
+            this.txtEndereco.MaxLength = 45;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(212, 27);
             this.txtEndereco.TabIndex = 11;
@@ -103,10 +103,10 @@
             this.lblEndereco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.Location = new System.Drawing.Point(148, 130);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Padding = new System.Windows.Forms.Padding(55, 5, 56, 5);
+            this.lblEndereco.Padding = new System.Windows.Forms.Padding(57, 5, 58, 5);
             this.lblEndereco.Size = new System.Drawing.Size(197, 28);
             this.lblEndereco.TabIndex = 12;
-            this.lblEndereco.Text = "Descrição";
+            this.lblEndereco.Text = "Endereço";
             this.lblEndereco.Visible = false;
             // 
             // btnConfirmar
@@ -174,7 +174,7 @@
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(364, 90);
-            this.txtDescricao.MaxLength = 20;
+            this.txtDescricao.MaxLength = 15;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(212, 27);
             this.txtDescricao.TabIndex = 2;

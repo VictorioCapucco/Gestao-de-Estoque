@@ -66,7 +66,9 @@ namespace GestaoEstoque
                 //Criando o DataTable dos tipos de material
                 DataTable oDtTipoMaterial = new DataTable();
                 oDtTipoMaterial.Clear();
-                oDtTipoMaterial = camadaNegocios.DataTableTipoMaterial();
+
+                                                                      //filtraCodigo, filtraStatus, codigoTipoMaterial
+                oDtTipoMaterial = camadaNegocios.DataTableTipoMaterial(false, true, 0);
 
                 //Preenchendo a ComboBox dos tipos de material
                 cmbTipoMaterial.DataSource = null;
