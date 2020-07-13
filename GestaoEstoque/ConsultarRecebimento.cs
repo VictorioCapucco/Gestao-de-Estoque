@@ -128,7 +128,6 @@ namespace GestaoEstoque
                 int rowIndex = oDtRecebimento.Rows.IndexOf(row[0]);
 
                 string dataRecebimento = oDtRecebimento.Rows[rowIndex]["dt_recebimento"].ToString();
-                int codigoPedidoCompra = int.Parse(oDtRecebimento.Rows[rowIndex]["id_pedido_compra"].ToString());
 
                 dataRecebimento = validar.AjustarData(dataRecebimento);
 
@@ -138,7 +137,7 @@ namespace GestaoEstoque
                     //Atualizando a lstbox dos materiais da obra
 
                     DataTable oDtMateriaisPedidoCompra = new DataTable();
-                    oDtMateriaisPedidoCompra = camadaNegocios.DataTableMateriaisPedidoCompra(codigoPedidoCompra);
+                    oDtMateriaisPedidoCompra = camadaNegocios.DataTableMateriaisRecebimento(codigoRecebimento);
 
                     string codigoMaterial;
                     string nomeMaterial;

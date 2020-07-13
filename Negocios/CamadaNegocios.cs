@@ -589,6 +589,18 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Materiais_Recebimento (id_material, id_recebimento, quantidade_material) values (" + codigoMaterial + "," + codigoRecebimento + "," + quantidadeMaterial + ")");
         }
 
+        public DataTable DataTableMateriaisRecebimento(int codigoRecebimento)
+        {
+            Conexao consulta = new Conexao();
+
+            return consulta.RetornarDataTable("select MR.id_material as Codigo, M.nome_material as Nome, MR.quantidade_material as Quantidade " +
+                                              "from Materiais_Recebimento as MR " +
+                                              "inner join Material as M on MR.id_material = M.id_material " +
+                                              "where MR.id_recebimento = " + codigoRecebimento +
+                                              " order by MR.id_material asc", "Materiais_Recebimento");
+
+        }
+
 
         //Autenticação
         public int AutenticarSenha(int codigoUsuario, string senhaUsuario)
