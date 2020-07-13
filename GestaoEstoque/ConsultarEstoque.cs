@@ -33,8 +33,8 @@ namespace GestaoEstoque
             DataTable oDtLocal = new DataTable();
             oDtLocal.Clear();
 
-                                                    //statusLocal, isObra, statusObra
-            oDtLocal = camadaNegocios.DataTableLocais(true, false, false);
+                                                    //filtraLocal, statusLocal, isObra, statusObra, codigoLocal
+            oDtLocal = camadaNegocios.DataTableLocais(false, true, false, false, 0);
 
             //Preenchendo a ComboBox
             cmbLocal.DataSource = null;

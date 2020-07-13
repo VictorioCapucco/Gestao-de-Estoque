@@ -435,8 +435,8 @@ namespace GestaoEstoque
                 DataTable oDtLocalOrigem = new DataTable();
                 oDtLocalOrigem.Clear();
 
-                                                                //statusLocal, isObra, statusObra
-                oDtLocalOrigem = camadaNegocios.DataTableLocais(true, false, false);
+                                                                //filtraLocal, statusLocal, isObra, statusObra, codigoLocal
+                oDtLocalOrigem = camadaNegocios.DataTableLocais(false, true, false, false, 0);
 
                 //Preenchendo a ComboBox
                 cmbLocalOrigem.DataSource = null;
@@ -478,8 +478,8 @@ namespace GestaoEstoque
                     DataTable oDtLocalDestino = new DataTable();
                     oDtLocalDestino.Clear();
 
-                                                                    //statusLocal, isObra, statusObra
-                    oDtLocalDestino = camadaNegocios.DataTableLocais(true, true, false);
+                                                                    //filtraLocal, statusLocal, isObra, statusObra, codigoLocal
+                    oDtLocalDestino = camadaNegocios.DataTableLocais(false, true, true, false, 0);
 
                     //Preenchendo a ComboBox
                     cmbLocalDestino.DataSource = null;

@@ -35,6 +35,7 @@
             this.toolStripConsultar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpbConsultar = new System.Windows.Forms.GroupBox();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.btnOperações = new System.Windows.Forms.Button();
             this.btnCadastros = new System.Windows.Forms.Button();
             this.btnConsultarUnidadeMedida = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.btnConsultarTransferencias = new System.Windows.Forms.Button();
             this.btnConsultarMaterial = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
             this.toolStripMenu.SuspendLayout();
             this.gpbConsultar.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +120,20 @@
             this.gpbConsultar.Size = new System.Drawing.Size(717, 294);
             this.gpbConsultar.TabIndex = 2;
             this.gpbConsultar.TabStop = false;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.Black;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.Color.White;
+            this.btnEstoque.Location = new System.Drawing.Point(235, 182);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(241, 32);
+            this.btnEstoque.TabIndex = 15;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnOperações
             // 
@@ -222,6 +236,7 @@
             this.btnConsultarLocais.Text = "Consultar Locais";
             this.btnConsultarLocais.UseVisualStyleBackColor = false;
             this.btnConsultarLocais.Visible = false;
+            this.btnConsultarLocais.Click += new System.EventHandler(this.btnConsultarLocais_Click);
             // 
             // btnConsultarPedidoCompra
             // 
@@ -282,20 +297,6 @@
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
             this.btnConsultarFornecedor.Visible = false;
             this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.BackColor = System.Drawing.Color.Black;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnEstoque.Location = new System.Drawing.Point(235, 182);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(241, 32);
-            this.btnEstoque.TabIndex = 15;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // Consultar
             // 

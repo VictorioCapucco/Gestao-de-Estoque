@@ -39,8 +39,8 @@ namespace GestaoEstoque
                                                                 //filtraStatus, statusFornecedor
             oDtFornecedores = camadaNegocios.DataTableFornecedor(true, true);
 
-            //statusLocal, isObra, statusObra
-            oDtLocais = camadaNegocios.DataTableLocais(true, false, false);
+                                                    //filtraLocal, statusLocal, isObra, statusObra, codigoLocal
+            oDtLocais = camadaNegocios.DataTableLocais(false, true, false, false, 0);
 
             //Preenchendo a ComboBox dos Locais
             cmbLocal.DataSource = null;

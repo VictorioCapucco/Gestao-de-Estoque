@@ -170,5 +170,15 @@ namespace GestaoEstoque
                 btnConsultarTipoTransferencia.Visible = true;
             }
         }
+
+        private void btnConsultarLocais_Click(object sender, EventArgs e)
+        {
+            Point posicaoForm = new Point(100, 100);
+            posicaoForm = this.Location;
+
+            Form formConsultarLocais = new ConsultarLocais(this, posicaoForm.X, posicaoForm.Y, permissaoUsuario);
+            this.Hide();
+            formConsultarLocais.Show();
+        }
     }
 }

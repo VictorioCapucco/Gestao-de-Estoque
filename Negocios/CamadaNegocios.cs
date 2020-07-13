@@ -32,13 +32,18 @@ namespace Negocios
             return insercao.ExecutaNQ("insert into Locais (descricao_local, endereco_local, status_local, obra) values('" + descricaoLocal + "','" + enderecoLocal + "'," + statusLocal + "," + obra + ')');
         }
 
-        public DataTable DataTableLocais(Boolean statusLocal, Boolean isObra, Boolean statusObra)
+        public DataTable DataTableLocais(Boolean filtraLocal, Boolean statusLocal, Boolean isObra, Boolean statusObra, int codigoLocal)
         {
             Conexao consulta = new Conexao();
             if (isObra == true)
                 return consulta.RetornarDataTable("select id_local, descricao_local from Locais where status_local = " + statusLocal + " and obra = " + isObra + " and status_obra = " + statusObra, "Locais");
             else
-                return consulta.RetornarDataTable("select id_local, descricao_local from Locais where status_local = " + statusLocal + " and obra = " + isObra, "Locais");
+            {
+                if (filtraLocal == false)
+                    return consulta.RetornarDataTable("select id_local, descricao_local from Locais where status_local = " + statusLocal + " and obra = " + isObra, "Locais");
+                else
+                    return consulta.RetornarDataTable("select * from Locais where id_local = " + codigoLocal + " and obra = false", "Locais");
+            }
         }
 
         public DataTable DataTableTodosLocais()
@@ -85,6 +90,19 @@ namespace Negocios
 
             else
                 return "";
+        }
+
+        public DataTable BuscaLocais(string descricaoBusca)
+        {
+            Conexao consulta = new Conexao();
+            return consulta.RetornarDataTable("select id_local, descricao_local, endereco_local from Locais where descricao_local like '%" + descricaoBusca + "%' and obra = false", "Locais");
+        }
+
+        public Boolean AlterarLocal(int codigoLocal, string descricaoLocal, string enderecoLocal, Boolean statusLocal)
+        {
+            Conexao alteracao = new Conexao();
+            string stringStatusLocal = statusLocal.ToString();
+            return alteracao.ExecutaNQ("update Locais set descricao_local = '" + descricaoLocal + "', endereco_local = '" + enderecoLocal + "', status_local = " + stringStatusLocal + " where id_local = " + codigoLocal);
         }
 
         //Usuarios
